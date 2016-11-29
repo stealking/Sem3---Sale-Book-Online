@@ -17,6 +17,7 @@
           <Property Name="Quantity" Type="int" />
           <Property Name="Price" Type="money" />
           <Property Name="ImageUrl" Type="nvarchar(max)" />
+          <Property Name="PublishDate" Type="date" />
           <Property Name="SaleOff" Type="int" />
           <Property Name="DateCreate" Type="date" />
           <Property Name="UserIDCreate" Type="int" />
@@ -28,7 +29,7 @@
           <Key>
             <PropertyRef Name="OrderID" />
           </Key>
-          <Property Name="OrderID" Type="int" Nullable="false" />
+          <Property Name="OrderID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="UserID" Type="int" />
           <Property Name="Date" Type="date" />
           <Property Name="Flag" Type="bit" />
@@ -237,6 +238,7 @@
           <NavigationProperty Name="User" Relationship="Self.FK_Book_User" FromRole="Book" ToRole="User" />
           <NavigationProperty Name="User1" Relationship="Self.FK_Book_User1" FromRole="Book" ToRole="User" />
           <NavigationProperty Name="Types" Relationship="BookOnlineModel.TypeBook" FromRole="Book" ToRole="Type" />
+          <Property Name="PublishDate" Type="DateTime" Precision="0" />
         </EntityType>
         <EntityType Name="Order">
           <Key>
@@ -411,6 +413,7 @@
           <EntitySetMapping Name="Books">
             <EntityTypeMapping TypeName="BookOnlineModel.Book">
               <MappingFragment StoreEntitySet="Book">
+                <ScalarProperty Name="PublishDate" ColumnName="PublishDate" />
                 <ScalarProperty Name="BookID" ColumnName="BookID" />
                 <ScalarProperty Name="Name" ColumnName="Name" />
                 <ScalarProperty Name="Author" ColumnName="Author" />
