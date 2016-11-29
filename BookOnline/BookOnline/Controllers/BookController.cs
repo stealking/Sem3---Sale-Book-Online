@@ -34,6 +34,7 @@ namespace BookOnline.Controllers
         {
             book.DateCreate = Convert.ToDateTime(book.DateCreate);
             book.DateUpdate = Convert.ToDateTime(book.DateUpdate);
+            book.PublishDate = Convert.ToDateTime(book.PublishDate);
             book = bookManager.Add(book);
             return book;
         }

@@ -163,6 +163,7 @@
   <ItemGroup>
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\BookController.cs" />
+    <Compile Include="Controllers\OrderController.cs" />
     <Compile Include="Controllers\TypeController.cs" />
     <Compile Include="Controllers\UserController.cs" />
     <Compile Include="Global.asax.cs">
@@ -173,6 +174,7 @@
     </Compile>
     <Compile Include="Models\BookManager.cs" />
     <Compile Include="Models\IBookManager.cs" />
+    <Compile Include="Models\IOrderManager.cs" />
     <Compile Include="Models\ITypeManager.cs" />
     <Compile Include="Models\IUserManager.cs" />
     <Compile Include="Models\Model1.Context.cs">
@@ -196,6 +198,7 @@
     <Compile Include="Models\OrderDetail.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\OrderManager.cs" />
     <Compile Include="Models\Role.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>

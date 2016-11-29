@@ -21,6 +21,7 @@
     <NavigationProperty Name="User" Relationship="Self.FK_Book_User" FromRole="Book" ToRole="User" />
     <NavigationProperty Name="User1" Relationship="Self.FK_Book_User1" FromRole="Book" ToRole="User" />
     <NavigationProperty Name="Types" Relationship="BookOnlineModel.TypeBook" FromRole="Book" ToRole="Type" />
+    <Property Name="PublishDate" Type="DateTime" Precision="0" />
   </EntityType>
   <EntityType Name="Order">
     <Key>

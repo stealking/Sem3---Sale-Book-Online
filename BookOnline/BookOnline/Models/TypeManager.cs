@@ -9,8 +9,8 @@ namespace BookOnline.Models
     public class TypeManager : ITypeManager
     {
         
-            BookOnlineEntities db = new BookOnlineEntities();
-            IList<Type> types;
+        BookOnlineEntities db = new BookOnlineEntities();
+        IList<Type> types;
         public IEnumerable<Type> GetAll()
         {
             types = new List<Type>();

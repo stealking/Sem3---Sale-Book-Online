@@ -12,6 +12,7 @@
     <Property Name="Quantity" Type="int" />
     <Property Name="Price" Type="money" />
     <Property Name="ImageUrl" Type="nvarchar(max)" />
+    <Property Name="PublishDate" Type="date" />
     <Property Name="SaleOff" Type="int" />
     <Property Name="DateCreate" Type="date" />
     <Property Name="UserIDCreate" Type="int" />
@@ -23,7 +24,7 @@
     <Key>
       <PropertyRef Name="OrderID" />
     </Key>
-    <Property Name="OrderID" Type="int" Nullable="false" />
+    <Property Name="OrderID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="UserID" Type="int" />
     <Property Name="Date" Type="date" />
     <Property Name="Flag" Type="bit" />
