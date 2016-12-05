@@ -12,17 +12,23 @@ export class SpotifyService {
     if(params){
       queryURL = `${queryURL}?${params.join('&')}`;
     }
-    return this.http.request(queryURL).map((res: any)=>res.json());
+    console.log(queryURL);
+    return this.http.request(queryURL).map((res: any)=> {return res.json()});
   }
-  search(query: string, type:string):Observable<any[]>{
+  search(query: Object):Observable<any[]>{
     return this.query(`/searchbooksbyname`,[
-      `name=${query}`
+      `name=${query['name']}`,
+      `author=${query['author']}`,
+      
     ]);
   }
   searchTrack(query: string): Observable<any[]>{
-    console.log(this.search(query,'track'));
-    return this.search(query,'track');
+    console.log(this.search(query));
+    return this.search(query);
   }
+  
+
+
   getTrack(id: string): Observable<any[]>{
     return this.query(`/tracks/${id}`);
   }
