@@ -19,21 +19,21 @@ namespace BookOnline.Models
             this.Types = new HashSet<Type>();
         }
     
-        public int BookID { get; set; }
-        public string Name { get; set; }
-        public string Author { get; set; }
+        public int id { get; set; }
+        public string name { get; set; }
+        public string author { get; set; }
         public Nullable<double> rate { get; set; }
-        public string Description { get; set; }
-        public Nullable<int> Quantity { get; set; }
-        public Nullable<decimal> Price { get; set; }
-        public string ImageUrl { get; set; }
-        public Nullable<int> SaleOff { get; set; }
-        public Nullable<System.DateTime> DateCreate { get; set; }
-        public Nullable<int> UserIDCreate { get; set; }
-        public Nullable<System.DateTime> DateUpdate { get; set; }
-        public Nullable<int> UserIDUpdate { get; set; }
+        public string description { get; set; }
+        public Nullable<int> quantity { get; set; }
+        public Nullable<decimal> price { get; set; }
+        public string imageUrl { get; set; }
+        public Nullable<System.DateTime> publishDate { get; set; }
+        public Nullable<int> saleOff { get; set; }
+        public Nullable<System.DateTime> dateCreate { get; set; }
+        public Nullable<int> userIdCreate { get; set; }
+        public Nullable<System.DateTime> dateUpdate { get; set; }
+        public Nullable<int> userIdUpdate { get; set; }
         public Nullable<bool> flag { get; set; }
-        public Nullable<System.DateTime> PublishDate { get; set; }
     
         public virtual User User { get; set; }
         public virtual User User1 { get; set; }

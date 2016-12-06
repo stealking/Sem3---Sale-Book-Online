@@ -8,16 +8,20 @@ using BookOnline.Models;
 using Newtonsoft.Json;
 using System.Data.Entity;
 using BookOnline.COR;
+using System.Web.Http.Cors;
 namespace BookOnline.Controllers
 {
-    [AllowCrossSiteJson]
+    [EnableCors(origins: "http://localhost:4200",
+     headers: "*", methods: "*")]
     public class BookController : ApiController
     {
         static readonly IBookManager bookManager = new BookManager();
         //Get All Books
+        [Route("book/getAll")]
         [HttpGet]
         public IEnumerable<Book> GetAllBooks()
         {
+//            throw new HttpResponseException(HttpStatusCode.Unauthorized);
             return bookManager.GetAll();
         }
         //Get Book by id
@@ -32,12 +36,13 @@ namespace BookOnline.Controllers
             return book;
         }
         //Add Book
+        
         [HttpPost]
         public Book AddBook(Book book)
         {
-            book.DateCreate = Convert.ToDateTime(book.DateCreate);
-            book.DateUpdate = Convert.ToDateTime(book.DateUpdate);
-            book.PublishDate = Convert.ToDateTime(book.PublishDate);
+            book.dateCreate = Convert.ToDateTime(book.dateCreate);
+            book.dateUpdate = Convert.ToDateTime(book.dateUpdate);
+            book.publishDate = Convert.ToDateTime(book.publishDate);
             book = bookManager.Add(book);
             return book;
         }

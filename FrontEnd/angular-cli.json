@@ -1,7 +1,7 @@
 {
   "project": {
-    "version": "1.0.0-beta.21",
-    "name": "router-param"
+    "version": "1.0.0-beta.22-1",
+    "name": "test-form"
   },
   "apps": [
     {
@@ -18,9 +18,7 @@
       "prefix": "app",
       "mobile": false,
       "styles": [
-        "styles.css",
-        "../node_modules/primeng/resources/themes/omega/theme.css",
-        "../node_modules/primeng/resources/primeng.min.css"
+        "styles.css"
       ],
       "scripts": [],
       "environments": {

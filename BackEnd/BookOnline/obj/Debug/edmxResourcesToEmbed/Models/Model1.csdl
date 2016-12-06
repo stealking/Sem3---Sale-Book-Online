@@ -1,38 +1,112 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Schema Namespace="BookOnlineModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="BookOnlineEntities" annotation:LazyLoadingEnabled="true">
+    <FunctionImport Name="sp_alterdiagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="version" Mode="In" Type="Int32" />
+      <Parameter Name="definition" Mode="In" Type="Binary" />
+    </FunctionImport>
+    <FunctionImport Name="sp_creatediagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="version" Mode="In" Type="Int32" />
+      <Parameter Name="definition" Mode="In" Type="Binary" />
+    </FunctionImport>
+    <FunctionImport Name="sp_dropdiagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_helpdiagramdefinition" ReturnType="Collection(BookOnlineModel.sp_helpdiagramdefinition_Result)">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_helpdiagrams" ReturnType="Collection(BookOnlineModel.sp_helpdiagrams_Result)">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_renamediagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="new_diagramname" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_upgraddiagrams" />
+    <EntitySet Name="Books" EntityType="BookOnlineModel.Book" />
+    <EntitySet Name="Orders" EntityType="BookOnlineModel.Order" />
+    <EntitySet Name="OrderDetails" EntityType="BookOnlineModel.OrderDetail" />
+    <EntitySet Name="Roles" EntityType="BookOnlineModel.Role" />
+    <EntitySet Name="sysdiagrams" EntityType="BookOnlineModel.sysdiagram" />
+    <EntitySet Name="Types" EntityType="BookOnlineModel.Type" />
+    <EntitySet Name="Users" EntityType="BookOnlineModel.User" />
+    <AssociationSet Name="FK_Book_User" Association="BookOnlineModel.FK_Book_User">
+      <End Role="User" EntitySet="Users" />
+      <End Role="Book" EntitySet="Books" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Book_User1" Association="BookOnlineModel.FK_Book_User1">
+      <End Role="User" EntitySet="Users" />
+      <End Role="Book" EntitySet="Books" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Order_User" Association="BookOnlineModel.FK_Order_User">
+      <End Role="User" EntitySet="Users" />
+      <End Role="Order" EntitySet="Orders" />
+    </AssociationSet>
+    <AssociationSet Name="FK_OrderDetail_Order" Association="BookOnlineModel.FK_OrderDetail_Order">
+      <End Role="Order" EntitySet="Orders" />
+      <End Role="OrderDetail" EntitySet="OrderDetails" />
+    </AssociationSet>
+    <AssociationSet Name="FK_User_Role" Association="BookOnlineModel.FK_User_Role">
+      <End Role="Role" EntitySet="Roles" />
+      <End Role="User" EntitySet="Users" />
+    </AssociationSet>
+    <AssociationSet Name="TypeBook" Association="BookOnlineModel.TypeBook">
+      <End Role="Book" EntitySet="Books" />
+      <End Role="Type" EntitySet="Types" />
+    </AssociationSet>
+  </EntityContainer>
+  <ComplexType Name="sp_helpdiagramdefinition_Result">
+    <Property Type="Int32" Name="version" Nullable="true" />
+    <Property Type="Binary" Name="definition" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="sp_helpdiagrams_Result">
+    <Property Type="String" Name="Database" Nullable="true" MaxLength="128" />
+    <Property Type="String" Name="Name" Nullable="false" MaxLength="128" />
+    <Property Type="Int32" Name="ID" Nullable="false" />
+    <Property Type="String" Name="Owner" Nullable="true" MaxLength="128" />
+    <Property Type="Int32" Name="OwnerID" Nullable="false" />
+  </ComplexType>
   <EntityType Name="Book">
     <Key>
-      <PropertyRef Name="BookID" />
+      <PropertyRef Name="id" />
     </Key>
-    <Property Name="BookID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-    <Property Name="Author" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="author" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="rate" Type="Double" />
-    <Property Name="Description" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
-    <Property Name="Quantity" Type="Int32" />
-    <Property Name="Price" Type="Decimal" Precision="19" Scale="4" />
-    <Property Name="ImageUrl" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
-    <Property Name="SaleOff" Type="Int32" />
-    <Property Name="DateCreate" Type="DateTime" Precision="0" />
-    <Property Name="UserIDCreate" Type="Int32" />
-    <Property Name="DateUpdate" Type="DateTime" Precision="0" />
-    <Property Name="UserIDUpdate" Type="Int32" />
+    <Property Name="description" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="quantity" Type="Int32" />
+    <Property Name="price" Type="Decimal" Precision="19" Scale="4" />
+    <Property Name="imageUrl" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="publishDate" Type="DateTime" Precision="0" />
+    <Property Name="saleOff" Type="Int32" />
+    <Property Name="dateCreate" Type="DateTime" Precision="0" />
+    <Property Name="userIdCreate" Type="Int32" />
+    <Property Name="dateUpdate" Type="DateTime" Precision="0" />
+    <Property Name="userIdUpdate" Type="Int32" />
     <Property Name="flag" Type="Boolean" />
-    <NavigationProperty Name="User" Relationship="Self.FK_Book_User" FromRole="Book" ToRole="User" />
-    <NavigationProperty Name="User1" Relationship="Self.FK_Book_User1" FromRole="Book" ToRole="User" />
+    <NavigationProperty Name="User" Relationship="BookOnlineModel.FK_Book_User" FromRole="Book" ToRole="User" />
+    <NavigationProperty Name="User1" Relationship="BookOnlineModel.FK_Book_User1" FromRole="Book" ToRole="User" />
     <NavigationProperty Name="Types" Relationship="BookOnlineModel.TypeBook" FromRole="Book" ToRole="Type" />
-    <Property Name="PublishDate" Type="DateTime" Precision="0" />
   </EntityType>
   <EntityType Name="Order">
     <Key>
       <PropertyRef Name="OrderID" />
     </Key>
-    <Property Name="OrderID" Type="Int32" Nullable="false" />
+    <Property Name="OrderID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="UserID" Type="Int32" />
     <Property Name="Date" Type="DateTime" Precision="0" />
     <Property Name="Flag" Type="Boolean" />
-    <NavigationProperty Name="User" Relationship="Self.FK_Order_User" FromRole="Order" ToRole="User" />
-    <NavigationProperty Name="OrderDetail" Relationship="Self.FK_OrderDetail_Order" FromRole="Order" ToRole="OrderDetail" />
+    <NavigationProperty Name="User" Relationship="BookOnlineModel.FK_Order_User" FromRole="Order" ToRole="User" />
+    <NavigationProperty Name="OrderDetail" Relationship="BookOnlineModel.FK_OrderDetail_Order" FromRole="Order" ToRole="OrderDetail" />
   </EntityType>
   <EntityType Name="OrderDetail">
     <Key>
@@ -42,7 +116,7 @@
     <Property Name="OrderID" Type="Int32" />
     <Property Name="BookID" Type="Int32" />
     <Property Name="Number" Type="Int32" />
-    <NavigationProperty Name="Order" Relationship="Self.FK_OrderDetail_Order" FromRole="OrderDetail" ToRole="Order" />
+    <NavigationProperty Name="Order" Relationship="BookOnlineModel.FK_OrderDetail_Order" FromRole="OrderDetail" ToRole="Order" />
   </EntityType>
   <EntityType Name="Role">
     <Key>
@@ -50,13 +124,13 @@
     </Key>
     <Property Name="RoleID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="RoleName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-    <NavigationProperty Name="Users" Relationship="Self.FK_User_Role" FromRole="Role" ToRole="User" />
+    <NavigationProperty Name="Users" Relationship="BookOnlineModel.FK_User_Role" FromRole="Role" ToRole="User" />
   </EntityType>
   <EntityType Name="sysdiagram">
     <Key>
       <PropertyRef Name="diagram_id" />
     </Key>
-    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="name" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
     <Property Name="principal_id" Type="Int32" Nullable="false" />
     <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="version" Type="Int32" />
@@ -85,38 +159,38 @@
     <Property Name="Phone" Type="String" MaxLength="11" FixedLength="true" Unicode="true" />
     <Property Name="RoleID" Type="Int32" />
     <Property Name="Flag" Type="Boolean" />
-    <NavigationProperty Name="Books" Relationship="Self.FK_Book_User" FromRole="User" ToRole="Book" />
-    <NavigationProperty Name="Books1" Relationship="Self.FK_Book_User1" FromRole="User" ToRole="Book" />
-    <NavigationProperty Name="Orders" Relationship="Self.FK_Order_User" FromRole="User" ToRole="Order" />
-    <NavigationProperty Name="Role" Relationship="Self.FK_User_Role" FromRole="User" ToRole="Role" />
+    <NavigationProperty Name="Books" Relationship="BookOnlineModel.FK_Book_User" FromRole="User" ToRole="Book" />
+    <NavigationProperty Name="Books1" Relationship="BookOnlineModel.FK_Book_User1" FromRole="User" ToRole="Book" />
+    <NavigationProperty Name="Orders" Relationship="BookOnlineModel.FK_Order_User" FromRole="User" ToRole="Order" />
+    <NavigationProperty Name="Role" Relationship="BookOnlineModel.FK_User_Role" FromRole="User" ToRole="Role" />
   </EntityType>
   <Association Name="FK_Book_User">
-    <End Role="User" Type="Self.User" Multiplicity="0..1" />
-    <End Role="Book" Type="Self.Book" Multiplicity="*" />
+    <End Type="BookOnlineModel.User" Role="User" Multiplicity="0..1" />
+    <End Type="BookOnlineModel.Book" Role="Book" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="User">
         <PropertyRef Name="UserID" />
       </Principal>
       <Dependent Role="Book">
-        <PropertyRef Name="UserIDCreate" />
+        <PropertyRef Name="userIdCreate" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_Book_User1">
-    <End Role="User" Type="Self.User" Multiplicity="0..1" />
-    <End Role="Book" Type="Self.Book" Multiplicity="*" />
+    <End Type="BookOnlineModel.User" Role="User" Multiplicity="0..1" />
+    <End Type="BookOnlineModel.Book" Role="Book" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="User">
         <PropertyRef Name="UserID" />
       </Principal>
       <Dependent Role="Book">
-        <PropertyRef Name="UserIDUpdate" />
+        <PropertyRef Name="userIdUpdate" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_Order_User">
-    <End Role="User" Type="Self.User" Multiplicity="0..1" />
-    <End Role="Order" Type="Self.Order" Multiplicity="*" />
+    <End Type="BookOnlineModel.User" Role="User" Multiplicity="0..1" />
+    <End Type="BookOnlineModel.Order" Role="Order" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="User">
         <PropertyRef Name="UserID" />
@@ -127,8 +201,8 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_OrderDetail_Order">
-    <End Role="Order" Type="Self.Order" Multiplicity="1" />
-    <End Role="OrderDetail" Type="Self.OrderDetail" Multiplicity="0..1" />
+    <End Type="BookOnlineModel.Order" Role="Order" Multiplicity="1" />
+    <End Type="BookOnlineModel.OrderDetail" Role="OrderDetail" Multiplicity="0..1" />
     <ReferentialConstraint>
       <Principal Role="Order">
         <PropertyRef Name="OrderID" />
@@ -139,8 +213,8 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_User_Role">
-    <End Role="Role" Type="Self.Role" Multiplicity="0..1" />
-    <End Role="User" Type="Self.User" Multiplicity="*" />
+    <End Type="BookOnlineModel.Role" Role="Role" Multiplicity="0..1" />
+    <End Type="BookOnlineModel.User" Role="User" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Role">
         <PropertyRef Name="RoleID" />
@@ -150,39 +224,6 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <EntityContainer Name="BookOnlineEntities" annotation:LazyLoadingEnabled="true">
-    <EntitySet Name="Books" EntityType="Self.Book" />
-    <EntitySet Name="Orders" EntityType="Self.Order" />
-    <EntitySet Name="OrderDetails" EntityType="Self.OrderDetail" />
-    <EntitySet Name="Roles" EntityType="Self.Role" />
-    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
-    <EntitySet Name="Types" EntityType="Self.Type" />
-    <EntitySet Name="Users" EntityType="Self.User" />
-    <AssociationSet Name="FK_Book_User" Association="Self.FK_Book_User">
-      <End Role="User" EntitySet="Users" />
-      <End Role="Book" EntitySet="Books" />
-    </AssociationSet>
-    <AssociationSet Name="FK_Book_User1" Association="Self.FK_Book_User1">
-      <End Role="User" EntitySet="Users" />
-      <End Role="Book" EntitySet="Books" />
-    </AssociationSet>
-    <AssociationSet Name="FK_Order_User" Association="Self.FK_Order_User">
-      <End Role="User" EntitySet="Users" />
-      <End Role="Order" EntitySet="Orders" />
-    </AssociationSet>
-    <AssociationSet Name="FK_OrderDetail_Order" Association="Self.FK_OrderDetail_Order">
-      <End Role="Order" EntitySet="Orders" />
-      <End Role="OrderDetail" EntitySet="OrderDetails" />
-    </AssociationSet>
-    <AssociationSet Name="FK_User_Role" Association="Self.FK_User_Role">
-      <End Role="Role" EntitySet="Roles" />
-      <End Role="User" EntitySet="Users" />
-    </AssociationSet>
-    <AssociationSet Name="TypeBook" Association="BookOnlineModel.TypeBook">
-      <End Role="Book" EntitySet="Books" />
-      <End Role="Type" EntitySet="Types" />
-    </AssociationSet>
-  </EntityContainer>
   <Association Name="TypeBook">
     <End Type="BookOnlineModel.Book" Role="Book" Multiplicity="*" />
     <End Type="BookOnlineModel.Type" Role="Type" Multiplicity="*" />

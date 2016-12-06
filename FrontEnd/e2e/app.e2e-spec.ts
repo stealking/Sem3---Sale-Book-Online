@@ -1,10 +1,10 @@
-import { RouterParamPage } from './app.po';
+import { TestFormPage } from './app.po';
 
-describe('router-param App', function() {
-  let page: RouterParamPage;
+describe('test-form App', function() {
+  let page: TestFormPage;
 
   beforeEach(() => {
-    page = new RouterParamPage();
+    page = new TestFormPage();
   });
 
   it('should display message saying app works', () => {

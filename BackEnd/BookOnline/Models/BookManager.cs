@@ -26,20 +26,20 @@ namespace BookOnline.Models
                 {
                     books.Add(new Book
                     {
-                        BookID = item.BookID,
-                        Name = item.Name,
-                        Author = item.Author,
+                        id = item.id,
+                        name = item.name,
+                        author = item.author,
                         rate = item.rate,
-                        Description = item.Description,
-                        Quantity = item.Quantity,
-                        Price = item.Price,
-                        ImageUrl = item.ImageUrl,
-                        SaleOff = item.SaleOff,
-                        PublishDate = item.PublishDate,
-                        DateCreate = item.DateCreate,
-                        UserIDCreate = item.UserIDCreate,
-                        UserIDUpdate = item.UserIDUpdate,
-                        DateUpdate = item.DateCreate,
+                        description = item.description,
+                        quantity = item.quantity,
+                        price = item.price,
+                        imageUrl = item.imageUrl,
+                        saleOff = item.saleOff,
+                        publishDate = item.publishDate,
+                        dateCreate = item.dateCreate,
+                        userIdCreate = item.userIdCreate,
+                        userIdUpdate = item.userIdUpdate,
+                        dateUpdate = item.dateCreate,
                         flag = item.flag,
                     });
                 }
@@ -53,25 +53,25 @@ namespace BookOnline.Models
             using (db = new BookOnlineEntities())
             {
                 Book book = null;
-                var query = db.Books.SingleOrDefault(b => b.BookID == id);
+                var query = db.Books.SingleOrDefault(b => b.id == id);
                 if (query != null)
                 {
                     book = new Book
                     {
-                        BookID = query.BookID,
-                        Name = query.Name,
-                        Author = query.Author,
+                        id = query.id,
+                        name = query.name,
+                        author = query.author,
                         rate = query.rate,
-                        Description = query.Description,
-                        Quantity = query.Quantity,
-                        Price = query.Price,
-                        ImageUrl = query.ImageUrl,
-                        SaleOff = query.SaleOff,
-                        PublishDate = query.PublishDate,
-                        DateCreate = query.DateCreate,
-                        UserIDCreate = query.UserIDCreate,
-                        UserIDUpdate = query.UserIDUpdate,
-                        DateUpdate = query.DateCreate,
+                        description = query.description,
+                        quantity = query.quantity,
+                        price = query.price,
+                        imageUrl = query.imageUrl,
+                        saleOff = query.saleOff,
+                        publishDate = query.publishDate,
+                        dateCreate = query.dateCreate,
+                        userIdCreate = query.userIdCreate,
+                        userIdUpdate = query.userIdUpdate,
+                        dateUpdate = query.dateCreate,
                         flag = query.flag,
                     };
                 }
@@ -88,7 +88,7 @@ namespace BookOnline.Models
                 {
                     throw new ArgumentNullException(nameof(book));
                 }
-                book.BookID = db.Books.Max(s => s.BookID) + 1;
+                book.id = db.Books.Max(s => s.id) + 1;
                 book.flag = true;
                 db.Books.Add(book);
                 db.SaveChanges();
@@ -101,7 +101,7 @@ namespace BookOnline.Models
         {
             using (db = new BookOnlineEntities())
             {
-                var query = db.Books.Where(b => b.BookID == id).Select(s => s);
+                var query = db.Books.Where(b => b.id == id).Select(s => s);
                 foreach (var item in query)
                 {
                     item.flag = false;
@@ -115,7 +115,7 @@ namespace BookOnline.Models
         {
             using (db = new BookOnlineEntities())
             {
-                var query = db.Books.Where(b => b.BookID == book.BookID);
+                var query = db.Books.Where(b => b.id == book.id);
                 if (!query.Any())
                 {
                     return false;
@@ -132,27 +132,28 @@ namespace BookOnline.Models
             using (db = new BookOnlineEntities())
             {
                 
-                var query = db.Books.Where(b => b.Name.Contains(name)).Select(s => new
+                var query = db.Books.Where(b => b.name.Contains(name)).Select(s => new
                 {
-                    s.BookID,
-                    s.Name,
-                    s.Author,
+                    s.id,
+                    s.name,
+                    s.author,
                     s.rate,
-                    s.Quantity,
-                    s.Price,
-                    s.ImageUrl,
-                    s.PublishDate,
-                    s.SaleOff,
-                    s.UserIDCreate,
-                    s.DateCreate,
-                    s.DateUpdate,
-                    s.UserIDUpdate,
-                    s.Description,
+                    s.quantity,
+                    s.price,
+                    s.imageUrl,
+                    s.publishDate,
+                    s.saleOff,
+                    s.userIdCreate,
+                    s.dateCreate,
+                    s.dateUpdate,
+                    s.userIdUpdate,
+                    s.description,
                     s.flag
                 }).ToList();
                 return query;
 
             }
         }
+
     }
 }

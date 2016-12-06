@@ -12,6 +12,8 @@ namespace BookOnline.Models
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
+
+    using System.Linq;
     
     public partial class BookOnlineEntities : DbContext
     {
@@ -32,5 +34,12 @@ namespace BookOnline.Models
         public DbSet<sysdiagram> sysdiagrams { get; set; }
         public DbSet<Type> Types { get; set; }
         public DbSet<User> Users { get; set; }
+    
+       
+    
+        public virtual int sp_upgraddiagrams()
+        {
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction("sp_upgraddiagrams");
+        }
     }
 }
