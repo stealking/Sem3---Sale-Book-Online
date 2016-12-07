@@ -40,9 +40,9 @@ namespace BookOnline.Controllers
         [HttpPost]
         public Book AddBook(Book book)
         {
-            book.dateCreate = Convert.ToDateTime(book.dateCreate);
-            book.dateUpdate = Convert.ToDateTime(book.dateUpdate);
-            book.publishDate = Convert.ToDateTime(book.publishDate);
+            book.DateCreate = Convert.ToDateTime(book.DateCreate);
+            book.DateUpdate = Convert.ToDateTime(book.DateUpdate);
+            book.PublishDate = Convert.ToDateTime(book.PublishDate);
             book = bookManager.Add(book);
             return book;
         }
@@ -57,7 +57,7 @@ namespace BookOnline.Controllers
         }
         //Delete Book
         [HttpDelete]
-        public int DeleteBook(int id)
+        public void DeleteBook(int id)
         {
             Book book = bookManager.Get(id);
             if (book == null)
@@ -65,7 +65,6 @@ namespace BookOnline.Controllers
                 throw new HttpResponseException(HttpStatusCode.NotFound);
             }
             bookManager.Remove(id);
-            return 200;
         }
 
         //Search book by Name

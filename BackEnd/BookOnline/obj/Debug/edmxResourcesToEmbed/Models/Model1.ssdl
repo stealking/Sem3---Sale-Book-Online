@@ -1,23 +1,23 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Schema Namespace="BookOnlineModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+<Schema Namespace="BookOnlineModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
   <EntityType Name="Book">
     <Key>
-      <PropertyRef Name="id" />
+      <PropertyRef Name="BookID" />
     </Key>
-    <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="name" Type="nvarchar" MaxLength="50" />
-    <Property Name="author" Type="nvarchar" MaxLength="50" />
+    <Property Name="BookID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" />
+    <Property Name="Author" Type="nvarchar" MaxLength="50" />
     <Property Name="rate" Type="float" />
-    <Property Name="description" Type="nvarchar" MaxLength="150" />
-    <Property Name="quantity" Type="int" />
-    <Property Name="price" Type="money" />
-    <Property Name="imageUrl" Type="nvarchar(max)" />
-    <Property Name="publishDate" Type="date" />
-    <Property Name="saleOff" Type="int" />
-    <Property Name="dateCreate" Type="date" />
-    <Property Name="userIdCreate" Type="int" />
-    <Property Name="dateUpdate" Type="date" />
-    <Property Name="userIdUpdate" Type="int" />
+    <Property Name="Description" Type="nvarchar" MaxLength="150" />
+    <Property Name="Quantity" Type="int" />
+    <Property Name="Price" Type="money" />
+    <Property Name="ImageUrl" Type="nvarchar(max)" />
+    <Property Name="PublishDate" Type="date" />
+    <Property Name="SaleOff" Type="int" />
+    <Property Name="DateCreate" Type="date" />
+    <Property Name="UserIDCreate" Type="int" />
+    <Property Name="DateUpdate" Type="date" />
+    <Property Name="UserIDUpdate" Type="int" />
     <Property Name="flag" Type="bit" />
   </EntityType>
   <EntityType Name="Order">
@@ -37,6 +37,7 @@
     <Property Name="OrderID" Type="int" />
     <Property Name="BookID" Type="int" />
     <Property Name="Number" Type="int" />
+    <Property Name="flag" Type="bit" />
   </EntityType>
   <EntityType Name="Role">
     <Key>
@@ -94,7 +95,7 @@
         <PropertyRef Name="UserID" />
       </Principal>
       <Dependent Role="Book">
-        <PropertyRef Name="userIdCreate" />
+        <PropertyRef Name="UserIDCreate" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -106,7 +107,7 @@
         <PropertyRef Name="UserID" />
       </Principal>
       <Dependent Role="Book">
-        <PropertyRef Name="userIdUpdate" />
+        <PropertyRef Name="UserIDUpdate" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -123,14 +124,14 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_OrderDetail_Order">
-    <End Role="Order" Type="Self.Order" Multiplicity="1" />
-    <End Role="OrderDetail" Type="Self.OrderDetail" Multiplicity="0..1" />
+    <End Role="Order" Type="Self.Order" Multiplicity="0..1" />
+    <End Role="OrderDetail" Type="Self.OrderDetail" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Order">
         <PropertyRef Name="OrderID" />
       </Principal>
       <Dependent Role="OrderDetail">
-        <PropertyRef Name="ID" />
+        <PropertyRef Name="OrderID" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -139,7 +140,7 @@
     <End Role="TypeBook" Type="Self.TypeBook" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Book">
-        <PropertyRef Name="id" />
+        <PropertyRef Name="BookID" />
       </Principal>
       <Dependent Role="TypeBook">
         <PropertyRef Name="BookID" />
@@ -170,37 +171,6 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Function Name="fn_diagramobjects" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="true" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" ReturnType="int" />
-  <Function Name="sp_alterdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
-    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
-    <Parameter Name="owner_id" Type="int" Mode="In" />
-    <Parameter Name="version" Type="int" Mode="In" />
-    <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
-  </Function>
-  <Function Name="sp_creatediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
-    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
-    <Parameter Name="owner_id" Type="int" Mode="In" />
-    <Parameter Name="version" Type="int" Mode="In" />
-    <Parameter Name="definition" Type="varbinary(max)" Mode="In" />
-  </Function>
-  <Function Name="sp_dropdiagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
-    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
-    <Parameter Name="owner_id" Type="int" Mode="In" />
-  </Function>
-  <Function Name="sp_helpdiagramdefinition" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
-    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
-    <Parameter Name="owner_id" Type="int" Mode="In" />
-  </Function>
-  <Function Name="sp_helpdiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
-    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
-    <Parameter Name="owner_id" Type="int" Mode="In" />
-  </Function>
-  <Function Name="sp_renamediagram" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
-    <Parameter Name="diagramname" Type="nvarchar" Mode="In" />
-    <Parameter Name="owner_id" Type="int" Mode="In" />
-    <Parameter Name="new_diagramname" Type="nvarchar" Mode="In" />
-  </Function>
-  <Function Name="sp_upgraddiagrams" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo" />
   <EntityContainer Name="BookOnlineModelStoreContainer">
     <EntitySet Name="Book" EntityType="Self.Book" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Order" EntityType="Self.Order" Schema="dbo" store:Type="Tables" />

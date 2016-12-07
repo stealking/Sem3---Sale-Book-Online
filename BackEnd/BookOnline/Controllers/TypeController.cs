@@ -6,9 +6,12 @@ using System.Net.Http;
 using System.Web.Http;
 using BookOnline.Models;
 using Type = BookOnline.Models.Type;
+using System.Web.Http.Cors;
 
 namespace BookOnline.Controllers
 {
+    [EnableCors(origins: "http://localhost:4200",
+     headers: "*", methods: "*")]
     public class TypeController : ApiController
     {
         static readonly ITypeManager typeManager = new TypeManager();
