@@ -1,26 +1,33 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
+import { Routes, RouterModule } from '@angular/router';
+import { LocationStrategy, HashLocationStrategy } from '@angular/common';
 
 import { AppComponent } from './app.component';
-// import { HeroFormComponent } from './hero-form/hero-form.component';
-import { BookListComponent } from './components/book-list/book-list.component';
-import { BookFormComponent } from './components/book-form/book-form.component';
+import { AdminComponent, AdminComponentModule, routes as childRoutes } from './components/admin/admin.component';
+import { HomeComponent } from './components/home/home.component';
+
+const routes: Routes = [
+  { path: '', redirectTo: 'home', pathMatch: 'full' },
+  { path: 'home', component: HomeComponent },
+  { path: 'admin', component: AdminComponent, children: childRoutes }
+];
 
 @NgModule({
   declarations: [
     AppComponent,
-    // HeroFormComponent,
-    BookListComponent,
-    BookFormComponent
+    HomeComponent
   ],
   imports: [
+    AdminComponentModule,
     BrowserModule,
-    FormsModule,
-    HttpModule
+    HttpModule,
+    RouterModule.forRoot(routes)
   ],
-  providers: [],
+  providers: [
+    { provide: LocationStrategy, useClass: HashLocationStrategy }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

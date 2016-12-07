@@ -57,7 +57,7 @@ namespace BookOnline.Controllers
         }
         //Delete Book
         [HttpDelete]
-        public void DeleteBook(int id)
+        public int DeleteBook(int id)
         {
             Book book = bookManager.Get(id);
             if (book == null)
@@ -65,6 +65,7 @@ namespace BookOnline.Controllers
                 throw new HttpResponseException(HttpStatusCode.NotFound);
             }
             bookManager.Remove(id);
+            return 200;
         }
 
         //Search book by Name

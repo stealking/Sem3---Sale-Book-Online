@@ -1,9 +1,8 @@
 <!--<div [hidden]="submitted">-->
-  {{diagnostic}}
-  {{data}}
+  
   <div class="container">
-    <h1>Hero form</h1>
-    <form (ngSubmit)="onSubmit()" #heroForm="ngForm">
+    <h1>Book</h1>
+    <form (ngSubmit)="onSubmit()" #bookForm="ngForm">
       <div class="form-group">
         <label for="name">Name</label>
         <input type="text" class="form-control" id="name" required [(ngModel)]="model.name" name="name" #name="ngModel">
@@ -21,10 +20,13 @@
         <option *ngFor="let rate of rates" [value]="rate">{{rate}}</option>
       </select>
       </div>
-      <button class="btn btn-default" type="submit" [disabled]="!heroForm.form.valid">Submit</button>
-      <button class="btn btn-default" (click)="newHero(); heroForm.reset()">Clear</button>
+      <button class="btn btn-default" type="submit" [disabled]="!bookForm.form.valid">Submit</button>
+      <button class="btn btn-default" (click)="newBook(); bookForm.reset()">Clear</button>
     </form>
+    <button class="btn btn-default" [routerLink]="['./']">Back</button>
+    <button class="btn btn-default" (click)="back()">Back2</button>
   </div>
+
 <!--</div>-->
 
 <!--<div [hidden]="!submitted">
