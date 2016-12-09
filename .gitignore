@@ -7,6 +7,7 @@
 # dependencies
 /FrontEnd/node_modules
 /FrontEnd/bower_components
+/BackEnd/packages
 
 # IDEs and editors
 /FrontEnd/.idea
