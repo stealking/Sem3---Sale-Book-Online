@@ -1,0 +1,27 @@
+<div class="container">
+  <h2>List of User</h2>
+  <a [routerLink]="['./new']" class="btn btn-primary">Add new User</a>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>No.</th>
+        <th>Email</th>
+        <th>Password</th>
+        <th>Name</th>
+       
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let user of this.results; let num = index">
+        <td>{{num}}</td>
+        <td>{{user.Email}}</td>
+        <td>{{user.Password}}</td>
+        <td>{{user.Name}}</td>
+        <td>
+          <button class="btn btn-primary"><i class="fa fa-1x fa-pencil-square-o" aria-hidden="true" (click)="editUser(user.UserID)"></i></button>
+          <button class="btn btn-danger"><i class="fa fa-1x fa-times" aria-hidden="true" (click)="deleteUser(user.UserID)"></i></button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

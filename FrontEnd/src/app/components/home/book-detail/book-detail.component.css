@@ -1,0 +1,11 @@
+.book-info{
+    padding: 1rem;
+    background: #fff;
+}
+.book-content{
+    height: 1240px;
+    width: 100%;
+}
+.book-image > img {
+    width: 100%;
+}

@@ -1,0 +1,27 @@
+<div class="container">
+  <h2>List of books</h2>
+  <a [routerLink]="['./new']" class="btn btn-primary">Add new book</a>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>No.</th>
+        <th>Name</th>
+        <th>Author</th>
+        <th>Rate</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let book of this.results; let num = index">
+        <td>{{num}}</td>
+        <td>{{book.Name}}</td>
+        <td>{{book.Author}}</td>
+        <td>{{book.Rate}}</td>
+        <td>
+          <button class="btn btn-primary"><i class="fa fa-1x fa-pencil-square-o" aria-hidden="true" (click)="editBook(book.BookID)"></i></button>
+          <button class="btn btn-danger"><i class="fa fa-1x fa-times" aria-hidden="true" (click)="deleteBook(book.BookID)"></i></button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

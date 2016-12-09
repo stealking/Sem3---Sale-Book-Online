@@ -1,0 +1,56 @@
+/* You can add global styles to this file, and also import other style files */
+body{
+    line-height: 1.42857;
+    color: #333;
+    background-color: #f0f0f0;
+}
+
+.nav-mid input[pinputtext]{
+    height: 4.4rem;
+    color: #333;
+    line-height: normal;
+    padding: 0 0 0 3.5rem;
+}
+@media screen and (max-width: 1030px){
+    .nav-mid input[pinputtext]{
+        padding: 0 0 0 1rem;
+    }
+}
+.search-button span {
+    position: relative;
+    top: 1px;
+}
+.search-icon-button .ui-button .ui-button-text{
+    display: none;
+}
+.ui-autocomplete-dropdown{
+    display: none;
+}
+.ui-button, .ui-button span, button.ui-button.ui-state-default span, .ui-button.ui-state-default span{
+     font-weight: normal;
+}
+.ui-autocomplete-panel {
+    max-height: 1000px!important;
+}
+.content-wrap{
+    padding: 0.5rem 1rem 1rem 1rem;
+    overflow: hidden;
+    clear: both;
+}
+@media (min-width: 1024px){
+    .content-wrap {
+        padding: 0.5rem 2.5rem 1rem 2.5rem;
+    }
+}
+
+.sidebar-content input[pinputtext]{
+    padding: 0 0 0 1rem;
+}
+
+.book-rate > p-rating a{
+    cursor: default;
+}
+
+.ui-widget-content{
+    border: none;
+}
