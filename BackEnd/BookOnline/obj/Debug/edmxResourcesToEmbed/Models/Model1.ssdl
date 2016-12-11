@@ -19,6 +19,7 @@
     <Property Name="DateUpdate" Type="date" />
     <Property Name="UserIDUpdate" Type="int" />
     <Property Name="Flag" Type="bit" />
+    <Property Name="Status" Type="nvarchar" MaxLength="50" />
   </EntityType>
   <EntityType Name="Order">
     <Key>

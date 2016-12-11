@@ -35,6 +35,7 @@ namespace BookOnline.Models
         public Nullable<System.DateTime> DateUpdate { get; set; }
         public Nullable<int> UserIDUpdate { get; set; }
         public Nullable<bool> Flag { get; set; }
+        public string Status { get; set; }
     
         public virtual User User { get; set; }
         public virtual User User1 { get; set; }
