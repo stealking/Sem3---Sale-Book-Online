@@ -156,38 +156,41 @@ namespace BookOnline.Models
             }
         }
 
-        public dynamic SearchMultiQuery(string name, int? Rate, decimal? minPrice, decimal? maxPrice)
+        public dynamic SearchMultiQuery(string name, int? Rate, int?[] typeId, decimal? minPrice, decimal? maxPrice)
         {
             using (db = new BookOnlineEntities())
             {
                 var query = from s in db.Books
-                    select new
-                    {
-                        s.BookID,
-                        s.Name,
-                        s.Author,
-                        s.Rate,
-                        s.Quantity,
-                        s.Price,
-                        s.ImageUrl,
-                        s.PublishDate,
-                        s.SaleOff,
-                        s.UserIDCreate,
-                        s.DateCreate,
-                        s.DateUpdate,
-                        s.UserIDUpdate,
-                        s.Description,
-                        s.Flag
-                    };
+                            select new
+                            {
+                                s.BookID,
+                                s.Name,
+                                s.Author,
+                                s.Rate,
+                                s.Quantity,
+                                s.Price,
+                                s.ImageUrl,
+                                s.PublishDate,
+                                s.SaleOff,
+                                s.UserIDCreate,
+                                s.DateCreate,
+                                s.DateUpdate,
+                                s.UserIDUpdate,
+                                s.Description,
+                                s.Flag,
+                                s.Types
+                            };
+                if (name != null)
+                    query = query.Where(b => b.Name.Contains(name));
                 if (Rate.HasValue)
                     query = query.Where(b => b.Rate == Rate);
                 if (minPrice.HasValue)
                     query = query.Where(b => b.Price >= minPrice);
                 if (maxPrice.HasValue)
                     query = query.Where(b => b.Price <= maxPrice);
-
-
-                return query.ToList();
+                var TypeId = new List<int> { 8 };
+                query = query.Where(b => b.Types.Select(x => x.TypeID).Any() && b.Types.Select(x => x.TypeID).Intersect(TypeId).Any());
+                return JsonConvert.SerializeObject(query);
             }
         }
     }

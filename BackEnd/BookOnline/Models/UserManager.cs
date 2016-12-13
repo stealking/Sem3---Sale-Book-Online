@@ -8,85 +8,107 @@ namespace BookOnline.Models
 {
     public class UserManager : IUserManager
     {
-        BookOnlineEntities db = new BookOnlineEntities();
+        BookOnlineEntities db;
         IList<User> users;
         public IEnumerable<User> GetAll()
         {
-            users = new List<User>();
-            var query = db.Users.Select(s => s).ToList();
-            foreach (var item in query)
+            using (db = new BookOnlineEntities())
             {
-                users.Add(new User
+                users = new List<User>();
+                var query = db.Users.Select(s => s).ToList();
+                foreach (var item in query)
                 {
-                    UserID = item.UserID,
-                    Email = item.Email,
-                    Password = item.Password,
-                    Name = item.Name,
-                    Address = item.Address,
-                    VisaCode = item.VisaCode,
-                    Phone = item.Phone,
-                    RoleID = item.UserID,
-                    Flag = item.Flag
-                });
+                    users.Add(new User
+                    {
+                        UserID = item.UserID,
+                        Email = item.Email,
+                        Password = item.Password,
+                        Name = item.Name,
+                        Address = item.Address,
+                        VisaCode = item.VisaCode,
+                        Phone = item.Phone,
+                        RoleID = item.UserID,
+                        Flag = item.Flag
+                    });
+                }
+                return users;
             }
-            return users;
         }
 
         public User Get(int id)
         {
-            User user = null;
-            var query = db.Users.SingleOrDefault(s => s.UserID == id);
-            if (query != null)
+            using (db = new BookOnlineEntities())
             {
-                user = new User
+
+                User user = null;
+                var query = db.Users.SingleOrDefault(s => s.UserID == id);
+                if (query != null)
                 {
-                    UserID = query.UserID,
-                    Email = query.Email,
-                    Password = query.Password,
-                    Name = query.Name,
-                    Address = query.Address,
-                    VisaCode = query.VisaCode,
-                    Phone = query.Phone,
-                    RoleID = query.UserID,
-                    Flag = query.Flag
-                };
+                    user = new User
+                    {
+                        UserID = query.UserID,
+                        Email = query.Email,
+                        Password = query.Password,
+                        Name = query.Name,
+                        Address = query.Address,
+                        VisaCode = query.VisaCode,
+                        Phone = query.Phone,
+                        RoleID = query.UserID,
+                        Flag = query.Flag
+                    };
+                }
+                return user;
             }
-            return user;
         }
 
         public User Add(User user)
         {
-            if (user == null)
+            using (db = new BookOnlineEntities())
             {
-                throw new ArgumentNullException(nameof(user));
+                if (user == null)
+                {
+                    throw new ArgumentNullException(nameof(user));
+                }
+                user.UserID = db.Users.Max(s => s.UserID) + 1;
+                user.Flag = true;
+                db.Users.Add(user);
+                db.SaveChanges();
+                return user;
             }
-            user.UserID = db.Users.Max(s => s.UserID) + 1;
-            user.Flag = true;
-            db.Users.Add(user);
-            db.SaveChanges();
-            return user;
         }
 
         public void Remove(int id)
         {
-            var query = db.Users.Where(b => b.UserID == id).Select(s => s);
-            foreach (var item in query)
+            using (db = new BookOnlineEntities())
             {
-                item.Flag = false;
+                var query = db.Users.Where(b => b.UserID == id).Select(s => s);
+                foreach (var item in query)
+                {
+                    item.Flag = false;
+                }
+                db.SaveChanges();
             }
-            db.SaveChanges();
         }
 
         public bool Update(User user)
         {
-
-            var query = db.Users.Where(b => b.UserID == user.UserID);
-            if (!query.Any())
+            using (db = new BookOnlineEntities())
             {
-                return false;
+                var result = db.Users.SingleOrDefault(u => u.UserID.Equals(user.UserID));
+                if (result != null)
+                {
+                    result.Email = user.Email;
+                    result.Password = user.Password;
+                    result.Name = user.Name;
+                    result.Address = user.Address;
+                    result.DateOfBirth = user.DateOfBirth;
+                    result.VisaCode = user.VisaCode;
+                    result.Phone = user.Phone;
+                    result.RoleID = user.RoleID;
+                    db.SaveChanges();
+                }
             }
-            db.Users.AddOrUpdate(user);
-            db.SaveChanges();
+
             return true;
         }
     }

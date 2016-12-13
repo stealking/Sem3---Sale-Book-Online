@@ -291,7 +291,6 @@
           <Property Name="TypeID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="Flag" Type="Boolean" />
-          <NavigationProperty Name="Books" Relationship="Self.TypeBook" FromRole="Type" ToRole="Book" />
         </EntityType>
         <EntityType Name="User">
           <Key>

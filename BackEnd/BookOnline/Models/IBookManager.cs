@@ -17,6 +17,6 @@ namespace BookOnline.Models
         bool Update(Book book);
         dynamic SearchBooksByName(string name);
 
-        dynamic SearchMultiQuery(string name, int? rate, decimal? minPrice, decimal? maxPrice);
+        dynamic SearchMultiQuery(string name, int? Rate, int?[] typeId, decimal? minPrice, decimal? maxPrice);
     }
 }

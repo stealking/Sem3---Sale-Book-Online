@@ -75,9 +75,9 @@ namespace BookOnline.Controllers
         }
 
         [HttpGet]
-        public dynamic SearchMultiQuery(string name, int? rate, decimal? minPrice, decimal? maxPrice)
+        public dynamic SearchMultiQuery(string name, int? rate, int?[] typeId, decimal? minPrice, decimal? maxPrice)
         {
-            return bookManager.SearchMultiQuery(name, rate, minPrice, maxPrice);
+            return bookManager.SearchMultiQuery(name, rate, typeId, minPrice, maxPrice);
         }
     }
 }
