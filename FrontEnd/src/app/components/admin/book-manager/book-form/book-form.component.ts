@@ -43,14 +43,14 @@ export class BookFormComponent implements OnInit {
         'http://localhost:53106/api/book/AddBook',
         JSON.stringify(this.model), options)
         .subscribe((res: Response) => {
-          alert(JSON.stringify(res.json()));
+          alert('Add Book Successed!');
         })
     } else {
       this.http.put(
         'http://localhost:53106/api/book/UpdateBook/' + this.id,
         JSON.stringify(this.model), options)
         .subscribe((res: Response) => {
-          alert(JSON.stringify(res.json()));
+          alert('Update Book Successed!');
         })
     }
   }
@@ -64,7 +64,8 @@ export class BookFormComponent implements OnInit {
   }
 
   back(): void {
-    this.router.navigate(['./'], { relativeTo: this.route });
+    // this.router.navigate(['./'], { relativeTo: this.route });
+    this.location.back();
   }
 
 }

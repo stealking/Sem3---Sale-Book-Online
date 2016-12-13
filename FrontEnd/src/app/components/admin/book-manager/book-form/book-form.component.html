@@ -1,4 +1,4 @@
-<!--<div [hidden]="submitted">-->
+
   
   <div class="container">
     <h1>Book</h1>
@@ -11,7 +11,7 @@
         </div>
       </div>
       <div class="form-group">
-        <label for="alterEgo">Author</label>
+        <label for="author">Author</label>
         <input type="text" class="form-control" id="author" [(ngModel)]="model.Author" name="author">
       </div>
       <div class="form-group">
@@ -20,22 +20,61 @@
         <option *ngFor="let rate of rates" [value]="rate">{{rate}}</option>
       </select>
       </div>
-      <button class="btn btn-default" type="submit" [disabled]="!bookForm.form.valid">Submit</button>
+      <div class="form-group">
+        <label for="description">Description</label>
+        <input type="text" class="form-control" id="description" [(ngModel)]="model.Description" name="description">
+      </div>
+      <div class="form-group">
+        <label for="quantity">Quantity</label>
+        <input type="text" class="form-control" id="quantity" [(ngModel)]="model.Quantity" name="quantity">
+      </div>
+      <div class="form-group">
+        <label for="price">Price</label>
+        <input type="text" class="form-control" id="price" [(ngModel)]="model.Price" name="price">
+      </div>
+      <div class="form-group">
+        <label for="status">Status</label>
+        <input type="text" class="form-control" id="status" [(ngModel)]="model.Status" name="status">
+      </div>
+      <div class="form-group">
+        <label for="imageUrl">imageUrl</label>
+        <input type="text" class="form-control" id="imageUrl" [(ngModel)]="model.ImageUrl" name="imageUrl">
+      </div>   
+      <div class="form-group">
+        <input type="file" value="Chọn Ảnh">
+      </div>
+      <div class="form-group">
+        <label for="publishDate">Publish Date</label>
+        <input type="text" class="form-control" id="publishDate" [(ngModel)]="model.PublishDate" name="publishDate">
+      </div>
+      <div class="form-group">
+        <label for="saleOff">Sale Off</label>
+        <input type="text" class="form-control" id="saleOff" [(ngModel)]="model.SaleOff" name="saleOff">
+      </div>
+      <div class="form-group">
+        <label for="saleOff">Sale Off</label>
+        <input type="text" class="form-control" id="saleOff" [(ngModel)]="model.SaleOff" name="saleOff">
+      </div>
+      <div class="form-group">
+        <label for="dateCreate">Date Create</label>
+        <input type="text" class="form-control" id="dateCreate" [(ngModel)]="model.DateCreate" name="dateCreate">
+      </div>
+      <div class="form-group">
+        <label for="userIDCreate">User ID Create</label>
+        <input type="text" class="form-control" id="userIDCreate" [(ngModel)]="model.UserIDCreate" name="userIDCreate">
+      </div>
+      <div class="form-group">
+        <label for="dateUpdate">Date Update</label>
+        <input type="text" class="form-control" id="dateUpdate" [(ngModel)]="model.DateUpdate" name="dateUpdate">
+      </div> 
+      <div class="form-group">
+        <label for="userIDUpdate">User ID Update</label>
+        <input type="text" class="form-control" id="userIDUpdate" [(ngModel)]="model.UserIDUpdate" name="userIDUpdate">
+      </div> 
+      <button class="btn btn-default" type="submit" [disabled]="!bookForm.form.valid">Submit</button>    
       <button class="btn btn-default" (click)="newBook(); bookForm.reset()">Clear</button>
+
     </form>
-    <button class="btn btn-default" [routerLink]="['./']">Back</button>
-    <button class="btn btn-default" (click)="back()">Back2</button>
+    <button class="btn btn-default" (click)="back()">Back</button>
   </div>
-
-<!--</div>-->
-
-<!--<div [hidden]="!submitted">
-  <h2>You submited the following: </h2>
-  <div class="row">
-    <div class="col-xs-3">Name</div>
-    <div class="col-xs-9 pull-left">{{model.name}}</div>
-  </div>
-  <div class="row">
-    
-  </div>
-</div>-->
+  

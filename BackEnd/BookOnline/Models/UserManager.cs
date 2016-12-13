@@ -25,9 +25,10 @@ namespace BookOnline.Models
                         Password = item.Password,
                         Name = item.Name,
                         Address = item.Address,
+                        DateOfBirth = item.DateOfBirth,
                         VisaCode = item.VisaCode,
                         Phone = item.Phone,
-                        RoleID = item.UserID,
+                        RoleID = item.RoleID,
                         Flag = item.Flag
                     });
                 }
@@ -51,9 +52,10 @@ namespace BookOnline.Models
                         Password = query.Password,
                         Name = query.Name,
                         Address = query.Address,
+                        DateOfBirth = query.DateOfBirth,
                         VisaCode = query.VisaCode,
                         Phone = query.Phone,
-                        RoleID = query.UserID,
+                        RoleID = query.RoleID,
                         Flag = query.Flag
                     };
                 }

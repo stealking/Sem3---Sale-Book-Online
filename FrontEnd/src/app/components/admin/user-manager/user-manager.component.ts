@@ -5,6 +5,8 @@ import { CommonModule } from '@angular/common';
 import { HttpModule } from '@angular/http';
 import { UserFormComponent } from './user-form/user-form.component';
 import { UserListFormComponent } from './user-list-form/user-list-form.component';
+import {DropdownModule} from 'primeng/primeng';
+// import { CustomFormsModule } from 'ng2-validation';
 
 @Component({
   selector: 'app-user-manager',
@@ -29,17 +31,21 @@ export const routes: Routes = [
 @NgModule({
   declarations: [
     UserFormComponent,
-    UserListFormComponent
+    UserListFormComponent,
   ],
   exports:[
     UserFormComponent,
-    UserListFormComponent
+    UserListFormComponent,
+    DropdownModule,
+    
   ],
   imports:[
     RouterModule,
     CommonModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    DropdownModule,
+    
   ]
 })
 

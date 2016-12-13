@@ -8,15 +8,17 @@
         <th>Email</th>
         <th>Password</th>
         <th>Name</th>
-       
+        <th>Address</th>
+        <th>Action</th>
       </tr>
     </thead>
     <tbody>
       <tr *ngFor="let user of this.results; let num = index">
-        <td>{{num}}</td>
+        <td>{{num+1}}</td>
         <td>{{user.Email}}</td>
         <td>{{user.Password}}</td>
         <td>{{user.Name}}</td>
+        <td>{{user.Address}}</td>
         <td>
           <button class="btn btn-primary"><i class="fa fa-1x fa-pencil-square-o" aria-hidden="true" (click)="editUser(user.UserID)"></i></button>
           <button class="btn btn-danger"><i class="fa fa-1x fa-times" aria-hidden="true" (click)="deleteUser(user.UserID)"></i></button>

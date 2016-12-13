@@ -4,6 +4,8 @@ import { user } from '../../../../classes/user';
 import { FormsModule } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Location } from '@angular/common';
+// import { CustomFormsModule } from 'ng2-validation';
+import {SelectItem} from 'primeng/primeng';
 @Component({
   selector: 'app-user-form',
   templateUrl: './user-form.component.html',
@@ -12,19 +14,24 @@ import { Location } from '@angular/common';
 export class UserFormComponent implements OnInit {
 
   data;
+  roleIDs: SelectItem[];
+  selectedRole: string;
   date = new Date(Date.now());
-  model = new user(1,	'tansy91@gmail.com',	'12345',	'Trần Tấn Sỹ',	'214 Ngô Quyền', this.date.getFullYear() + '/'+this.date.getMonth() +'/' + this.date.getDay()	,	null ,	null , 	1,	true);
+  model = new user(1,	'',	'',	'',	'', this.date.getFullYear() + '/'+this.date.getMonth() +'/' + this.date.getDay()	,	null ,	null , 	1,	true);
   id: number;
   job: string;
   
   
   
   constructor(public http: Http, public route: ActivatedRoute, public location: Location, public router: Router) { 
+    this.roleIDs = [];
+    this.roleIDs.push({ label: 'Admin', value: 1 });
+    this.roleIDs.push({ label: 'User', value: 2 });
      route.params.subscribe(params => {
       this.id = params['id'];
       if (this.id) this.job = 'edit'; else this.job = 'new';
-      
     })
+
   }
 
   onSubmit(){
@@ -37,7 +44,7 @@ export class UserFormComponent implements OnInit {
       JSON.stringify(this.model), options)
       .subscribe((res: Response) =>{
            this.data = res.json();
-           alert(JSON.stringify(res.json()));
+           alert('Add User Successed!');
       })
     }
     else{
@@ -46,7 +53,7 @@ export class UserFormComponent implements OnInit {
       JSON.stringify(this.model), options)
       .subscribe((res: Response) =>{
            this.data = res.json();
-           alert(JSON.stringify(res.json()));
+           alert('Update User Successed');
       })
     }
     
@@ -72,8 +79,8 @@ export class UserFormComponent implements OnInit {
   }
 
   back(): void {
-    // this.location.back();
-    this.router.navigate(['./'], { relativeTo: this.route });
+    this.location.back();
+    // this.router.navigate(['./'], { relativeTo: this.route });
     // alert(123);
     // this.router.navigate(['/book']);
   }
