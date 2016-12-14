@@ -12,17 +12,40 @@ import { Http, Response, Headers, RequestOptions } from '@angular/http';
 export class BookListComponent implements OnInit {
 
   results: Object;
+  public data: any = this.results;
+  settings = {
+    columns: {
+      BookID: {
+        title: 'Book ID'
+      },
+      Name: {
+        title: 'Name'
+      },
+      Author: {
+        title: 'Author'
+      },
+      Rate: {
+        title: 'Rate'
+      }
+    }
+  };
+
+
   constructor(public http: Http, private router: Router, private route: ActivatedRoute) { }
+
 
   ngOnInit() {
     this.updateListBook();
   }
+
   // render json result to dom
   renderResults(res: any): void {
     this.results = null;
     if (res) {
       this.results = res;
     }
+    this.data = this.results;
+    console.log(JSON.stringify(this.data));
   }
   // update list book
   updateListBook(): void {

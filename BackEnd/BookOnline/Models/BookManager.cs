@@ -22,7 +22,7 @@ namespace BookOnline.Models
             using (db = new BookOnlineEntities())
             {
                 books = new List<Book>();
-                var query = (from s in db.Books select s).ToList();
+                var query = (from s in db.Books select s).Where(b => b.Flag == true).ToList();
                 foreach (var item in query)
                 {
                     books.Add(new Book
@@ -36,11 +36,12 @@ namespace BookOnline.Models
                         Price = item.Price,
                         ImageUrl = item.ImageUrl,
                         SaleOff = item.SaleOff,
+                        Status = item.Status,
                         PublishDate = item.PublishDate,
                         DateCreate = item.DateCreate,
                         UserIDCreate = item.UserIDCreate,
                         UserIDUpdate = item.UserIDUpdate,
-                        DateUpdate = item.DateCreate,
+                        DateUpdate = item.DateUpdate,
                         Flag = item.Flag,
                     });
                 }
@@ -69,10 +70,11 @@ namespace BookOnline.Models
                         ImageUrl = query.ImageUrl,
                         SaleOff = query.SaleOff,
                         PublishDate = query.PublishDate,
+                        Status = query.Status,
                         DateCreate = query.DateCreate,
                         UserIDCreate = query.UserIDCreate,
                         UserIDUpdate = query.UserIDUpdate,
-                        DateUpdate = query.DateCreate,
+                        DateUpdate = query.DateUpdate,
                         Flag = query.Flag,
                     };
                 }
@@ -90,6 +92,7 @@ namespace BookOnline.Models
                     throw new ArgumentNullException(nameof(book));
                 }
                 book.BookID = db.Books.Max(s => s.BookID) + 1;
+                book.DateCreate = DateTime.Now;
                 book.Flag = true;
                 db.Books.Add(book);
                 db.SaveChanges();
@@ -121,6 +124,7 @@ namespace BookOnline.Models
                 {
                     return false;
                 }
+                book.DateUpdate = DateTime.Now;
                 db.Books.AddOrUpdate(book);
                 db.SaveChanges();
                 return true;
@@ -153,6 +157,18 @@ namespace BookOnline.Models
                 }).ToList();
                 return query;
 
+            }
+        }
+
+        public bool UpdateBookImg(int id, string url)
+        {
+            using (db = new BookOnlineEntities())
+            {
+                var book = db.Books.SingleOrDefault(b => b.BookID == id);
+                book.ImageUrl = url;
+                db.Books.AddOrUpdate(book);
+                db.SaveChanges();
+                return true;
             }
         }
 
@@ -193,5 +209,7 @@ namespace BookOnline.Models
                 return JsonConvert.SerializeObject(query);
             }
         }
+
+        
     }
 }

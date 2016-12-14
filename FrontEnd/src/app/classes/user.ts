@@ -1,4 +1,4 @@
-export class user{
+export class User{
     constructor(
         public UserID: number,
         public Email: string,
@@ -9,6 +9,7 @@ export class user{
         public VisaCode?: string,
         public Phone?: number,
         public RoleID?: number,
-        public Flag?:boolean        
+        public Flag?:boolean,
+        public Button?:string   
     ){}
 }

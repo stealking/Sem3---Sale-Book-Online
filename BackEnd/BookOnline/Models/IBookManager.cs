@@ -16,7 +16,7 @@ namespace BookOnline.Models
         void Remove(int id);
         bool Update(Book book);
         dynamic SearchBooksByName(string name);
-
+        bool UpdateBookImg(int id, string url);
         dynamic SearchMultiQuery(string name, int? Rate, int?[] typeId, decimal? minPrice, decimal? maxPrice);
     }
 }

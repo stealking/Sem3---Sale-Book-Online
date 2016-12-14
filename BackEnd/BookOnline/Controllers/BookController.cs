@@ -7,6 +7,11 @@ using System.Web.Http;
 using BookOnline.Models;
 using Newtonsoft.Json;
 using System.Data.Entity;
+using System.Diagnostics;
+using System.IO;
+using System.Net.Http.Headers;
+using System.Threading.Tasks;
+using System.Web;
 using BookOnline.COR;
 using System.Web.Http.Cors;
 namespace BookOnline.Controllers
@@ -78,6 +83,53 @@ namespace BookOnline.Controllers
         public dynamic SearchMultiQuery(string name, int? rate, int?[] typeId, decimal? minPrice, decimal? maxPrice)
         {
             return bookManager.SearchMultiQuery(name, rate, typeId, minPrice, maxPrice);
+        }
+
+        [HttpPost]
+        public Task<HttpResponseMessage> PostFormData(int id)
+        {
+            
+            if (!Request.Content.IsMimeMultipartContent())
+            {
+                throw new HttpResponseException(HttpStatusCode.UnsupportedMediaType);
+            }
+
+            string root = HttpContext.Current.Server.MapPath("~/Content");
+            CustomMultipartFormDataStreamProvider provider = new CustomMultipartFormDataStreamProvider(root);
+
+            // Read the form data and return an async task.
+            var task = Request.Content.ReadAsMultipartAsync(provider).
+                ContinueWith<HttpResponseMessage>(t =>
+                {
+                    if (t.IsFaulted || t.IsCanceled)
+                    {
+                        Request.CreateErrorResponse(HttpStatusCode.InternalServerError, t.Exception);
+                    }
+                    //provider.FileData[0].LocalFileName = provider.FileData[0].Headers.ContentDisposition.FileName);
+            // This illustrates how to get the file names.
+            foreach (MultipartFileData file in provider.FileData)
+                    {
+                        Trace.WriteLine(file.Headers.ContentDisposition.FileName);
+                        Trace.WriteLine("Server file path: " + file.LocalFileName);
+                        string [] split = new string[] {"\\"};
+                        var x = file.LocalFileName.Split(split, StringSplitOptions.None);
+                        bookManager.UpdateBookImg(id, x[x.Length - 1]);
+                    }
+                    return Request.CreateResponse(HttpStatusCode.OK);
+                });
+
+            return task;
+        }
+
+    }
+
+    public class CustomMultipartFormDataStreamProvider : MultipartFormDataStreamProvider
+    {
+        public CustomMultipartFormDataStreamProvider(string path) : base(path) { }
+
+        public override string GetLocalFileName(HttpContentHeaders headers)
+        {
+            return headers.ContentDisposition.FileName.Replace("\"", string.Empty);
         }
     }
 }

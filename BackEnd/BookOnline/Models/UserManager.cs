@@ -15,7 +15,7 @@ namespace BookOnline.Models
             using (db = new BookOnlineEntities())
             {
                 users = new List<User>();
-                var query = db.Users.Select(s => s).ToList();
+                var query = db.Users.Select(s => s).Where(b => b.Flag == true).ToList();
                 foreach (var item in query)
                 {
                     users.Add(new User

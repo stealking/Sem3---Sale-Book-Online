@@ -1,4 +1,4 @@
-<div class="container">
+<!--<div class="container">
   <h2>List of User</h2>
   <a [routerLink]="['./new']" class="btn btn-primary">Add new User</a>
   <table class="table">
@@ -6,9 +6,10 @@
       <tr>
         <th>No.</th>
         <th>Email</th>
-        <th>Password</th>
         <th>Name</th>
         <th>Address</th>
+        <th>Date of Birth</th>
+        <th>Phone</th>
         <th>Action</th>
       </tr>
     </thead>
@@ -16,9 +17,10 @@
       <tr *ngFor="let user of this.results; let num = index">
         <td>{{num+1}}</td>
         <td>{{user.Email}}</td>
-        <td>{{user.Password}}</td>
         <td>{{user.Name}}</td>
         <td>{{user.Address}}</td>
+        <td>{{user.DateOfBirth}}</td>
+        <td>{{user.Phone}}</td>
         <td>
           <button class="btn btn-primary"><i class="fa fa-1x fa-pencil-square-o" aria-hidden="true" (click)="editUser(user.UserID)"></i></button>
           <button class="btn btn-danger"><i class="fa fa-1x fa-times" aria-hidden="true" (click)="deleteUser(user.UserID)"></i></button>
@@ -26,4 +28,30 @@
       </tr>
     </tbody>
   </table>
+</div>-->
+<div class="row">
+  <div class="col-md-4">
+    <input *ngIf="config.filtering" placeholder="Filter all columns"
+           [ngTableFiltering]="config.filtering"
+           class="form-control"
+           (tableChanged)="onChangeTable(config)"/>
+  </div>
 </div>
+<br>
+<ng-table [config]="config"
+          (tableChanged)="onChangeTable(config)"
+          (cellClicked)="onCellClick($event)"
+          [rows]="rows" [columns]="columns">
+</ng-table>
+<pagination *ngIf="config.paging"
+            class="pagination-sm"
+            [(ngModel)]="page"
+            [totalItems]="length"
+            [itemsPerPage]="itemsPerPage"
+            [maxSize]="maxSize"
+            [boundaryLinks]="true"
+            [rotate]="false"
+            (pageChanged)="onChangeTable(config, $event)"
+            (numPages)="numPages = $event">
+</pagination>
+<pre *ngIf="config.paging" class="card card-block card-header">Page: {{page}} / {{numPages}}</pre>

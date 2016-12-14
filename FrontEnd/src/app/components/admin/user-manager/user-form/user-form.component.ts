@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {Http, Response, Headers, RequestOptions} from '@angular/http';
-import { user } from '../../../../classes/user';
+import { User } from '../../../../classes/user';
 import { FormsModule } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Location } from '@angular/common';
@@ -17,7 +17,7 @@ export class UserFormComponent implements OnInit {
   roleIDs: SelectItem[];
   selectedRole: string;
   date = new Date(Date.now());
-  model = new user(1,	'',	'',	'',	'', this.date.getFullYear() + '/'+this.date.getMonth() +'/' + this.date.getDay()	,	null ,	null , 	1,	true);
+  model = new User(1,	'',	'',	'',	'', this.date.getFullYear() + '/'+this.date.getMonth() +'/' + this.date.getDay()	,	null ,	null , 	1,	true);
   id: number;
   job: string;
   
@@ -67,7 +67,7 @@ export class UserFormComponent implements OnInit {
         'http://localhost:53106/api/user/GetUserById/' + this.id)
         .subscribe((res: Response) => {
           
-          this.model = <user>res.json();
+          this.model = <User>res.json();
           
         })
     
@@ -75,7 +75,7 @@ export class UserFormComponent implements OnInit {
   }
 
   newUser() {
-    this.model = new user(1,	'tansy91@gmail.com',	'12345',	'Trần Tấn Sỹ',	'214 Ngô Quyền', null	,	null ,	null , 	1,	true);
+    this.model = new User(1,	'tansy91@gmail.com',	'12345',	'Trần Tấn Sỹ',	'214 Ngô Quyền', null	,	null ,	null , 	1,	true);
   }
 
   back(): void {
