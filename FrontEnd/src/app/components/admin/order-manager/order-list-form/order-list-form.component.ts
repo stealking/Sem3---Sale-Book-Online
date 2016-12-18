@@ -25,17 +25,21 @@ export class OrderListFormComponent implements OnInit {
     }
   }
 
-  //update list user
+  //update list order
   updateListOrder(): void{
     this.http.get('http://localhost:53106/api/order/getallorders').subscribe((res: any) => this.renderResults(res.json()));
   }
-
-  //open edit user
+//open list of oder detail
+ checkOrder(id: number): void{
+    this.router.navigate(['./check/'+ id], { relativeTo: this.route});
+  }
+  //open edit order
   editOrder(id: number): void{
     this.router.navigate(['./edit/' + id], { relativeTo: this.route});
   }
+  
 
-  //delete user
+  //delete order
   deleteOrder(id: number): void{
     this.http.delete('http://localhost:53106/api/order/deleteorder' +id).subscribe((res: any) => this.updateListOrder());
   }

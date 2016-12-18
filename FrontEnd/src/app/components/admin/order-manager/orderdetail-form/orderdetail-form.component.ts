@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Order } from '../../../../classes/order';
+import { OrderDetail } from '../../../../classes/orderdetail';
 import { Http, Response, Headers, RequestOptions } from '@angular/http';
 // ??
 import { FormsModule } from '@angular/forms';
@@ -7,49 +7,48 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { Location } from '@angular/common';
 
 @Component({
-  selector: 'app-order-form',
-  templateUrl: './order-form.component.html',
-  styleUrls: ['./order-form.component.css']
+  selector: 'app-orderdetail-form',
+  templateUrl: './orderdetail-form.component.html',
+  styleUrls: ['./orderdetail-form.component.css']
 })
-export class OrderFormComponent implements OnInit {
-  ok: Object;
-  homnay = new Date(Date.now());
+export class OrderdetailFormComponent implements OnInit {
   id: number;
   job: string;
-    model = new Order(  this.id,this.homnay.getFullYear()+'/'+this.homnay.getMonth()+'/'+this.homnay.getDate(), true);
+  ok: Object;
+  ok1: Object;
+  model = new OrderDetail(this.id,3,1,1,true);
   constructor(public http: Http, public route: ActivatedRoute, public location: Location, public router: Router) {
     route.params.subscribe(params => {
       this.id = params['id'];
-      if (this.id) this.job = 'edit'; else this.job = 'new';
+      if (this.id) this.job = 'editdt'; else this.job = 'newdt';
     })
-  }
+   }
 
-
-  ngOnInit(): void {
-    // check if in edit page
-    if (this.job === 'edit') {
+  ngOnInit() {
+    if (this.job === 'editdt') {
       this.http.get(
-        'http://localhost:53106/api/order/GetOrderById/' + this.id)
+        'http://localhost:53106/api/orderdetail/GetOrderById/' + this.id)
         .subscribe((res: Response) => {
-          this.model = <Order>res.json();
+          this.model = <OrderDetail>res.json();
         })
     }
-    this.updateListUser();
+    this.updateListOrder();
+    this.updateListBook();
   }
   // submit form
   onSubmit() {
     let headers = new Headers({ 'Content-Type': 'application/json' });
     let options = new RequestOptions({ headers: headers });
-    if (this.job == "new") {
+    if (this.job == "newdt") {
       this.http.post(
-        'http://localhost:53106/api/order/AddOrder',
+        'http://localhost:53106/api/orderdetail/AddOrder',
         JSON.stringify(this.model), options)
         .subscribe((res: Response) => {
           alert(JSON.stringify(res.json()));
         })
     } else {
       this.http.put(
-        'http://localhost:53106/api/order/UpdateOrder/' + this.id,
+        'http://localhost:53106/api/orderdetail/UpdateOrder/' + this.id,
         JSON.stringify(this.model), options)
         .subscribe((res: Response) => {
           alert(JSON.stringify(res.json()));
@@ -62,7 +61,7 @@ export class OrderFormComponent implements OnInit {
   }
 
   newOrder() {
-    this.model = new Order( 1,this.homnay.getFullYear()+'/'+this.homnay.getMonth()+'/'+this.homnay.getDate(), true);
+    this.model = new OrderDetail(this.id,3,1,1,true);
   }
 
   back(): void {
@@ -74,10 +73,17 @@ export class OrderFormComponent implements OnInit {
       this.ok = res;
     }
   }
-  updateListUser(): void{
-    this.http.get('http://localhost:53106/api/user/getallusers').subscribe((res: any) => this.renderResults(res.json()));
+  renderResults1(res: any): void{
+    this.ok1 = null;
+    if(res){
+      this.ok1 = res;
+    }
   }
-  
-  
+  updateListOrder(): void{
+    this.http.get('http://localhost:53106/api/orderdetail/GetAllOrders').subscribe((res: any) => this.renderResults(res.json()));
+  }
+  updateListBook(): void{
+    this.http.get('http://localhost:53106/Book/Getall').subscribe((res: any) => this.renderResults1(res.json()));
+  }
 
 }

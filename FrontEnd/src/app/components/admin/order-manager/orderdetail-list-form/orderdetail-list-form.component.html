@@ -1,0 +1,28 @@
+<div class="container">
+  <h2>List of OrderDetail form oderid </h2>
+  <a [routerLink]="['./newdt']" class="btn btn-primary">Add new OrderDetail Here!</a>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>No.</th>
+        <th>ID</th>
+        <th>OrderID</th>
+        <th>BookID</th>
+        <th>Number</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let OrderDetail of this.results; let num = index">
+        <td>{{num}}</td>
+        <td>{{OrderDetail.ID}}</td>
+        <td>{{OrderDetail.OrderID}}</td>
+        <td>{{OrderDetail.BookID}}</td>
+        <td>{{OrderDetail.Number}}</td>
+        <td>
+          <button class="btn btn-primary"><i class="fa fa-1x fa-pencil-square-o" aria-hidden="true" (click)="editOrderdt(OrderDetail.ID)"></i></button>
+          <button class="btn btn-danger"><i class="fa fa-1x fa-times" aria-hidden="true" (click)="deleteOrderdt(OrderDetail.ID)"></i></button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

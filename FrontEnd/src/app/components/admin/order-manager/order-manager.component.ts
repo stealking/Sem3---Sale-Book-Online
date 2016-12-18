@@ -5,7 +5,8 @@ import { CommonModule } from '@angular/common';
 import { HttpModule } from '@angular/http';
 import { OrderFormComponent } from './order-form/order-form.component';
 import { OrderListFormComponent } from './order-list-form/order-list-form.component';
-
+import { OrderdetailFormComponent } from './orderdetail-form/orderdetail-form.component';
+import { OrderdetailListFormComponent } from './orderdetail-list-form/orderdetail-list-form.component';
 @Component({
   selector: 'app-order-manager',
   templateUrl: './order-manager.component.html',
@@ -23,19 +24,24 @@ export class OrderManagerComponent implements OnInit {
 export const routes: Routes = [
   { path: 'new', component: OrderFormComponent },
   { path: 'edit/:id', component: OrderFormComponent },
-  { path: '', component: OrderListFormComponent}
+  { path: '', component: OrderListFormComponent },
+  { path: 'check/:id', component: OrderdetailListFormComponent },
 ]
 
 @NgModule({
   declarations: [
     OrderFormComponent,
-    OrderListFormComponent
+    OrderListFormComponent,
+    OrderdetailFormComponent,
+    OrderdetailListFormComponent
   ],
-  exports:[
+  exports: [
     OrderFormComponent,
-    OrderListFormComponent
+    OrderListFormComponent,
+    OrderdetailFormComponent,
+    OrderdetailListFormComponent
   ],
-  imports:[
+  imports: [
     RouterModule,
     CommonModule,
     FormsModule,

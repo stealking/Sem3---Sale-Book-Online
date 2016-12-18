@@ -4,7 +4,7 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="BookOnlineModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="BookOnlineModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Book">
           <Key>
             <PropertyRef Name="BookID" />
@@ -215,11 +215,43 @@
             <End Role="User" EntitySet="User" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="BookOnlineModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityContainer Name="BookOnlineEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Books" EntityType="BookOnlineModel.Book" />
+          <EntitySet Name="Orders" EntityType="BookOnlineModel.Order" />
+          <EntitySet Name="OrderDetails" EntityType="BookOnlineModel.OrderDetail" />
+          <EntitySet Name="Roles" EntityType="BookOnlineModel.Role" />
+          <EntitySet Name="sysdiagrams" EntityType="BookOnlineModel.sysdiagram" />
+          <EntitySet Name="Types" EntityType="BookOnlineModel.Type" />
+          <EntitySet Name="Users" EntityType="BookOnlineModel.User" />
+          <AssociationSet Name="FK_Book_User" Association="BookOnlineModel.FK_Book_User">
+            <End Role="User" EntitySet="Users" />
+            <End Role="Book" EntitySet="Books" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Book_User1" Association="BookOnlineModel.FK_Book_User1">
+            <End Role="User" EntitySet="Users" />
+            <End Role="Book" EntitySet="Books" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Order_User" Association="BookOnlineModel.FK_Order_User">
+            <End Role="User" EntitySet="Users" />
+            <End Role="Order" EntitySet="Orders" />
+          </AssociationSet>
+          <AssociationSet Name="FK_OrderDetail_Order" Association="BookOnlineModel.FK_OrderDetail_Order">
+            <End Role="Order" EntitySet="Orders" />
+            <End Role="OrderDetail" EntitySet="OrderDetails" />
+          </AssociationSet>
+          <AssociationSet Name="FK_User_Role" Association="BookOnlineModel.FK_User_Role">
+            <End Role="Role" EntitySet="Roles" />
+            <End Role="User" EntitySet="Users" />
+          </AssociationSet>
+          <AssociationSet Name="TypeBook" Association="BookOnlineModel.TypeBook">
+            <End Role="Book" EntitySet="Books" />
+            <End Role="Type" EntitySet="Types" />
+          </AssociationSet>
+        </EntityContainer>
         <EntityType Name="Book">
           <Key>
             <PropertyRef Name="BookID" />
@@ -240,9 +272,9 @@
           <Property Name="UserIDUpdate" Type="Int32" />
           <Property Name="Flag" Type="Boolean" />
           <Property Name="Status" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <NavigationProperty Name="User" Relationship="Self.FK_Book_User" FromRole="Book" ToRole="User" />
-          <NavigationProperty Name="User1" Relationship="Self.FK_Book_User1" FromRole="Book" ToRole="User" />
-          <NavigationProperty Name="Types" Relationship="Self.TypeBook" FromRole="Book" ToRole="Type" />
+          <NavigationProperty Name="User" Relationship="BookOnlineModel.FK_Book_User" FromRole="Book" ToRole="User" />
+          <NavigationProperty Name="User1" Relationship="BookOnlineModel.FK_Book_User1" FromRole="Book" ToRole="User" />
+          <NavigationProperty Name="Types" Relationship="BookOnlineModel.TypeBook" FromRole="Book" ToRole="Type" />
         </EntityType>
         <EntityType Name="Order">
           <Key>
@@ -252,8 +284,8 @@
           <Property Name="UserID" Type="Int32" />
           <Property Name="Date" Type="DateTime" Precision="0" />
           <Property Name="Flag" Type="Boolean" />
-          <NavigationProperty Name="User" Relationship="Self.FK_Order_User" FromRole="Order" ToRole="User" />
-          <NavigationProperty Name="OrderDetails" Relationship="Self.FK_OrderDetail_Order" FromRole="Order" ToRole="OrderDetail" />
+          <NavigationProperty Name="User" Relationship="BookOnlineModel.FK_Order_User" FromRole="Order" ToRole="User" />
+          <NavigationProperty Name="OrderDetails" Relationship="BookOnlineModel.FK_OrderDetail_Order" FromRole="Order" ToRole="OrderDetail" />
         </EntityType>
         <EntityType Name="OrderDetail">
           <Key>
@@ -264,7 +296,7 @@
           <Property Name="BookID" Type="Int32" />
           <Property Name="Number" Type="Int32" />
           <Property Name="Flag" Type="Boolean" />
-          <NavigationProperty Name="Order" Relationship="Self.FK_OrderDetail_Order" FromRole="OrderDetail" ToRole="Order" />
+          <NavigationProperty Name="Order" Relationship="BookOnlineModel.FK_OrderDetail_Order" FromRole="OrderDetail" ToRole="Order" />
         </EntityType>
         <EntityType Name="Role">
           <Key>
@@ -272,13 +304,13 @@
           </Key>
           <Property Name="RoleID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="RoleName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <NavigationProperty Name="Users" Relationship="Self.FK_User_Role" FromRole="Role" ToRole="User" />
+          <NavigationProperty Name="Users" Relationship="BookOnlineModel.FK_User_Role" FromRole="Role" ToRole="User" />
         </EntityType>
         <EntityType Name="sysdiagram">
           <Key>
             <PropertyRef Name="diagram_id" />
           </Key>
-          <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="name" Type="String" Nullable="false" MaxLength="128" FixedLength="false" Unicode="true" />
           <Property Name="principal_id" Type="Int32" Nullable="false" />
           <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="version" Type="Int32" />
@@ -291,6 +323,7 @@
           <Property Name="TypeID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="Flag" Type="Boolean" />
+          <NavigationProperty Name="Books" Relationship="BookOnlineModel.TypeBook" FromRole="Type" ToRole="Book" />
         </EntityType>
         <EntityType Name="User">
           <Key>
@@ -306,14 +339,14 @@
           <Property Name="Phone" Type="String" MaxLength="11" FixedLength="true" Unicode="true" />
           <Property Name="RoleID" Type="Int32" />
           <Property Name="Flag" Type="Boolean" />
-          <NavigationProperty Name="Books" Relationship="Self.FK_Book_User" FromRole="User" ToRole="Book" />
-          <NavigationProperty Name="Books1" Relationship="Self.FK_Book_User1" FromRole="User" ToRole="Book" />
-          <NavigationProperty Name="Orders" Relationship="Self.FK_Order_User" FromRole="User" ToRole="Order" />
-          <NavigationProperty Name="Role" Relationship="Self.FK_User_Role" FromRole="User" ToRole="Role" />
+          <NavigationProperty Name="Books" Relationship="BookOnlineModel.FK_Book_User" FromRole="User" ToRole="Book" />
+          <NavigationProperty Name="Books1" Relationship="BookOnlineModel.FK_Book_User1" FromRole="User" ToRole="Book" />
+          <NavigationProperty Name="Orders" Relationship="BookOnlineModel.FK_Order_User" FromRole="User" ToRole="Order" />
+          <NavigationProperty Name="Role" Relationship="BookOnlineModel.FK_User_Role" FromRole="User" ToRole="Role" />
         </EntityType>
         <Association Name="FK_Book_User">
-          <End Role="User" Type="Self.User" Multiplicity="0..1" />
-          <End Role="Book" Type="Self.Book" Multiplicity="*" />
+          <End Type="BookOnlineModel.User" Role="User" Multiplicity="0..1" />
+          <End Type="BookOnlineModel.Book" Role="Book" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="User">
               <PropertyRef Name="UserID" />
@@ -324,8 +357,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Book_User1">
-          <End Role="User" Type="Self.User" Multiplicity="0..1" />
-          <End Role="Book" Type="Self.Book" Multiplicity="*" />
+          <End Type="BookOnlineModel.User" Role="User" Multiplicity="0..1" />
+          <End Type="BookOnlineModel.Book" Role="Book" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="User">
               <PropertyRef Name="UserID" />
@@ -336,8 +369,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_Order_User">
-          <End Role="User" Type="Self.User" Multiplicity="0..1" />
-          <End Role="Order" Type="Self.Order" Multiplicity="*" />
+          <End Type="BookOnlineModel.User" Role="User" Multiplicity="0..1" />
+          <End Type="BookOnlineModel.Order" Role="Order" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="User">
               <PropertyRef Name="UserID" />
@@ -348,8 +381,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_OrderDetail_Order">
-          <End Role="Order" Type="Self.Order" Multiplicity="0..1" />
-          <End Role="OrderDetail" Type="Self.OrderDetail" Multiplicity="*" />
+          <End Type="BookOnlineModel.Order" Role="Order" Multiplicity="0..1" />
+          <End Type="BookOnlineModel.OrderDetail" Role="OrderDetail" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Order">
               <PropertyRef Name="OrderID" />
@@ -360,8 +393,8 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="FK_User_Role">
-          <End Role="Role" Type="Self.Role" Multiplicity="0..1" />
-          <End Role="User" Type="Self.User" Multiplicity="*" />
+          <End Type="BookOnlineModel.Role" Role="Role" Multiplicity="0..1" />
+          <End Type="BookOnlineModel.User" Role="User" Multiplicity="*" />
           <ReferentialConstraint>
             <Principal Role="Role">
               <PropertyRef Name="RoleID" />
@@ -372,42 +405,9 @@
           </ReferentialConstraint>
         </Association>
         <Association Name="TypeBook">
-          <End Role="Book" Type="Self.Book" Multiplicity="*" />
-          <End Role="Type" Type="Self.Type" Multiplicity="*" />
+          <End Type="BookOnlineModel.Book" Role="Book" Multiplicity="*" />
+          <End Type="BookOnlineModel.Type" Role="Type" Multiplicity="*" />
         </Association>
-        <EntityContainer Name="BookOnlineEntities" annotation:LazyLoadingEnabled="true">
-          <EntitySet Name="Books" EntityType="Self.Book" />
-          <EntitySet Name="Orders" EntityType="Self.Order" />
-          <EntitySet Name="OrderDetails" EntityType="Self.OrderDetail" />
-          <EntitySet Name="Roles" EntityType="Self.Role" />
-          <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
-          <EntitySet Name="Types" EntityType="Self.Type" />
-          <EntitySet Name="Users" EntityType="Self.User" />
-          <AssociationSet Name="FK_Book_User" Association="Self.FK_Book_User">
-            <End Role="User" EntitySet="Users" />
-            <End Role="Book" EntitySet="Books" />
-          </AssociationSet>
-          <AssociationSet Name="FK_Book_User1" Association="Self.FK_Book_User1">
-            <End Role="User" EntitySet="Users" />
-            <End Role="Book" EntitySet="Books" />
-          </AssociationSet>
-          <AssociationSet Name="FK_Order_User" Association="Self.FK_Order_User">
-            <End Role="User" EntitySet="Users" />
-            <End Role="Order" EntitySet="Orders" />
-          </AssociationSet>
-          <AssociationSet Name="FK_OrderDetail_Order" Association="Self.FK_OrderDetail_Order">
-            <End Role="Order" EntitySet="Orders" />
-            <End Role="OrderDetail" EntitySet="OrderDetails" />
-          </AssociationSet>
-          <AssociationSet Name="FK_User_Role" Association="Self.FK_User_Role">
-            <End Role="Role" EntitySet="Roles" />
-            <End Role="User" EntitySet="Users" />
-          </AssociationSet>
-          <AssociationSet Name="TypeBook" Association="Self.TypeBook">
-            <End Role="Book" EntitySet="Books" />
-            <End Role="Type" EntitySet="Types" />
-          </AssociationSet>
-        </EntityContainer>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -417,96 +417,96 @@
           <EntitySetMapping Name="Books">
             <EntityTypeMapping TypeName="BookOnlineModel.Book">
               <MappingFragment StoreEntitySet="Book">
-                <ScalarProperty Name="BookID" ColumnName="BookID" />
-                <ScalarProperty Name="Name" ColumnName="Name" />
-                <ScalarProperty Name="Author" ColumnName="Author" />
-                <ScalarProperty Name="Rate" ColumnName="Rate" />
-                <ScalarProperty Name="Description" ColumnName="Description" />
-                <ScalarProperty Name="Quantity" ColumnName="Quantity" />
-                <ScalarProperty Name="Price" ColumnName="Price" />
-                <ScalarProperty Name="ImageUrl" ColumnName="ImageUrl" />
-                <ScalarProperty Name="PublishDate" ColumnName="PublishDate" />
-                <ScalarProperty Name="SaleOff" ColumnName="SaleOff" />
-                <ScalarProperty Name="DateCreate" ColumnName="DateCreate" />
-                <ScalarProperty Name="UserIDCreate" ColumnName="UserIDCreate" />
-                <ScalarProperty Name="DateUpdate" ColumnName="DateUpdate" />
-                <ScalarProperty Name="UserIDUpdate" ColumnName="UserIDUpdate" />
-                <ScalarProperty Name="Flag" ColumnName="Flag" />
                 <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="Flag" ColumnName="Flag" />
+                <ScalarProperty Name="UserIDUpdate" ColumnName="UserIDUpdate" />
+                <ScalarProperty Name="DateUpdate" ColumnName="DateUpdate" />
+                <ScalarProperty Name="UserIDCreate" ColumnName="UserIDCreate" />
+                <ScalarProperty Name="DateCreate" ColumnName="DateCreate" />
+                <ScalarProperty Name="SaleOff" ColumnName="SaleOff" />
+                <ScalarProperty Name="PublishDate" ColumnName="PublishDate" />
+                <ScalarProperty Name="ImageUrl" ColumnName="ImageUrl" />
+                <ScalarProperty Name="Price" ColumnName="Price" />
+                <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Rate" ColumnName="Rate" />
+                <ScalarProperty Name="Author" ColumnName="Author" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="BookID" ColumnName="BookID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Orders">
             <EntityTypeMapping TypeName="BookOnlineModel.Order">
               <MappingFragment StoreEntitySet="Order">
-                <ScalarProperty Name="OrderID" ColumnName="OrderID" />
-                <ScalarProperty Name="UserID" ColumnName="UserID" />
-                <ScalarProperty Name="Date" ColumnName="Date" />
                 <ScalarProperty Name="Flag" ColumnName="Flag" />
+                <ScalarProperty Name="Date" ColumnName="Date" />
+                <ScalarProperty Name="UserID" ColumnName="UserID" />
+                <ScalarProperty Name="OrderID" ColumnName="OrderID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="OrderDetails">
             <EntityTypeMapping TypeName="BookOnlineModel.OrderDetail">
               <MappingFragment StoreEntitySet="OrderDetail">
-                <ScalarProperty Name="ID" ColumnName="ID" />
-                <ScalarProperty Name="OrderID" ColumnName="OrderID" />
-                <ScalarProperty Name="BookID" ColumnName="BookID" />
-                <ScalarProperty Name="Number" ColumnName="Number" />
                 <ScalarProperty Name="Flag" ColumnName="Flag" />
+                <ScalarProperty Name="Number" ColumnName="Number" />
+                <ScalarProperty Name="BookID" ColumnName="BookID" />
+                <ScalarProperty Name="OrderID" ColumnName="OrderID" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Roles">
             <EntityTypeMapping TypeName="BookOnlineModel.Role">
               <MappingFragment StoreEntitySet="Role">
-                <ScalarProperty Name="RoleID" ColumnName="RoleID" />
                 <ScalarProperty Name="RoleName" ColumnName="RoleName" />
+                <ScalarProperty Name="RoleID" ColumnName="RoleID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="sysdiagrams">
             <EntityTypeMapping TypeName="BookOnlineModel.sysdiagram">
               <MappingFragment StoreEntitySet="sysdiagrams">
-                <ScalarProperty Name="name" ColumnName="name" />
-                <ScalarProperty Name="principal_id" ColumnName="principal_id" />
-                <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
-                <ScalarProperty Name="version" ColumnName="version" />
                 <ScalarProperty Name="definition" ColumnName="definition" />
+                <ScalarProperty Name="version" ColumnName="version" />
+                <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+                <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+                <ScalarProperty Name="name" ColumnName="name" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Types">
             <EntityTypeMapping TypeName="BookOnlineModel.Type">
               <MappingFragment StoreEntitySet="Type">
-                <ScalarProperty Name="TypeID" ColumnName="TypeID" />
-                <ScalarProperty Name="Name" ColumnName="Name" />
                 <ScalarProperty Name="Flag" ColumnName="Flag" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="TypeID" ColumnName="TypeID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <EntitySetMapping Name="Users">
             <EntityTypeMapping TypeName="BookOnlineModel.User">
               <MappingFragment StoreEntitySet="User">
-                <ScalarProperty Name="UserID" ColumnName="UserID" />
-                <ScalarProperty Name="Email" ColumnName="Email" />
-                <ScalarProperty Name="Password" ColumnName="Password" />
-                <ScalarProperty Name="Name" ColumnName="Name" />
-                <ScalarProperty Name="Address" ColumnName="Address" />
-                <ScalarProperty Name="DateOfBirth" ColumnName="DateOfBirth" />
-                <ScalarProperty Name="VisaCode" ColumnName="VisaCode" />
-                <ScalarProperty Name="Phone" ColumnName="Phone" />
-                <ScalarProperty Name="RoleID" ColumnName="RoleID" />
                 <ScalarProperty Name="Flag" ColumnName="Flag" />
+                <ScalarProperty Name="RoleID" ColumnName="RoleID" />
+                <ScalarProperty Name="Phone" ColumnName="Phone" />
+                <ScalarProperty Name="VisaCode" ColumnName="VisaCode" />
+                <ScalarProperty Name="DateOfBirth" ColumnName="DateOfBirth" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="UserID" ColumnName="UserID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
           <AssociationSetMapping Name="TypeBook" TypeName="BookOnlineModel.TypeBook" StoreEntitySet="TypeBook">
-            <EndProperty Name="Book">
-              <ScalarProperty Name="BookID" ColumnName="BookID" />
-            </EndProperty>
             <EndProperty Name="Type">
               <ScalarProperty Name="TypeID" ColumnName="TypeID" />
+            </EndProperty>
+            <EndProperty Name="Book">
+              <ScalarProperty Name="BookID" ColumnName="BookID" />
             </EndProperty>
           </AssociationSetMapping>
         </EntityContainerMapping>
