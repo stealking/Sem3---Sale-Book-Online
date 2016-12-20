@@ -22,7 +22,8 @@ namespace BookOnline.Models
                     OrderID = item.OrderID,
                     UserID = item.UserID,
                     Date = item.Date,
-                    Flag = item.Flag
+                    Flag = item.Flag,
+                    OrderDetails = item.OrderDetails
                 });
             }
             return orders;

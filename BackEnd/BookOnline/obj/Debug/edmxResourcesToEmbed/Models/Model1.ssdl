@@ -5,21 +5,21 @@
       <PropertyRef Name="BookID" />
     </Key>
     <Property Name="BookID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="Name" Type="nvarchar" MaxLength="50" />
-    <Property Name="Author" Type="nvarchar" MaxLength="50" />
+    <Property Name="Name" Type="nvarchar" MaxLength="150" />
+    <Property Name="Author" Type="nvarchar" MaxLength="100" />
     <Property Name="Rate" Type="float" />
-    <Property Name="Description" Type="nvarchar" MaxLength="150" />
+    <Property Name="Description" Type="nvarchar(max)" />
     <Property Name="Quantity" Type="int" />
     <Property Name="Price" Type="money" />
     <Property Name="ImageUrl" Type="nvarchar(max)" />
     <Property Name="PublishDate" Type="date" />
     <Property Name="SaleOff" Type="int" />
+    <Property Name="Status" Type="nvarchar" MaxLength="50" />
     <Property Name="DateCreate" Type="date" />
     <Property Name="UserIDCreate" Type="int" />
     <Property Name="DateUpdate" Type="date" />
     <Property Name="UserIDUpdate" Type="int" />
     <Property Name="Flag" Type="bit" />
-    <Property Name="Status" Type="nvarchar" MaxLength="50" />
   </EntityType>
   <EntityType Name="Order">
     <Key>
@@ -136,7 +136,7 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK_TypeBook_Book1">
+  <Association Name="FK_TypeBook_Book">
     <End Role="Book" Type="Self.Book" Multiplicity="1" />
     <End Role="TypeBook" Type="Self.TypeBook" Multiplicity="*" />
     <ReferentialConstraint>
@@ -197,7 +197,7 @@
       <End Role="Order" EntitySet="Order" />
       <End Role="OrderDetail" EntitySet="OrderDetail" />
     </AssociationSet>
-    <AssociationSet Name="FK_TypeBook_Book1" Association="Self.FK_TypeBook_Book1">
+    <AssociationSet Name="FK_TypeBook_Book" Association="Self.FK_TypeBook_Book">
       <End Role="Book" EntitySet="Book" />
       <End Role="TypeBook" EntitySet="TypeBook" />
     </AssociationSet>

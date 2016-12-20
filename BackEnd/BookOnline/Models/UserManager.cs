@@ -79,6 +79,27 @@ namespace BookOnline.Models
             }
         }
 
+        public dynamic Login(string email, string password)
+        {
+           
+                using (db = new BookOnlineEntities())
+                {
+                    User user = null;
+                    var query = db.Users.FirstOrDefault(u => u.Email == email && u.Password == password);
+                    if (query != null)
+                    {
+                        user = new User
+                        {
+                            UserID = query.UserID,
+                            Email = query.Email,
+                            Password = query.Password,
+                            RoleID = query.RoleID
+                        };
+                    }
+                    return user;
+                }         
+        }
+
         public void Remove(int id)
         {
             using (db = new BookOnlineEntities())

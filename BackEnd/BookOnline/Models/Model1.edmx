@@ -4,27 +4,27 @@
   <edmx:Runtime>
     <!-- SSDL content -->
     <edmx:StorageModels>
-      <Schema Namespace="BookOnlineModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+    <Schema Namespace="BookOnlineModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
         <EntityType Name="Book">
           <Key>
             <PropertyRef Name="BookID" />
           </Key>
           <Property Name="BookID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="Name" Type="nvarchar" MaxLength="50" />
-          <Property Name="Author" Type="nvarchar" MaxLength="50" />
+          <Property Name="Name" Type="nvarchar" MaxLength="150" />
+          <Property Name="Author" Type="nvarchar" MaxLength="100" />
           <Property Name="Rate" Type="float" />
-          <Property Name="Description" Type="nvarchar" MaxLength="150" />
+          <Property Name="Description" Type="nvarchar(max)" />
           <Property Name="Quantity" Type="int" />
           <Property Name="Price" Type="money" />
           <Property Name="ImageUrl" Type="nvarchar(max)" />
           <Property Name="PublishDate" Type="date" />
           <Property Name="SaleOff" Type="int" />
+          <Property Name="Status" Type="nvarchar" MaxLength="50" />
           <Property Name="DateCreate" Type="date" />
           <Property Name="UserIDCreate" Type="int" />
           <Property Name="DateUpdate" Type="date" />
           <Property Name="UserIDUpdate" Type="int" />
           <Property Name="Flag" Type="bit" />
-          <Property Name="Status" Type="nvarchar" MaxLength="50" />
         </EntityType>
         <EntityType Name="Order">
           <Key>
@@ -141,7 +141,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="FK_TypeBook_Book1">
+        <Association Name="FK_TypeBook_Book">
           <End Role="Book" Type="Self.Book" Multiplicity="1" />
           <End Role="TypeBook" Type="Self.TypeBook" Multiplicity="*" />
           <ReferentialConstraint>
@@ -202,7 +202,7 @@
             <End Role="Order" EntitySet="Order" />
             <End Role="OrderDetail" EntitySet="OrderDetail" />
           </AssociationSet>
-          <AssociationSet Name="FK_TypeBook_Book1" Association="Self.FK_TypeBook_Book1">
+          <AssociationSet Name="FK_TypeBook_Book" Association="Self.FK_TypeBook_Book">
             <End Role="Book" EntitySet="Book" />
             <End Role="TypeBook" EntitySet="TypeBook" />
           </AssociationSet>
@@ -215,8 +215,7 @@
             <End Role="User" EntitySet="User" />
           </AssociationSet>
         </EntityContainer>
-      </Schema>
-    </edmx:StorageModels>
+      </Schema></edmx:StorageModels>
     <!-- CSDL content -->
     <edmx:ConceptualModels>
       <Schema Namespace="BookOnlineModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
@@ -225,10 +224,10 @@
             <PropertyRef Name="BookID" />
           </Key>
           <Property Name="BookID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="Author" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Name" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="Author" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
           <Property Name="Rate" Type="Double" />
-          <Property Name="Description" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
           <Property Name="Quantity" Type="Int32" />
           <Property Name="Price" Type="Decimal" Precision="19" Scale="4" />
           <Property Name="ImageUrl" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
