@@ -21,6 +21,17 @@ namespace BookOnline.Controllers
         {
             return orderManager.GetAll();
         }
+        //Get all oderdt form orderid
+        [HttpGet]
+        public IEnumerable<OrderDetail> GetAllOrdersdt(int id)
+        {
+            var order = orderManager.Getdetail(id);
+            if (order == null)
+            {
+                throw new HttpResponseException(HttpStatusCode.OK);
+            }
+            return order;
+        }
         //Get Order by id
         [HttpGet]
         public OrderDetail GetOrderById(int id)

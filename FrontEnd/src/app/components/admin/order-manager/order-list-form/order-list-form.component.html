@@ -11,14 +11,15 @@
       </tr>
     </thead>
     <tbody>
-      <tr *ngFor="let order of this.results; let num = index">
+      <tr *ngFor="let Order of this.results; let num = index">
         <td>{{num}}</td>
-        <td>{{order.OrderID}}</td>
-        <td>{{order.UserID}}</td>
-        <td>{{order.Date}}</td>
+        <td>{{Order.OrderID}}</td>
+        <td>{{Order.UserID}}</td>
+        <td>{{Order.Date}}</td>
         <td>
-          <button class="btn btn-primary"><i class="fa fa-1x fa-pencil-square-o" aria-hidden="true" (click)="editOrder(order.OrderID)"></i></button>
-          <button class="btn btn-danger"><i class="fa fa-1x fa-times" aria-hidden="true" (click)="deleteOrder(order.OrderID)"></i></button>
+          <button class="btn btn-primary"><i class="fa fa-1x fa-pencil-square-o" aria-hidden="true" (click)="checkOrder(Order.OrderID)"></i></button>
+          <button class="btn btn-primary"><i class="fa fa-1x fa-pencil-square-o" aria-hidden="true" (click)="editOrder(Order.OrderID)"></i></button>
+          <button class="btn btn-danger"><i class="fa fa-1x fa-times" aria-hidden="true" (click)="deleteOrder(Order.OrderID)"></i></button>
         </td>
       </tr>
     </tbody>

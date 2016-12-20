@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Data.Entity.Migrations;
 using System.Linq;
 using System.Web;
+using System.Web.Razor.Generator;
 
 namespace BookOnline.Models
 {
@@ -10,6 +11,7 @@ namespace BookOnline.Models
     {
         BookOnlineEntities db = new BookOnlineEntities();
         IList<OrderDetail> ordersdetail;
+        IList<OrderDetail> getdt;
         public IEnumerable<OrderDetail> GetAll()
         {
             ordersdetail = new List<OrderDetail>();
@@ -43,6 +45,23 @@ namespace BookOnline.Models
                 };
             }
             return ordersdetail;
+        }
+        public IEnumerable<OrderDetail> Getdetail(int id)
+        {
+            getdt = new List<OrderDetail>();
+            var query = (db.OrderDetails.Where(oder => oder.OrderID == id)).ToList();
+            foreach (var item in query)
+            {
+                getdt.Add(new OrderDetail
+                {
+                    ID = item.ID,
+                    OrderID = item.OrderID,
+                    BookID = item.BookID,
+                    Number = item.Number
+                });
+            }
+            return getdt;
+
         }
 
         public OrderDetail Add(OrderDetail orderdetail)

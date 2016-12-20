@@ -66,6 +66,11 @@ namespace BookOnline.Models
             {
                 item.Flag = false;
             }
+            var query1 = db.OrderDetails.Where(b => b.OrderID == id).Select(s => s);
+            foreach (var item1 in query1)
+            {
+                item1.Flag = false;
+            }
             db.SaveChanges();
         }
 
