@@ -5,9 +5,10 @@ import { FormsModule } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Location } from '@angular/common';
 import { CustomFormsModule } from 'ng2-validation';
-import { FileUploader } from 'ng2-file-upload';
- 
-
+// import { FileUploader } from 'ng2-file-upload';
+import { InputTextareaModule, LightboxModule, Message } from 'primeng/primeng';
+import { CalendarModule } from 'primeng/primeng';
+import {FileUploadModule} from 'primeng/primeng';
 @Component({
   selector: 'app-book-form',
   templateUrl: './book-form.component.html',
@@ -15,21 +16,16 @@ import { FileUploader } from 'ng2-file-upload';
 })
 export class BookFormComponent implements OnInit {
   rates = [1, 2, 3, 4, 5];
-  statuss = ['New', 'Old'];
-  model = new Book(this.id, '', '', 5, '', null, null, '', '', null, null, null, null, null, null);
+  statuss = ['New', 'Old','Hot'];
+  model = new Book(this.id,'','',5,'',null,null,'default-image.jpg',null,'',null,'',null,null,null,null,'',);
   id: number;
   job: string;
-  public uploader:FileUploader;
-  public hasBaseDropZoneOver:boolean = false;
-  public hasAnotherDropZoneOver:boolean = false;
-
-  public fileOverBase(e:any):void {
-    this.hasBaseDropZoneOver = e;
-  }
-
-  public fileOverAnother(e:any):void {
-    this.hasAnotherDropZoneOver = e;
-  }
+  date1 = new Date();
+  msgs: Message[];
+  uploadedFiles: any[] = [];
+  URL = 'http://localhost:53106/api/book/PostFormData/' + this.id
+  // public uploader:FileUploader;
+  
 
 
   constructor(public http: Http, public route: ActivatedRoute, public location: Location, public router: Router) {
@@ -48,12 +44,10 @@ export class BookFormComponent implements OnInit {
         .subscribe((res: Response) => {
           this.model = <Book>res.json();
         })
-
-    var URL = 'http://localhost:53106/api/book/PostFormData/' + this.id;
-    this.uploader = new FileUploader({url: URL});
-    this.uploader.onAfterAddingFile = (file)=> { file.withCredentials = false; };
+    // var URL = 'http://localhost:53106/api/book/PostFormData/' + this.id;
+    // this.uploader = new FileUploader({url: URL});
+    // this.uploader.onAfterAddingFile = (file)=> { file.withCredentials = false; };
     }
-
   }
   
   // submit form
@@ -61,7 +55,7 @@ export class BookFormComponent implements OnInit {
     let headers = new Headers({ 'Content-Type': 'application/json' });
     let options = new RequestOptions({ headers: headers });
     
-    this.uploader.uploadAll();
+    // this.uploader.uploadAll();
     
     if (this.job == "new") {
       this.http.post(
@@ -71,6 +65,7 @@ export class BookFormComponent implements OnInit {
           alert('Add Book Successed!');
         })
     } else {
+      this.model.PublishDate = this.date1;
       this.http.put(
         'http://localhost:53106/api/book/UpdateBook/' + this.id,
         JSON.stringify(this.model), options)
@@ -79,7 +74,6 @@ export class BookFormComponent implements OnInit {
           this.reloadPage();
         })
     }
-
   }
 
   get diagnostic() {
@@ -87,7 +81,7 @@ export class BookFormComponent implements OnInit {
   }
 
   newBook() {
-    this.model = new Book(this.id, '', '', 5, '', null, null, '', '', null, null, null, null, null, null);
+    this.model = new Book(this.id,'','',5,'',null,null,'',null,'',null,'',null,null,null,null,'','','');
   }
 
   back(): void {
@@ -98,4 +92,14 @@ export class BookFormComponent implements OnInit {
   reloadPage(): void{
     window.location.reload();
   }
+
+   onUpload(event) {
+        for(let file of event.files) {
+            this.uploadedFiles.push(file);
+        }
+    
+        this.msgs = [];
+        this.msgs.push({severity: 'info', summary: 'File Uploaded', detail: ''});
+    }
+  
 }

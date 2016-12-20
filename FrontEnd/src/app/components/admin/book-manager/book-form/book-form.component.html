@@ -47,21 +47,39 @@
     </div>
     <div class="form-group">
       <label for="imageUrl">imageUrl<span style="color: red"> (*)</span></label>
-      <input type="text" class="form-control" id="imageUrl" name="imageUrl" [ngModel]="model.ImageUrl">
+      <!--<input type="text" class="form-control" id="imageUrl" name="imageUrl" [ngModel]="model.ImageUrl">-->
       <!--<button type="button" class="btn btn-success btn-s"
                     (click)="uploader.authToken=authToken ; uploader.uploadAll()" [disabled]="!uploader.getNotUploadedItems().length">
                 <span class="glyphicon glyphicon-upload"></span> Upload all
        </button>-->
     </div>
     <div class="form-group">
-      <img src="http://localhost:53106/content/{{model.ImageUrl}}"  alt="Image" height="100" width="100"> 
+      <img src="http://localhost:53106/content/{{model.ImageUrl}}" alt="Image" height="100" width="100">
     </div>
-    <div class="form-group">
+    <div>
+      <p-lightbox type="content">
+        <a class="group" href="#" pButton icon="fa-search" style="float:left" label="Zoom Image"></a>
+        <img src="http://localhost:53106/content/{{model.ImageUrl}}" alt="Image" height="50%" width="100%%">
+      </p-lightbox>
+    </div>
+
+    <p-fileUpload name="demo[]" url="URL" (onUpload)="onUpload($event)" accept="image/*" maxFileSize="1000000">
+      <template pTemplate type="content">
+        <ul *ngIf="uploadedFiles.length">
+          <li *ngFor="let file of uploadedFiles">{{file.name}} - {{file.size}} bytes</li>
+        </ul>
+      </template>
+    </p-fileUpload>
+    <!--<div class="form-group">
       <input type="file" ng2FileSelect [uploader]="uploader" />
-    </div>
+    </div>-->
     <div class="form-group">
       <label for="publishDate">Publish Date</label>
-      <input type="text" class="form-control" id="publishDate" [(ngModel)]="model.PublishDate" name="publishDate">
+      <input type="text" class="form-control" id="publishDate" disabled [(ngModel)]="model.PublishDate" name="publishDate">
+    </div>
+    <div>
+      <p-calendar [(ngModel)]="date1" value="model.PublishDate" [showIcon]="true" dateFormat="yy/mm/dd" [monthNavigator]="true"
+        [yearNavigator]="true" yearRange="1950:2030" [ngModelOptions]="{standalone: true}"></p-calendar>
     </div>
     <div class="form-group">
       <label for="saleOff">Sale Off</label>
@@ -84,10 +102,10 @@
       <input type="text" class="form-control" id="userIDUpdate" disabled [(ngModel)]="model.UserIDUpdate" name="userIDUpdate">
     </div>
     <div class="ui-g">
-    <div class="ui-g-6" align="center"><button class="btn btn-success btn-s" type="submit" [disabled]="!bookForm.form.valid">Submit</button></div>
-    <div class="ui-g-6" align="center"><button class="btn btn-warning btn-s" type="button" (click)="back()">Back</button></div>
+      <div class="ui-g-6" align="center"><button class="btn btn-success btn-s" type="submit" [disabled]="!bookForm.form.valid">Submit</button></div>
+      <div class="ui-g-6" align="center"><button class="btn btn-warning btn-s" type="button" (click)="back()">Back</button></div>
     </div>
-    
+
   </form>
-  
+
 </div>

@@ -1,19 +1,22 @@
-import { Component, OnInit, NgModule } from '@angular/core';
+import { Component, OnInit, NgModule, Injectable } from '@angular/core';
 import { Routes, RouterModule, ActivatedRoute, Router } from '@angular/router';
-import { FormsModule,  } from '@angular/forms';
+import { FormsModule, FormBuilder } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { HttpModule } from '@angular/http';
 import { UserFormComponent } from './user-form/user-form.component';
 import { UserListFormComponent } from './user-list-form/user-list-form.component';
-import {DropdownModule} from 'primeng/primeng';
+
 import { BrowserModule } from '@angular/platform-browser';
-import { Ng2TableModule } from 'ng2-table/ng2-table';
 import { PaginationModule } from 'ng2-bootstrap/ng2-bootstrap';
+import { DataTableModule,SharedModule,ButtonModule,DialogModule } from 'primeng/primeng';
+import { ContextMenuModule , MenuItem, ConfirmDialogModule, ConfirmationService} from 'primeng/primeng';
+import { GrowlModule, MessagesModule, DropdownModule } from 'primeng/primeng';
 
 @Component({
   selector: 'app-user-manager',
   templateUrl: './user-manager.component.html',
-  styleUrls: ['./user-manager.component.css']
+  styleUrls: ['./user-manager.component.css'],
+  providers: [ConfirmationService]
 })
 export class UserManagerComponent implements OnInit {
 
@@ -34,15 +37,23 @@ export const routes: Routes = [
   declarations: [
     UserFormComponent,
     UserListFormComponent,
-
+   
   ],
   exports:[
     UserFormComponent,
     UserListFormComponent,
     DropdownModule,
-    Ng2TableModule,
     PaginationModule,
-    BrowserModule
+    BrowserModule,
+    DataTableModule,
+    SharedModule,
+    ButtonModule,
+    DialogModule,
+    ContextMenuModule,
+    ConfirmDialogModule,
+    GrowlModule,
+    MessagesModule,
+    
   ],
   imports:[
     RouterModule,
@@ -50,9 +61,17 @@ export const routes: Routes = [
     FormsModule,
     HttpModule,
     DropdownModule,
-    Ng2TableModule,
     PaginationModule,
-    BrowserModule
+    BrowserModule,
+    DataTableModule,
+    SharedModule,
+    ButtonModule,
+    DialogModule,
+    ContextMenuModule,
+    ConfirmDialogModule,
+    GrowlModule,
+    MessagesModule,
+    
   ]
 })
 

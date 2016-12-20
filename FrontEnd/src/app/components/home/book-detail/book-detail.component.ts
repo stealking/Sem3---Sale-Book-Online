@@ -10,20 +10,25 @@ import { Book } from '../../../classes/book';
   styleUrls: ['./book-detail.component.css']
 })
 export class BookDetailComponent implements OnInit {
-    id: number;
-    book = new Book(this.id, '', '', 0);
-  constructor(public http: Http, public route: ActivatedRoute, public location: Location, public router: Router) { 
-        route.params.subscribe(params => {
-        this.id = params['id'];
+  id: number;
+  book = new Book(this.id, '', '', 0);
+  constructor(public http: Http, public route: ActivatedRoute, public location: Location, public router: Router) {
+    route.params.subscribe(params => {
+      this.id = params['id'];
     })
   }
 
   ngOnInit() {
-    this.http.get(
-        'http://localhost:53106/api/book/getbookbyid/' + this.id)
-        .subscribe((res: Response) => {
-          this.book = res.json();
-        })
+    this.http.get(  
+      'http://localhost:53106/api/book/getbookbyid/' + this.id)
+      .subscribe((res: Response) => {
+        this.book = res.json();
+        this.book.CurrentPrice = (Math.floor(this.book.Price * (100 - this.book.SaleOff)) + "0 VND").replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+        this.book.PublishPrice = (this.book.Price * 100 + "0 VND").replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+        this.book.SavePrice = (Math.floor(this.book.Price * this.book.SaleOff) + "0 VND").replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+        // this.book.PublishDateString = this.book.PublishDate.getDate() + '/' + (this.book.PublishDate.getMonth() + 1) + '/' + this.book.PublishDate.getFullYear();
+        console.log(this.book);
+      })
   }
   addZero(num: number): string {
     var str: string = num + '';

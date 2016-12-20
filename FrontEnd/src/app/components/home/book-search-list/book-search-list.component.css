@@ -60,12 +60,19 @@
     padding:10px; 
     height: 336px;
 }
+.book-detail  div {
+    text-align: center;
+}
+.book-name > p, .book-author > h3 {
+    display: inline-block;
+}
 .book-image{
     height: 140px;
 }
-.book-image > img {
+.book-image > a >img {
     width: auto;
     max-height: 140px; 
+    cursor: pointer;
 }
 
 .book-name > h3 {
@@ -128,4 +135,18 @@
 .book-detail-wrap{
     border: 1px solid;
     padding: 10px;
+}
+.price-range-label{
+    display: inline-block;
+}
+.price-range-value{
+    display: inline-block;
+    width: 100%;
+    text-align: right;
+}
+.price-range-wrapper{
+    margin-top: 6px;
+}
+.price-range-wrapper:last-child{
+    margin-top: 0px;
 }

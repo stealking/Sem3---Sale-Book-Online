@@ -23,7 +23,8 @@
     top: -4px;
     cursor: auto;
 }
-.nav-top a:hover{
+
+.nav-top a:hover, .nav-top a:focus{
     color: rgba(255,255,255,1);
     text-decoration: none;
 }

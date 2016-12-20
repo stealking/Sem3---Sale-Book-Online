@@ -1,57 +1,25 @@
-<!--<div class="container">
-  <h2>List of User</h2>
-  <a [routerLink]="['./new']" class="btn btn-primary">Add new User</a>
-  <table class="table">
-    <thead>
-      <tr>
-        <th>No.</th>
-        <th>Email</th>
-        <th>Name</th>
-        <th>Address</th>
-        <th>Date of Birth</th>
-        <th>Phone</th>
-        <th>Action</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr *ngFor="let user of this.results; let num = index">
-        <td>{{num+1}}</td>
-        <td>{{user.Email}}</td>
-        <td>{{user.Name}}</td>
-        <td>{{user.Address}}</td>
-        <td>{{user.DateOfBirth}}</td>
-        <td>{{user.Phone}}</td>
-        <td>
-          <button class="btn btn-primary"><i class="fa fa-1x fa-pencil-square-o" aria-hidden="true" (click)="editUser(user.UserID)"></i></button>
-          <button class="btn btn-danger"><i class="fa fa-1x fa-times" aria-hidden="true" (click)="deleteUser(user.UserID)"></i></button>
-        </td>
-      </tr>
-    </tbody>
-  </table>
-</div>-->
-<div class="row">
-  <div class="col-md-4">
-    <input *ngIf="config.filtering" placeholder="Filter all columns"
-           [ngTableFiltering]="config.filtering"
-           class="form-control"
-           (tableChanged)="onChangeTable(config)"/>
-  </div>
+
+<div class="ui-widget-header ui-helper-clearfix" style="padding:4px 10px;border-bottom: 0 none">
+  <i class="fa fa-search" style="float:left;margin:4px 4px 0 0"></i>
+  <input #gb type="text" pInputText size="50" style="float:left" placeholder="Global Filter">
 </div>
-<br>
-<ng-table [config]="config"
-          (tableChanged)="onChangeTable(config)"
-          (cellClicked)="onCellClick($event)"
-          [rows]="rows" [columns]="columns">
-</ng-table>
-<pagination *ngIf="config.paging"
-            class="pagination-sm"
-            [(ngModel)]="page"
-            [totalItems]="length"
-            [itemsPerPage]="itemsPerPage"
-            [maxSize]="maxSize"
-            [boundaryLinks]="true"
-            [rotate]="false"
-            (pageChanged)="onChangeTable(config, $event)"
-            (numPages)="numPages = $event">
-</pagination>
-<pre *ngIf="config.paging" class="card card-block card-header">Page: {{page}} / {{numPages}}</pre>
+<p-dataTable [value]="results" selectionMode="single" [(selection)]="selectedUser" (onRowSelect)="onRowSelect($event)" [paginator]="true"
+  rows="5" [responsive]="true" [globalFilter]="gb" [contextMenu]="cm">
+  <header>CRUD for Users</header>
+  <p-column field="Email" header="Email" [sortable]="true" [filter]="true" filterMatchMode="contains"></p-column>
+  <p-column field="Name" header="Name" [sortable]="true" [filter]="true" filterMatchMode="contains"></p-column>
+  <p-column field="Address" header="Address" [sortable]="true" [filter]="true" filterMatchMode="contains"></p-column>
+  <p-column field="DateOfBirth" header="DateOfBirth" [sortable]="true" [filter]="true" filterMatchMode="contains"></p-column>
+  <p-column field="Phone" header="Phone" [sortable]="true" [filter]="true" filterMatchMode="contains"></p-column>
+  <footer>
+    <div class="ui-helper-clearfix" style="width:100%">
+      <p-growl [value]="msgs"></p-growl>
+      <p-confirmDialog width="425"></p-confirmDialog>
+      <a [routerLink]="['./new']" pButton icon="fa-plus" style="float:left" label="Add new book"></a>
+      <button type="button" pButton icon="fa-edit" style="float:left" (click)="editUser(user.UserID)" label="Edit"></button>
+      <button type="button" pButton icon="fa-close" style="float:left" (click)="deleteUser(user.UserID)" label="Delete"></button>
+    </div>
+  </footer>
+</p-dataTable>
+<p-contextMenu #cm [model]="items"></p-contextMenu>
+

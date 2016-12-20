@@ -2,14 +2,14 @@
   <h1>User form</h1>
   <form (ngSubmit)="onSubmit()" #heroForm="ngForm">
     <div class="form-group">
-      <label for="Email">Email<span style="color: red"> (*)</span></label>
+      <label for="Email">Email<span style="color: red"> *</span></label>
       <input type="text" class="form-control" id="email" required  [(ngModel)]="model.Email" name="email" #email="ngModel">
       <div class="alert alert-danger" [hidden]="email.valid || email.pristine">
         email is required!
       </div>
     </div>
     <div class="form-group">
-      <label for="Password">Password<span style="color: red"> (*)</span></label>
+      <label for="Password">Password<span style="color: red"> *</span></label>
       <input type="text" class="form-control" id="password" required minlength="6" maxlength="24" [(ngModel)]="model.Password"
         name="password" #password="ngModel">
       <div *ngIf="password.errors && (password.dirty || password.touched)" class="alert alert-danger">
@@ -25,21 +25,21 @@
       </div>
     </div>
     <div class="form-group">
-      <label for="Name">Name<span style="color: red"> (*)</span></label>
+      <label for="Name">Name<span style="color: red"> *</span></label>
       <input type="text" id="name" class="form-control" required [(ngModel)]="model.Name" name="name" #name="ngModel">
       <div class="alert alert-danger" [hidden]="name.valid || name.pristine">
         Name is required!
       </div>
     </div>
     <div class="form-group">
-      <label for="address">Address<span style="color: red"> (*)</span></label>
+      <label for="address">Address<span style="color: red"> *</span></label>
       <input type="text" id="address" class="form-control" required [(ngModel)]="model.Address" name="address" #address="ngModel">
       <div class="alert alert-danger" [hidden]="address.valid || address.pristine">
         Address is required!
       </div>
     </div>
     <div class="form-group">
-      <label for="dateOfBirth">Date Of Birth<span style="color: red"> (*)</span></label>
+      <label for="dateOfBirth">Date Of Birth<span style="color: red"> *</span></label>
       <input type="text" id="dateOfBirth" class="form-control" required [(ngModel)]="model.DateOfBirth" name="dateOfBirth" #dateOfBirth="ngModel">
       <div class="alert alert-danger" [hidden]="dateOfBirth.valid || dateOfBirth.pristine">
         Date Of Birth is required!
@@ -59,16 +59,13 @@
     </div>
     <div class="form-group">
       <label for="roleID">Role ID</label>
-      <input type="text" id="roleID" class="form-control" [(ngModel)]="model.RoleID" name="RoleID" #roleID="ngModel">
-      <!--<p-dropdown [options]="roleIDs" [(ngModel)]="model.RoleID" [ngModelOptions]="{standalone: true}"></p-dropdown>
-      <p>Selected Role: {{selectedRole||'none'}}</p>-->
+      <p-dropdown [options]="roleIDs" [(ngModel)]="model.RoleID" [ngModelOptions]="{standalone: true}"></p-dropdown>
     </div>
 
     <div>
-      <button class="btn btn-default" type="submit" [disabled]="!heroForm.form.valid">Submit</button>
-      <button class="btn btn-default" (click)="newUser(); heroForm.reset()">Clear</button>
-
+      <div class="ui-g-6" align="center"><button class="btn btn-success btn-s" type="submit" [disabled]="!heroForm.form.valid">Submit</button></div>
+      <div class="ui-g-6" align="center"><button class="btn btn-warning btn-s" type="button" (click)="back()">Back</button></div>
     </div>
   </form>
-  <button class="btn btn-default" (click)="back()">Back</button>
+ 
 </div>

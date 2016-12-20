@@ -16,7 +16,7 @@ export class OrderFormComponent implements OnInit {
   homnay = new Date(Date.now());
   id: number;
   job: string;
-    model = new order(  this.id,this.homnay.getFullYear()+'/'+this.homnay.getMonth()+'/'+this.homnay.getDate(), true);
+    model = new order(this.id,null,this.homnay.getFullYear()+'/'+this.homnay.getMonth()+'/'+this.homnay.getDate(), true);
   constructor(public http: Http, public route: ActivatedRoute, public location: Location, public router: Router) {
     route.params.subscribe(params => {
       this.id = params['id'];
@@ -62,7 +62,7 @@ export class OrderFormComponent implements OnInit {
   }
 
   newOrder() {
-    this.model = new order( 1,this.homnay.getFullYear()+'/'+this.homnay.getMonth()+'/'+this.homnay.getDate(), true);
+    this.model = new order(this.id, null, this.homnay.getFullYear()+'/'+this.homnay.getMonth()+'/'+this.homnay.getDate(), true);
   }
 
   back(): void {

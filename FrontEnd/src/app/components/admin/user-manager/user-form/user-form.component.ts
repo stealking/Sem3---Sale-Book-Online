@@ -4,8 +4,9 @@ import { User } from '../../../../classes/user';
 import { FormsModule } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Location } from '@angular/common';
-// import { CustomFormsModule } from 'ng2-validation';
 import {SelectItem} from 'primeng/primeng';
+
+
 @Component({
   selector: 'app-user-form',
   templateUrl: './user-form.component.html',
@@ -62,15 +63,11 @@ export class UserFormComponent implements OnInit {
 
   ngOnInit(): void {
     if (this.job === 'edit') {
-      
       this.http.get(
         'http://localhost:53106/api/user/GetUserById/' + this.id)
         .subscribe((res: Response) => {
-          
           this.model = <User>res.json();
-          
         })
-    
     }
   }
 

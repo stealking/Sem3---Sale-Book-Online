@@ -1,5 +1,6 @@
 import { NgModule, Component, OnInit } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { AuthenticationService } from '../../services/AuthenticationService';
 
 import { UserManagerComponent, UserManagerComponentModule, routes as userManagerChildRoutes } from './user-manager/user-manager.component';
 import { BookManagerComponent, BookManagerComponentModule, routes as bookManagerChildRoutes } from './book-manager/book-manager.component';
@@ -13,15 +14,13 @@ import { CommonModule } from '@angular/common';
 })
 export class AdminComponent implements OnInit {
 
-    constructor() { }
+    constructor( private _service:AuthenticationService) { }
 
     ngOnInit() {
+         this._service.checkCredentials();
     }
-    goUser() {
-        alert('chua viet');
-    }
-    goBook() {
-
+    logout() {
+        this._service.logout();
     }
 }
 
@@ -50,6 +49,9 @@ export const routes: Routes = [
         UserManagerComponentModule,
         OrderManagerComponentModule,
         CommonModule
+    ],
+    providers: [
+        AuthenticationService
     ]
 })
 export class AdminComponentModule { }
