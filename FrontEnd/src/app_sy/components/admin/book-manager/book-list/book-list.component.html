@@ -1,0 +1,50 @@
+<!--<div class="container">
+  <h2>List of books</h2>
+  <a [routerLink]="['./new']" class="btn btn-primary">Add new book</a>
+  <table class="table">
+    <thead>
+      <tr>
+        <th>No.</th>
+        <th>Name</th>
+        <th>Author</th>
+        <th>Rate</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let book of this.results; let num = index">
+        <td>{{num}}</td>
+        <td>{{book.Name}}</td>
+        <td>{{book.Author}}</td>
+        <td>{{book.Rate}}</td>
+        <td>
+          <button class="btn btn-primary"><i class="fa fa-1x fa-pencil-square-o" aria-hidden="true" (click)="editBook(book.BookID)"></i></button>
+          <button class="btn btn-danger"><i class="fa fa-1x fa-times" aria-hidden="true" (click)="deleteBook(book.BookID)"></i></button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>-->
+<div class="ui-widget-header ui-helper-clearfix" style="padding:4px 10px;border-bottom: 0 none">
+  <i class="fa fa-search" style="float:left;margin:4px 4px 0 0"></i>
+  <input #gb type="text" pInputText size="50" style="float:left" placeholder="Global Filter">
+</div>
+<p-dataTable [value]="results" selectionMode="single" [(selection)]="selectedBook" (onRowSelect)="onRowSelect($event)" [paginator]="true"
+  rows="15" [responsive]="true" [globalFilter]="gb" [contextMenu]="cm">
+  <header>CRUD for Books</header>
+  <p-column field="Name" header="Name" [sortable]="true" [filter]="true" filterMatchMode="contains"></p-column>
+  <p-column field="Author" header="Author" [sortable]="true" [filter]="true" filterMatchMode="contains"></p-column>
+  <p-column field="Rate" header="Rate" [sortable]="true" [filter]="true" filterMatchMode="contains"></p-column>
+  <p-column field="Price" header="Price" [sortable]="true" [filter]="true" filterMatchMode="contains"></p-column>
+  <p-column field="Status" header="Status" [sortable]="true" [filter]="true" filterMatchMode="contains"></p-column>
+  <footer>
+    <div class="ui-helper-clearfix" style="width:100%">
+      <p-growl [value]="msgs"></p-growl>
+      <p-confirmDialog width="425"></p-confirmDialog>
+      <a [routerLink]="['./new']" pButton icon="fa-plus" style="float:left" label="Add new book"></a>
+      <button type="button" pButton icon="fa-edit" style="float:left" (click)="editBook(book.BookID)" label="Edit"></button>
+      <button type="button" pButton icon="fa-close" style="float:left" (click)="deleteBook(book.BookID)" label="Delete"></button>
+    </div>
+  </footer>
+</p-dataTable>
+<p-contextMenu #cm [model]="items"></p-contextMenu>

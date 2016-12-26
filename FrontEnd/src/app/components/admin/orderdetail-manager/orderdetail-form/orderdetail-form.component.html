@@ -1,0 +1,32 @@
+ <div class="container">
+    <h1>OrderDetail form</h1>
+    <form  (ngSubmit)="onSubmit()" #heroForm="ngForm">
+      <div class="form-group">
+        <label for="orderId">OrderID<span style="color: red"> (*)</span></label>
+        <select id="orderId" class="form-control" required [(ngModel)]="model.OrderID" name="orderId" #OrderId=ngModel>
+        <option *ngFor="let Order of this.ok" [value]=Order.OrderID>Id:{{Order.OrderID}}</option>
+      </select>
+      <div class="alert alert-danger" [hidden]="OrderId.valid || OrderId.pristine">
+        OrderId is required!
+        </div>   
+      {{model.OrderID}}
+      </div>   
+      <div class="form-group">
+        <label for="bookId">BookID<span style="color: red"> (*)</span></label>
+        <select id="bookId" class="form-control" required [(ngModel)]="model.BookID" name="bookId" #bookId=ngModel>
+        <option *ngFor="let Book of this.ok1" [value]=Book.BookID>Id:{{Book.BookID}} || Tên:{{Book.Name}} || GíaTiền:{{Book.Price}}</option>
+      </select>
+      <div class="alert alert-danger" [hidden]="bookId.valid || bookId.pristine">
+        Bookid is required!
+        </div>   
+      {{model.BookID}}
+      </div>
+      <div class="form-group">
+        <label for="numBer">Number</label>
+        <input type="text" class="form-control" id="numBer" [(ngModel)]="model.Number" name="numBer" #date="ngModel">
+      </div>  
+      <button class="btn btn-default" type="submit" [disabled]="!heroForm.form.valid" >Submit</button>
+      <button class="btn btn-default" (click)="newOrder(); heroForm.reset()">Clear</button>
+    </form>
+    <button class="btn btn-default" [routerLink]="['../']">Back</button>
+  </div>

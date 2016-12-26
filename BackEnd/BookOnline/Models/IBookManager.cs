@@ -10,13 +10,14 @@ namespace BookOnline.Models
 {
     public interface IBookManager
     {
-        dynamic GetAll();
+        IEnumerable<Book> GetAll();
         Book Get(int id);
         Book Add(Book book);
         void Remove(int id);
         bool Update(Book book);
         dynamic SearchBooksByName(string name);
         bool UpdateBookImg(int id, string url);
-        dynamic SearchMultiQuery( int? Rate, int?[] typeId, string name, decimal? minPrice, decimal? maxPrice, string status);
+
+        dynamic SearchMultiQuery(string name, int? Rate, int[] typeId, decimal? minPrice, decimal? maxPrice, string status);
     }
 }

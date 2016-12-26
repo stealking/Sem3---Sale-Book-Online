@@ -32,6 +32,16 @@ namespace BookOnline.Controllers
             }
             return order;
         }
+        [HttpGet]
+        public IEnumerable<OrderDetail> GetAllOrdersdtistory(int id)
+        {
+            var order = orderManager.Getdetailhistory(id);
+            if (order == null)
+            {
+                throw new HttpResponseException(HttpStatusCode.OK);
+            }
+            return order;
+        }
         //Get Order by id
         [HttpGet]
         public OrderDetail GetOrderById(int id)

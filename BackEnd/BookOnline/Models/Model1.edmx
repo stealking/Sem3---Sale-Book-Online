@@ -19,12 +19,12 @@
           <Property Name="ImageUrl" Type="nvarchar(max)" />
           <Property Name="PublishDate" Type="date" />
           <Property Name="SaleOff" Type="int" />
-          <Property Name="Status" Type="nvarchar" MaxLength="50" />
           <Property Name="DateCreate" Type="date" />
           <Property Name="UserIDCreate" Type="int" />
           <Property Name="DateUpdate" Type="date" />
           <Property Name="UserIDUpdate" Type="int" />
           <Property Name="Flag" Type="bit" />
+          <Property Name="Status" Type="nvarchar" MaxLength="50" />
         </EntityType>
         <EntityType Name="Order">
           <Key>
@@ -33,6 +33,13 @@
           <Property Name="OrderID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="UserID" Type="int" />
           <Property Name="Date" Type="date" />
+          <Property Name="ReceiverCity" Type="nvarchar" MaxLength="50" />
+          <Property Name="ReceiverDistrict" Type="nvarchar" MaxLength="50" />
+          <Property Name="ReceiverAddress" Type="nvarchar" MaxLength="50" />
+          <Property Name="ReceiverPhone" Type="nvarchar" MaxLength="50" />
+          <Property Name="LogisticsCost" Type="money" />
+          <Property Name="AddressType" Type="varchar" MaxLength="20" />
+          <Property Name="Status" Type="varchar" MaxLength="20" />
           <Property Name="Flag" Type="bit" />
         </EntityType>
         <EntityType Name="OrderDetail">
@@ -41,7 +48,7 @@
           </Key>
           <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="OrderID" Type="int" />
-          <Property Name="BookID" Type="int" />
+          <Property Name="BookID" Type="int" Nullable="false" />
           <Property Name="Number" Type="int" />
           <Property Name="Flag" Type="bit" />
         </EntityType>
@@ -129,6 +136,18 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK_OrderDetail_Book">
+          <End Role="Book" Type="Self.Book" Multiplicity="1" />
+          <End Role="OrderDetail" Type="Self.OrderDetail" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Book">
+              <PropertyRef Name="BookID" />
+            </Principal>
+            <Dependent Role="OrderDetail">
+              <PropertyRef Name="BookID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK_OrderDetail_Order">
           <End Role="Order" Type="Self.Order" Multiplicity="0..1" />
           <End Role="OrderDetail" Type="Self.OrderDetail" Multiplicity="*" />
@@ -198,6 +217,10 @@
             <End Role="User" EntitySet="User" />
             <End Role="Order" EntitySet="Order" />
           </AssociationSet>
+          <AssociationSet Name="FK_OrderDetail_Book" Association="Self.FK_OrderDetail_Book">
+            <End Role="Book" EntitySet="Book" />
+            <End Role="OrderDetail" EntitySet="OrderDetail" />
+          </AssociationSet>
           <AssociationSet Name="FK_OrderDetail_Order" Association="Self.FK_OrderDetail_Order">
             <End Role="Order" EntitySet="Order" />
             <End Role="OrderDetail" EntitySet="OrderDetail" />
@@ -234,6 +257,10 @@
           <AssociationSet Name="FK_Book_User1" Association="BookOnlineModel.FK_Book_User1">
             <End Role="User" EntitySet="Users" />
             <End Role="Book" EntitySet="Books" />
+          </AssociationSet>
+          <AssociationSet Name="FK_OrderDetail_Book" Association="BookOnlineModel.FK_OrderDetail_Book">
+            <End Role="Book" EntitySet="Books" />
+            <End Role="OrderDetail" EntitySet="OrderDetails" />
           </AssociationSet>
           <AssociationSet Name="FK_Order_User" Association="BookOnlineModel.FK_Order_User">
             <End Role="User" EntitySet="Users" />
@@ -272,8 +299,6 @@
           <Property Name="UserIDUpdate" Type="Int32" />
           <Property Name="Flag" Type="Boolean" />
           <Property Name="Status" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
-          <NavigationProperty Name="User" Relationship="BookOnlineModel.FK_Book_User" FromRole="Book" ToRole="User" />
-          <NavigationProperty Name="User1" Relationship="BookOnlineModel.FK_Book_User1" FromRole="Book" ToRole="User" />
           <NavigationProperty Name="Types" Relationship="BookOnlineModel.TypeBook" FromRole="Book" ToRole="Type" />
         </EntityType>
         <EntityType Name="Order">
@@ -284,8 +309,14 @@
           <Property Name="UserID" Type="Int32" />
           <Property Name="Date" Type="DateTime" Precision="0" />
           <Property Name="Flag" Type="Boolean" />
-          <NavigationProperty Name="User" Relationship="BookOnlineModel.FK_Order_User" FromRole="Order" ToRole="User" />
           <NavigationProperty Name="OrderDetails" Relationship="BookOnlineModel.FK_OrderDetail_Order" FromRole="Order" ToRole="OrderDetail" />
+          <Property Name="ReceiverCity" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ReceiverDistrict" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ReceiverAddress" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ReceiverPhone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="LogisticsCost" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="AddressType" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="Status" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
         </EntityType>
         <EntityType Name="OrderDetail">
           <Key>
@@ -293,10 +324,10 @@
           </Key>
           <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="OrderID" Type="Int32" />
-          <Property Name="BookID" Type="Int32" />
+          <Property Name="BookID" Type="Int32" Nullable="false" />
           <Property Name="Number" Type="Int32" />
           <Property Name="Flag" Type="Boolean" />
-          <NavigationProperty Name="Order" Relationship="BookOnlineModel.FK_OrderDetail_Order" FromRole="OrderDetail" ToRole="Order" />
+          <NavigationProperty Name="Book" Relationship="BookOnlineModel.FK_OrderDetail_Book" FromRole="OrderDetail" ToRole="Book" />
         </EntityType>
         <EntityType Name="Role">
           <Key>
@@ -323,7 +354,6 @@
           <Property Name="TypeID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="Name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="Flag" Type="Boolean" />
-          <NavigationProperty Name="Books" Relationship="BookOnlineModel.TypeBook" FromRole="Type" ToRole="Book" />
         </EntityType>
         <EntityType Name="User">
           <Key>
@@ -368,6 +398,18 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="FK_OrderDetail_Book">
+          <End Type="BookOnlineModel.Book" Role="Book" Multiplicity="1" />
+          <End Type="BookOnlineModel.OrderDetail" Role="OrderDetail" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Book">
+              <PropertyRef Name="BookID" />
+            </Principal>
+            <Dependent Role="OrderDetail">
+              <PropertyRef Name="BookID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK_Order_User">
           <End Type="BookOnlineModel.User" Role="User" Multiplicity="0..1" />
           <End Type="BookOnlineModel.Order" Role="Order" Multiplicity="*" />
@@ -408,7 +450,7 @@
           <End Type="BookOnlineModel.Book" Role="Book" Multiplicity="*" />
           <End Type="BookOnlineModel.Type" Role="Type" Multiplicity="*" />
         </Association>
-      </Schema>
+        </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
@@ -439,6 +481,13 @@
           <EntitySetMapping Name="Orders">
             <EntityTypeMapping TypeName="BookOnlineModel.Order">
               <MappingFragment StoreEntitySet="Order">
+                <ScalarProperty Name="Status" ColumnName="Status" />
+                <ScalarProperty Name="AddressType" ColumnName="AddressType" />
+                <ScalarProperty Name="LogisticsCost" ColumnName="LogisticsCost" />
+                <ScalarProperty Name="ReceiverPhone" ColumnName="ReceiverPhone" />
+                <ScalarProperty Name="ReceiverAddress" ColumnName="ReceiverAddress" />
+                <ScalarProperty Name="ReceiverDistrict" ColumnName="ReceiverDistrict" />
+                <ScalarProperty Name="ReceiverCity" ColumnName="ReceiverCity" />
                 <ScalarProperty Name="Flag" ColumnName="Flag" />
                 <ScalarProperty Name="Date" ColumnName="Date" />
                 <ScalarProperty Name="UserID" ColumnName="UserID" />

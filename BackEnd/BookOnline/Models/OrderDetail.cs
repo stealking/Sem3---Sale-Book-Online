@@ -16,10 +16,10 @@ namespace BookOnline.Models
     {
         public int ID { get; set; }
         public Nullable<int> OrderID { get; set; }
-        public Nullable<int> BookID { get; set; }
+        public int BookID { get; set; }
         public Nullable<int> Number { get; set; }
         public Nullable<bool> Flag { get; set; }
     
-        public virtual Order Order { get; set; }
+        public virtual Book Book { get; set; }
     }
 }

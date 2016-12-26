@@ -1,0 +1,73 @@
+<div class="ui-g form-wrapper">
+    <div class="ui-g-6 half-form-wrapper">
+        <h2>
+            Sign in
+        </h2>
+        <div class="">
+            <div class="form-group">
+                <label class="control-label" for="email">Email</label>
+                <div class="form-control-wrap">
+                    <input [(ngModel)]="user.Email" id="email" type="email" >
+                </div>
+            </div>
+
+            <div class="form-group">
+                 <label class="control-label" for="password">Password</label>
+                <div class="form-control-wrap">
+                    <input [(ngModel)]="user.Password" id="password" type="password" >
+                </div>
+            </div>
+            <span>{{errorMsg}}</span>
+            <div class="form-group">
+                <div class="form-control-wrap">
+            <button (click)="login()" class="btn waves-effect waves-light" type="submit" name="action">Login</button>
+            </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="ui-g-6 half-form-wrapper">
+        <h2>
+            Register
+        </h2>
+        <div class="">
+            <div class="form-group">
+                <label class="control-label" for="email">Email</label>
+                <div class="form-control-wrap">
+                    
+                    <input [(ngModel)]="model.Email" id="email" type="email" >
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="control-label" for="name">Name</label>
+                <div class="form-control-wrap">
+                    
+                    <input [(ngModel)]="model.Name" id="name" type="name">
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label class="control-label" for="password">Password</label>
+                <div class="form-control-wrap">
+                    <input [(ngModel)]="model.Password" id="password" type="password">
+                    <div class="help-block">Please enter a password with at least six characters.</div>
+                </div>
+                
+            </div>
+
+            <div class="form-group">
+                <label class="control-label" for="confirmPassword">Confirm password</label>
+                <div class="form-control-wrap">
+                    <input type="password" id="confirmPassword" >
+                </div>
+            </div>
+            <span>{{errorMsgRes}}</span>
+            <div class="form-group">
+                   <div class="form-control-wrap">
+            <button (click)="register()" class="btn waves-effect waves-light" type="submit" name="action">Register</button>
+                   </div>
+            </div>
+        </div>
+    </div>
+</div>

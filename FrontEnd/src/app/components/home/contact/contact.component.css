@@ -1,0 +1,21 @@
+.ng-valid[required], .ng-valid.required{
+    border-left: 5px solid #42A948
+}
+.ng-invalid:not(form){
+    border-left: 5px solid #a94442;
+}
+.container{
+    width: 100%;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 20px;
+}
+.form-control{
+    width: 95%;
+}
+textarea{
+    resize: none;
+}
+#thank{
+   width: 95%; 
+}

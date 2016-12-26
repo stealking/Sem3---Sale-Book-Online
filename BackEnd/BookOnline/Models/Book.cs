@@ -37,8 +37,6 @@ namespace BookOnline.Models
         public Nullable<bool> Flag { get; set; }
         public string Status { get; set; }
     
-        public virtual User User { get; set; }
-        public virtual User User1 { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Type> Types { get; set; }
     }

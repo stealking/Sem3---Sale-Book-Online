@@ -1,0 +1,94 @@
+<div class="content-wrap">
+  <div class="ContentSideSections Implementation ui-fluid">
+    <div class="ui-grid ui-grid-responsive ui-grid-pad basket-page">
+      <h1>Giỏ hàng</h1>
+      <div class="checkout-head-wrap">
+        <div *ngIf="this.order.OrderDetails.length == 0">
+          <h4>Bạn chưa chọn sách để đưa vào giỏ hàng</h4>
+        </div>
+        <div *ngIf="this.order.OrderDetails.length != 0">
+        <i class="fa fa-shopping-basket" aria-hidden="true"></i>
+        <div class="basket-msg ">
+          Bạn có {{this.order.OrderDetails.length}} loại sách với tổng giá trị
+          <span class="basket-total">{{bookService.formatPrice(sum)}}</span> trong giỏ hàng.
+        </div>
+        </div>
+        <!--<button>Checkout</button>-->
+        <!--<button>Save my choice</button>-->
+      </div>
+      <div *ngIf="this.order.OrderDetails.length != 0">
+        <div class="basket-items-wrap">
+          <div class="basket-header">
+            <h2>Chi tiết giỏ hàng</h2>
+          </div>
+          <div *ngFor="let orderDetail of order.OrderDetails" class="basket-item">
+            <div class="item-info-wrap">
+              <div class="item-img">
+                <a href="" class="item-link">
+                  <img src="http://localhost:53106/content/{{orderDetail.Book.ImageUrl}}" alt="Fantastic Beasts and Where to Find Them">
+                </a>
+              </div>
+              <div class="item-info">
+                <h2>
+                  <a>{{orderDetail.Book.Name}}</a>
+                </h2>
+                <div class="meta-wrap">
+                  <span class="format">Hardback, English</span>
+                  <span class="author">{{orderDetail.Book.Author}}</span>
+                </div>
+
+                <div class="price-wrap">
+                  <span class="price">{{orderDetail.Book.CurrentPrice}}</span>
+                  <span *ngIf="orderDetail.Book.SaleOff > 0">
+                <span class="rrp">{{orderDetail.Book.PublishPrice}}</span>
+                  <span class="price-save">-{{orderDetail.Book.SaleOff + "%"}}</span>
+                  </span>
+                </div>
+
+                <!--<p class="availablity-text">Available - dispatched from the UK in 2 business days</p>-->
+
+              </div>
+            </div>
+            <div class="item-checkout-info">
+              <div class="form-inline update-quantity">
+
+                <label for="Qty_0">Số lượng</label>
+                <input type="number" min="1" step="1" value="0" [(ngModel)]="orderDetail.Number" (change)="updatePriceSum()" class="Qty boxed form-control input-sm">
+              </div>
+
+              <p class="item-total">{{bookService.formatPrice(orderDetail.Number * orderDetail.Book.CPrice)}}</p>
+
+              <div class="remove-item">
+                <button type="submit" class="btn remove-btn" (click)="removeFromOrder(orderDetail.ID)">xóa</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="basket-totals-wrap">
+          <div class="basket-totals">
+            <!--<dl class="delivery-text">
+            <dt>Delivery cost</dt>
+            <dd>FREE</dd>
+          </dl>-->
+
+            <dl class="total">
+              <dt>Tổng cộng</dt>
+              <dd>{{bookService.formatPrice(sum)}}</dd>
+            </dl>
+
+          </div>
+          <div class="basket-checkout-btn-wrap">
+            <div class="checkout-btns-wrap">
+              <button (click)="goDelivery()">Tiếp theo >></button>
+            </div>
+            <div class="checkout-btns-wrap">
+              <button (click)="continueShopping()">Tiếp tục mua sắm</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Http, Response, Headers, RequestOptions } from '@angular/http';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Location } from '@angular/common';
-
+import {BookService} from '../../../services/book.service';
 import { Book } from '../../../classes/book';
 @Component({
   selector: 'app-book-detail',
@@ -12,7 +12,8 @@ import { Book } from '../../../classes/book';
 export class BookDetailComponent implements OnInit {
   id: number;
   book = new Book(this.id, '', '', 0);
-  constructor(public http: Http, public route: ActivatedRoute, public location: Location, public router: Router) {
+  constructor(public http: Http, public route: ActivatedRoute, public location: Location, public router: Router, 
+  public bookService: BookService) {
     route.params.subscribe(params => {
       this.id = params['id'];
     })
@@ -23,9 +24,9 @@ export class BookDetailComponent implements OnInit {
       'http://localhost:53106/api/book/getbookbyid/' + this.id)
       .subscribe((res: Response) => {
         this.book = res.json();
-        this.book.CurrentPrice = (Math.floor(this.book.Price * (100 - this.book.SaleOff)) + "0 VND").replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-        this.book.PublishPrice = (this.book.Price * 100 + "0 VND").replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-        this.book.SavePrice = (Math.floor(this.book.Price * this.book.SaleOff) + "0 VND").replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+        this.book.CurrentPrice = this.bookService.formatPrice(this.book.Price * (100 - this.book.SaleOff));
+        this.book.PublishPrice = this.bookService.formatPrice(this.book.Price * 100); 
+        this.book.SavePrice = this.bookService.formatPrice(this.book.Price * this.book.SaleOff);  
         // this.book.PublishDateString = this.book.PublishDate.getDate() + '/' + (this.book.PublishDate.getMonth() + 1) + '/' + this.book.PublishDate.getFullYear();
         console.log(this.book);
       })

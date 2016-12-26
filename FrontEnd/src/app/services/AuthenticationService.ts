@@ -7,10 +7,12 @@ import { Http, Response, Headers, RequestOptions } from '@angular/http';
 @Injectable()
 export class AuthenticationService implements OnInit {
     data;
-    private loggedIn = false;
+    private loggedIn = localStorage.getItem("user") ? true : false;
     constructor(public http: Http, private router: Router, private route: ActivatedRoute) { }
 
-    ngOnInit(): void { }
+    ngOnInit(): void {
+        this.loggedIn = localStorage.getItem("user") ? true : false;
+    }
 
 
     logout() {
@@ -51,11 +53,11 @@ export class AuthenticationService implements OnInit {
         if (user === null) {
             alert('Please Login your account');
             this.router.navigate(['./login']);
-        } else if (user.RoleID === 2 && user.JustLogin ) {
+        } else if (user.RoleID === 2 && user.JustLogin) {
             user.JustLogin = false;
             localStorage.setItem("user", JSON.stringify(user));
             this.router.navigate(['./home']);
-        } else if (user.RoleID === 1 ) {
+        } else if (user.RoleID === 1) {
             this.router.navigate(['./admin']);
         }
 

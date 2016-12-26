@@ -17,7 +17,7 @@ namespace BookOnline.Models
         
         BookOnlineEntities db;
         IList<Book> books;
-        public dynamic GetAll()
+        public IEnumerable<Book> GetAll()
         {
             using (db = new BookOnlineEntities())
             {
@@ -92,7 +92,7 @@ namespace BookOnline.Models
                     throw new ArgumentNullException(nameof(book));
                 }
                 book.BookID = db.Books.Max(s => s.BookID) + 1;
-                book.DateCreate = DateTime.Now.Date;
+                book.DateCreate = DateTime.Now;
                 book.Flag = true;
                 db.Books.Add(book);
                 db.SaveChanges();
@@ -124,7 +124,7 @@ namespace BookOnline.Models
                 {
                     return false;
                 }
-                book.DateUpdate = DateTime.Now.Date;
+                book.DateUpdate = DateTime.Now;
                 db.Books.AddOrUpdate(book);
                 db.SaveChanges();
                 return true;
@@ -165,17 +165,14 @@ namespace BookOnline.Models
             using (db = new BookOnlineEntities())
             {
                 var book = db.Books.SingleOrDefault(b => b.BookID == id);
-                if (book != null)
-                {
-                    book.ImageUrl = url;
-                    db.Books.AddOrUpdate(book);
-                }
+                book.ImageUrl = url;
+                db.Books.AddOrUpdate(book);
                 db.SaveChanges();
                 return true;
             }
         }
 
-        public dynamic SearchMultiQuery( int? Rate, int?[] typeId, string name, decimal? minPrice, decimal? maxPrice, string status)
+        public dynamic SearchMultiQuery(string name, int? Rate, int[] typeId, decimal? minPrice, decimal? maxPrice, string status)
         {
             using (db = new BookOnlineEntities())
             {
@@ -207,12 +204,17 @@ namespace BookOnline.Models
                     query = query.Where(b => b.Price >= minPrice);
                 if (maxPrice.HasValue)
                     query = query.Where(b => b.Price <= maxPrice);
-                var TypeId = new List<int> { 4,5,8,9,10,11 };
-                query = query.Where(b => b.Types.Select(x => x.TypeID).Any() && b.Types.Select(x => x.TypeID).Intersect(TypeId).Any());
-                return JsonConvert.SerializeObject(query);
+                Console.Write(typeId);
+                if (typeId != null && typeId.Length > 0)
+                {
+                    //                    List<int> TypeId =  typeId.Where(t => t != null).Select(t=>(int)t).ToList();
+                    List<int> TypeId = typeId.ToList();
+                    query = query.Where(b => b.Types.Select(x => x.TypeID).Any() && b.Types.Select(x => x.TypeID).Intersect(TypeId).Any());
+                }
+                //query = query.Where(b => b.Types.SingleOrDefault(x => x.TypeID).ToArray().Except(typeId)));
+                return query.ToList();
             }
         }
 
-        
     }
 }

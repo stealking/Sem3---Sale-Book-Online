@@ -14,12 +14,12 @@
     <Property Name="ImageUrl" Type="nvarchar(max)" />
     <Property Name="PublishDate" Type="date" />
     <Property Name="SaleOff" Type="int" />
-    <Property Name="Status" Type="nvarchar" MaxLength="50" />
     <Property Name="DateCreate" Type="date" />
     <Property Name="UserIDCreate" Type="int" />
     <Property Name="DateUpdate" Type="date" />
     <Property Name="UserIDUpdate" Type="int" />
     <Property Name="Flag" Type="bit" />
+    <Property Name="Status" Type="nvarchar" MaxLength="50" />
   </EntityType>
   <EntityType Name="Order">
     <Key>
@@ -28,6 +28,13 @@
     <Property Name="OrderID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="UserID" Type="int" />
     <Property Name="Date" Type="date" />
+    <Property Name="ReceiverCity" Type="nvarchar" MaxLength="50" />
+    <Property Name="ReceiverDistrict" Type="nvarchar" MaxLength="50" />
+    <Property Name="ReceiverAddress" Type="nvarchar" MaxLength="50" />
+    <Property Name="ReceiverPhone" Type="nvarchar" MaxLength="50" />
+    <Property Name="LogisticsCost" Type="money" />
+    <Property Name="AddressType" Type="varchar" MaxLength="20" />
+    <Property Name="Status" Type="varchar" MaxLength="20" />
     <Property Name="Flag" Type="bit" />
   </EntityType>
   <EntityType Name="OrderDetail">
@@ -36,7 +43,7 @@
     </Key>
     <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="OrderID" Type="int" />
-    <Property Name="BookID" Type="int" />
+    <Property Name="BookID" Type="int" Nullable="false" />
     <Property Name="Number" Type="int" />
     <Property Name="Flag" Type="bit" />
   </EntityType>
@@ -124,6 +131,18 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <Association Name="FK_OrderDetail_Book">
+    <End Role="Book" Type="Self.Book" Multiplicity="1" />
+    <End Role="OrderDetail" Type="Self.OrderDetail" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Book">
+        <PropertyRef Name="BookID" />
+      </Principal>
+      <Dependent Role="OrderDetail">
+        <PropertyRef Name="BookID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <Association Name="FK_OrderDetail_Order">
     <End Role="Order" Type="Self.Order" Multiplicity="0..1" />
     <End Role="OrderDetail" Type="Self.OrderDetail" Multiplicity="*" />
@@ -192,6 +211,10 @@
     <AssociationSet Name="FK_Order_User" Association="Self.FK_Order_User">
       <End Role="User" EntitySet="User" />
       <End Role="Order" EntitySet="Order" />
+    </AssociationSet>
+    <AssociationSet Name="FK_OrderDetail_Book" Association="Self.FK_OrderDetail_Book">
+      <End Role="Book" EntitySet="Book" />
+      <End Role="OrderDetail" EntitySet="OrderDetail" />
     </AssociationSet>
     <AssociationSet Name="FK_OrderDetail_Order" Association="Self.FK_OrderDetail_Order">
       <End Role="Order" EntitySet="Order" />

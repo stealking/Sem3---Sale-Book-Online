@@ -5,12 +5,17 @@ import { CommonModule } from '@angular/common';
 import { HttpModule } from '@angular/http';
 import { OrderFormComponent } from './order-form/order-form.component';
 import { OrderListFormComponent } from './order-list-form/order-list-form.component';
-import { OrderdetailFormComponent } from './orderdetail-form/orderdetail-form.component';
-import { OrderdetailListFormComponent } from './orderdetail-list-form/orderdetail-list-form.component';
+import {OrderDetailManagerComponentModule, routes as orderdetailManagerChildRoutes} from '../orderdetail-manager/orderdetail-manager.component';
+import { BrowserModule } from '@angular/platform-browser';
+import { PaginationModule } from 'ng2-bootstrap/ng2-bootstrap';
+import { DataTableModule,SharedModule,ButtonModule,DialogModule } from 'primeng/primeng';
+import { ContextMenuModule , MenuItem, ConfirmDialogModule, ConfirmationService} from 'primeng/primeng';
+import { GrowlModule, MessagesModule, DropdownModule } from 'primeng/primeng';
 @Component({
   selector: 'app-order-manager',
   templateUrl: './order-manager.component.html',
-  styleUrls: ['./order-manager.component.css']
+  styleUrls: ['./order-manager.component.css'],
+  providers: [ConfirmationService]
 })
 export class OrderManagerComponent implements OnInit {
 
@@ -23,29 +28,49 @@ export class OrderManagerComponent implements OnInit {
 
 export const routes: Routes = [
   { path: 'new', component: OrderFormComponent },
-  { path: 'edit/:id', component: OrderFormComponent },
+  { path: 'edit/:id', component: OrderFormComponent, },
   { path: '', component: OrderListFormComponent },
-  { path: 'check/:id', component: OrderdetailListFormComponent },
+  { path: 'check/:id', component: OrderFormComponent, children: orderdetailManagerChildRoutes }
+
 ]
 
 @NgModule({
   declarations: [
     OrderFormComponent,
     OrderListFormComponent,
-    OrderdetailFormComponent,
-    OrderdetailListFormComponent
   ],
   exports: [
     OrderFormComponent,
     OrderListFormComponent,
-    OrderdetailFormComponent,
-    OrderdetailListFormComponent
+    DropdownModule,
+    PaginationModule,
+    BrowserModule,
+    DataTableModule,
+    SharedModule,
+    ButtonModule,
+    DialogModule,
+    ContextMenuModule,
+    ConfirmDialogModule,
+    GrowlModule,
+    MessagesModule
   ],
   imports: [
     RouterModule,
     CommonModule,
     FormsModule,
-    HttpModule
+    HttpModule,
+    DropdownModule,
+    PaginationModule,
+    BrowserModule,
+    DataTableModule,
+    SharedModule,
+    ButtonModule,
+    DialogModule,
+    ContextMenuModule,
+    ConfirmDialogModule,
+    GrowlModule,
+    MessagesModule,
+    OrderDetailManagerComponentModule
   ]
 })
 

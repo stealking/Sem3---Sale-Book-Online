@@ -1,0 +1,22 @@
+<div class="ui-widget-header ui-helper-clearfix" style="padding:4px 10px;border-bottom: 0 none">
+  <i class="fa fa-search" style="float:left;margin:4px 4px 0 0"></i>
+  <input #gb type="text" pInputText size="50" style="float:left" placeholder="Global Filter">
+</div>
+<p-dataTable [value]="results" selectionMode="single" [(selection)]="selectedOrderDetail" (onRowSelect)="onRowSelect($event)" [paginator]="true"
+  rows="5" [responsive]="true" [globalFilter]="gb" [contextMenu]="cm">
+  <header>OrderDetail</header>
+  <p-column field="ID" header="ID" [sortable]="true" [filter]="true" filterMatchMode="contains"></p-column>
+  <p-column field="OrderID" header="OrderID" [sortable]="true" [filter]="true" filterMatchMode="contains"></p-column>
+  <p-column field="BookID" header="BookID" [sortable]="true" [filter]="true" filterMatchMode="contains"></p-column>
+  <p-column field="Number" header="Number" [sortable]="true" [filter]="true" filterMatchMode="contains"></p-column>
+  <footer>
+    <div class="ui-helper-clearfix" style="width:100%">
+      <p-growl [value]="msgs"></p-growl>
+      <p-confirmDialog width="425"></p-confirmDialog>
+      <a [routerLink]="['./newdt']" pButton icon="fa-plus" style="float:left" label="Add new orderdetail"></a>
+      <button type="button" pButton icon="fa-edit" style="float:left" (click)="editOrderdt(orderdetail.ID)" label="Edit"></button>
+      <button type="button" pButton icon="fa-close" style="float:left" (click)="deleteOrderdt(orderdetail.ID)" label="Delete"></button>
+    </div>
+  </footer>
+</p-dataTable>
+<p-contextMenu #cm [model]="items"></p-contextMenu>

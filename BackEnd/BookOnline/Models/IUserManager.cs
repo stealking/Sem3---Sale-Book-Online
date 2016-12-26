@@ -11,7 +11,6 @@ namespace BookOnline.Models
         IEnumerable<User> GetAll();
         User Get(int id);
         User Add(User user);
-        dynamic Login(string email, string password);
         void Remove(int id);
         bool Update(User user);
     }

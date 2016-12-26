@@ -1,0 +1,111 @@
+<div class="container">
+  <h1>Book</h1>
+  <form (ngSubmit)="onSubmit()" #bookForm="ngForm">
+    <div class="form-group">
+      <label for="name">Name<span style="color: red"> (*)</span></label>
+      <input type="text" class="form-control" id="name" required [(ngModel)]="model.Name" name="name" #name="ngModel">
+      <div class="alert alert-danger" [hidden]="name.valid || name.pristine">
+        Name is required!
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="author">Author<span style="color: red"> (*)</span></label>
+      <input type="text" class="form-control" id="author" required [(ngModel)]="model.Author" name="author" #author="ngModel">
+      <div class="alert alert-danger" [hidden]="author.valid || author.pristine">
+        Author is required!
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="rate">Rates</label>
+      <select id="rate" class="form-control" [(ngModel)]="model.Rate" name="rate">
+        <option *ngFor="let rate of rates" [value]="rate">{{rate}}</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="description">Description</label>
+      <input type="text" class="form-control" id="description" [(ngModel)]="model.Description" name="description">
+    </div>
+    <div class="form-group">
+      <label for="quantity">Quantity<span style="color: red"> (*)</span></label>
+      <input type="text" class="form-control" id="quantity" required [(ngModel)]="model.Quantity" name="quantity" #quantity="ngModel">
+      <div class="alert alert-danger" [hidden]="quantity.valid || quantity.pristine">
+        Quantity is required!
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="price">Price<span style="color: red"> (*)</span></label>
+      <input type="text" class="form-control" id="price" required [(ngModel)]="model.Price" name="price" #price="ngModel">
+      <div class="alert alert-danger" [hidden]="price.valid || price.pristine">
+        Price is required!
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="status">Status<span style="color: red"> (*)</span></label>
+      <select id="status" class="form-control" required [(ngModel)]="model.Status" name="status">
+        <option *ngFor="let status of statuss" [selected]="status" [value]="status">{{status}}</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="imageUrl">imageUrl<span style="color: red"> (*)</span></label>
+      <!--<input type="text" class="form-control" id="imageUrl" name="imageUrl" [ngModel]="model.ImageUrl">-->
+      <!--<button type="button" class="btn btn-success btn-s"
+                    (click)="uploader.authToken=authToken ; uploader.uploadAll()" [disabled]="!uploader.getNotUploadedItems().length">
+                <span class="glyphicon glyphicon-upload"></span> Upload all
+       </button>-->
+    </div>
+    <div class="form-group">
+      <img src="http://localhost:53106/content/{{model.ImageUrl}}" alt="Image" height="100" width="100">
+    </div>
+    <div>
+      <p-lightbox type="content">
+        <a class="group" href="#" pButton icon="fa-search" style="float:left" label="Zoom Image"></a>
+        <img src="http://localhost:53106/content/{{model.ImageUrl}}" alt="Image" height="50%" width="100%%">
+      </p-lightbox>
+    </div>
+
+    <p-fileUpload name="demo[]" url="URL" (onUpload)="onUpload($event)" accept="image/*" maxFileSize="1000000">
+      <template pTemplate type="content">
+        <ul *ngIf="uploadedFiles.length">
+          <li *ngFor="let file of uploadedFiles">{{file.name}} - {{file.size}} bytes</li>
+        </ul>
+      </template>
+    </p-fileUpload>
+    <!--<div class="form-group">
+      <input type="file" ng2FileSelect [uploader]="uploader" />
+    </div>-->
+    <div class="form-group">
+      <label for="publishDate">Publish Date</label>
+      <input type="text" class="form-control" id="publishDate" disabled [(ngModel)]="model.PublishDate" name="publishDate">
+    </div>
+    <div>
+      <p-calendar [(ngModel)]="date1" value="model.PublishDate" [showIcon]="true" dateFormat="yy/mm/dd" [monthNavigator]="true"
+        [yearNavigator]="true" yearRange="1950:2030" [ngModelOptions]="{standalone: true}"></p-calendar>
+    </div>
+    <div class="form-group">
+      <label for="saleOff">Sale Off</label>
+      <input type="text" class="form-control" id="saleOff" [(ngModel)]="model.SaleOff" name="saleOff">
+    </div>
+    <div class="form-group">
+      <label for="dateCreate">Date Create</label>
+      <input type="text" class="form-control" id="dateCreate" disabled [(ngModel)]="model.DateCreate" name="dateCreate">
+    </div>
+    <div class="form-group">
+      <label for="userIDCreate">User ID Create</label>
+      <input type="text" class="form-control" id="userIDCreate" disabled [(ngModel)]="model.UserIDCreate" name="userIDCreate">
+    </div>
+    <div class="form-group">
+      <label for="dateUpdate">Date Update</label>
+      <input type="text" class="form-control" id="dateUpdate" disabled [(ngModel)]="model.DateUpdate" name="dateUpdate">
+    </div>
+    <div class="form-group">
+      <label for="userIDUpdate">User ID Update</label>
+      <input type="text" class="form-control" id="userIDUpdate" disabled [(ngModel)]="model.UserIDUpdate" name="userIDUpdate">
+    </div>
+    <div class="ui-g">
+      <div class="ui-g-6" align="center"><button class="btn btn-success btn-s" type="submit" [disabled]="!bookForm.form.valid">Submit</button></div>
+      <div class="ui-g-6" align="center"><button class="btn btn-warning btn-s" type="button" (click)="back()">Back</button></div>
+    </div>
+
+  </form>
+
+</div>

@@ -5,7 +5,6 @@ import { Http, Response, Headers, RequestOptions } from '@angular/http';
 import { FormsModule } from '@angular/forms';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Location } from '@angular/common';
-
 @Component({
   selector: 'app-order-form',
   templateUrl: './order-form.component.html',
@@ -13,14 +12,11 @@ import { Location } from '@angular/common';
 })
 export class OrderFormComponent implements OnInit {
   ok: Object;
-  homnay = new Date(Date.now());
+  date = new Date(Date.now());
   id: number;
   job: string;
-<<<<<<< HEAD
-    model = new order(this.id,null,this.homnay.getFullYear()+'/'+this.homnay.getMonth()+'/'+this.homnay.getDate(), true);
-=======
-    model = new Order(  this.id,this.homnay.getFullYear()+'/'+this.homnay.getMonth()+'/'+this.homnay.getDate(), true);
->>>>>>> 634c2086ad4fd5e3d87f22ce2dab27c02991b441
+  d: string[];
+    model = new Order();
   constructor(public http: Http, public route: ActivatedRoute, public location: Location, public router: Router) {
     route.params.subscribe(params => {
       this.id = params['id'];
@@ -36,9 +32,13 @@ export class OrderFormComponent implements OnInit {
         'http://localhost:53106/api/order/GetOrderById/' + this.id)
         .subscribe((res: Response) => {
           this.model = <Order>res.json();
+          this.d = this.model.Date.split("T");
+          this.model.Date = this.d[0];
+          console.log(this.model.Date);
         })
     }
     this.updateListUser();
+
   }
   // submit form
   onSubmit() {
@@ -49,28 +49,20 @@ export class OrderFormComponent implements OnInit {
         'http://localhost:53106/api/order/AddOrder',
         JSON.stringify(this.model), options)
         .subscribe((res: Response) => {
-          alert(JSON.stringify(res.json()));
+          alert('Add Order Successed!');
         })
     } else {
       this.http.put(
         'http://localhost:53106/api/order/UpdateOrder/' + this.id,
         JSON.stringify(this.model), options)
         .subscribe((res: Response) => {
-          alert(JSON.stringify(res.json()));
+          alert('update Order Successed!');
         })
     }
   }
 
   get diagnostic() {
     return JSON.stringify(this.model)
-  }
-
-  newOrder() {
-<<<<<<< HEAD
-    this.model = new order(this.id, null, this.homnay.getFullYear()+'/'+this.homnay.getMonth()+'/'+this.homnay.getDate(), true);
-=======
-    this.model = new Order( 1,this.homnay.getFullYear()+'/'+this.homnay.getMonth()+'/'+this.homnay.getDate(), true);
->>>>>>> 634c2086ad4fd5e3d87f22ce2dab27c02991b441
   }
 
   back(): void {

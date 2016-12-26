@@ -24,8 +24,14 @@ namespace BookOnline.Models
         public Nullable<int> UserID { get; set; }
         public Nullable<System.DateTime> Date { get; set; }
         public Nullable<bool> Flag { get; set; }
+        public string ReceiverCity { get; set; }
+        public string ReceiverDistrict { get; set; }
+        public string ReceiverAddress { get; set; }
+        public string ReceiverPhone { get; set; }
+        public Nullable<decimal> LogisticsCost { get; set; }
+        public string AddressType { get; set; }
+        public string Status { get; set; }
     
-        public virtual User User { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<OrderDetail> OrderDetails { get; set; }
     }

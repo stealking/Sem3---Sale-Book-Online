@@ -36,17 +36,10 @@ namespace BookOnline.Controllers
         [HttpPost]
         public User AddUser(User user)
         {
-            user.RoleID = 2;
+            user.DateOfBirth = Convert.ToDateTime(user.DateOfBirth);
             user = userManager.Add(user);
             return user;
         }
-
-        [HttpGet]
-        public dynamic Login(string email, string password)
-        {
-            return userManager.Login(email, password);
-        }
-
         //Update User
         [HttpPut]
         public void UpdateUser(User user)

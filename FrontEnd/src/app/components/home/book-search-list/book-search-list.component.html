@@ -66,7 +66,7 @@
               <!--<div class="book-detail-wrap">-->
               <div class="book-image">
                 <a (click)="goBook(book.BookID)">
-                  <img src="../../../../../assets/book/{{addZero(book.BookID)}}.jpg">
+                  <img src="http://localhost:53106/content/{{book.ImageUrl}}">
                 </a>
               </div>
               <div class="book-name">
@@ -88,7 +88,7 @@
                 <!--</span>-->
               </div>
               <div class="search-button normal-search">
-                <button pButton type="text" label="Đưa vô giỏ hàng"></button>
+                <button pButton type="text" label="Đưa vô giỏ hàng" (click)="addToCart(book)"></button>
               </div>
               <!--<hr class="ui-widget-content" style="border-top:0">-->
             </div>

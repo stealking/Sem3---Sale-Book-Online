@@ -10,7 +10,7 @@
 .nav-top > div{
       height: 44px;
 }
-.nav-top a{
+.nav-top a, .nav-top strong{
     color: rgba(255,255,255,0.8);
     transition: all .3s;
     line-height: 4.4rem;

@@ -1,0 +1,48 @@
+<div class="container">
+  <h1>Contact Us!</h1>
+<form form (ngSubmit)="onSubmit()" #contactForm="ngForm" class="ui-g-12 ui-md-6">
+    <div class="form-group">
+        <p id ="thank" style="font-size: 20px">
+        Cảm ơn quý khách hàng đã quan tâm đến sản phẩm, dịch vụ của BookDepository. Quý khách có thể liên hệ trực tiếp, hoặc để lại thông tin theo form bên dưới. Chúng tôi sẽ hồi âm sớm nhất có thể.
+        </p>
+    </div>
+  <div class="form-group">
+  <label for="email">Email Adrress<span style="color: red"> (*)</span></label>
+  <input class="form-control" type="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" title="Invalid email address" id="email" name="email" #email="ngModel" [(ngModel)]="model.Email" required placeholder="Enter your email Adrress">
+  <div class="alert alert-danger" [hidden]="email.valid || email.pristine">
+      Invalid Email Adrress!
+  </div>
+  </div>
+  <div class="form-group">
+  <label for="contactSubject">Contact Subject<span style="color: red"> (*)</span></label>
+  <input class="form-control" type="text" id="contactSubject" name="contactSubject" #contactSubject="ngModel" [(ngModel)]="model.ContactSubject" required placeholder="Enter contact subject">
+  <div class="alert alert-danger" [hidden]="contactSubject.valid || contactSubject.pristine">
+      Contact Subject is required!
+  </div>
+  </div>
+   <div class="form-group">
+  <label for="content">Content<span style="color: red"> (*)</span></label>
+  <textarea class="form-control" rows="5" cols="10" id="content" name="content" #content="ngModel" [(ngModel)]="model.Content" required placeholder="Enter Content"></textarea>
+  <div class="alert alert-danger" [hidden]="content.valid || content.pristine">
+      Content is required!
+  </div>
+  </div>
+  <div class="form-group" align="left"><button class="btn btn-success btn-s" type="submit"  [disabled]="!contactForm.form.valid">Submit</button>
+   <button class="btn btn-warning btn-s" type="button" (click)="back()">Back</button>
+      </div>
+</form>
+<form class="ui-g-12 ui-md-6">
+    <div class="form-group" style="padding-right: 5px">
+     <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15335.593308876469!2d108.221383!3d16.070765!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31421833d5d33d15%3A0x11a43eff80392862!2zMzggWcOqbiBCw6FpLCBI4bqjaSBDaMOidSAxLCBRLiBI4bqjaSBDaMOidSwgxJDDoCBO4bq1bmcsIFZp4buHdCBOYW0!5e0!3m2!1svi!2s!4v1482700630716" width="600" height="450" frameborder="0" style="border:0" allowfullscreen></iframe>
+    </div>
+    <div class="form-group">
+     <label>Địa chỉ: 38 Yên Bái, Q.Hải Châu, TP. Đà Nẵng.</label>
+    </div>
+    <div class="form-group">
+     <label>Tel: 012345678</label>
+    </div>
+    <div class="form-group">
+     <label>Fax: 012345678</label>
+    </div>
+</form>
+</div>

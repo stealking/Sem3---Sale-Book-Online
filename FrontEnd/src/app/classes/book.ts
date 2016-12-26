@@ -8,6 +8,7 @@ export class Book {
         public Description?: string,
         public Quatity?: number,
         public Price?: number,
+        public CPrice?: number,
         public ImageUrl?: string,
         public PublishDate?: Date,
         public PublishDateString?: string,

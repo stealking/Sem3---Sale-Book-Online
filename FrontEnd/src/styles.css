@@ -54,3 +54,25 @@ body{
 .ui-widget-content{
     border: none;
 }
+p-radiobutton > .ui-radiobutton > .ui-radiobutton-box{
+    width: 18px;
+    height: 18px;
+}
+.ui-radiobutton-label{
+    margin-bottom: 0px;
+}
+.ui-radiobutton-label{
+    font-weight: 400;
+}
+.ui-dropdown > .ui-dropdown-label{
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #555;
+    padding: 6px 12px;
+}
+.ui-dropdown.ui-widget .ui-dropdown-trigger .fa{
+    margin-top: 9px;
+}
+.ui-dropdown-panel .ui-dropdown-filter-container{
+    width: 100%;
+}

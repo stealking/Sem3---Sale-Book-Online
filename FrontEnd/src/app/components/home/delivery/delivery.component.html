@@ -1,0 +1,98 @@
+<div class="content-wrap">
+  <div class="ContentSideSections Implementation ui-fluid">
+    <div class="ui-grid ui-grid-responsive ui-grid-pad basket-page">
+      <form (ngSubmit)="next()" #detailForm="ngForm" class="ui-form">
+      <div>
+        <h1>Thông tin vận chuyển</h1>
+      </div>
+      <div class="main-content">
+       
+        <div class="info-group">
+          <h2>Thông tin liên hệ</h2>
+          <div class="info-part">
+            <p><label for="email">Email</label></p>
+            <p>
+              <input type="email" name="email" required pattern="[^@]+@[^@]+\.[a-zA-Z]{2,}" [(ngModel)]="order.ReceiverEmail" #email="ngModel">
+              <span class="alert alert-danger" [hidden]="email.valid || email.pristine">
+                    Email: Bắt buộc, cần nhập đúng định dạng!
+                </span>
+            </p>
+          </div>
+          <div class="info-part">
+            <p><label for="phone">Điện thoại</label></p>
+            <p>
+              <input name="phone" type="text" required pattern="^[0-9]+$"[(ngModel)]="order.ReceiverPhone" #phone="ngModel">
+              <span class="alert alert-danger" [hidden]="phone.valid || phone.pristine">
+                    Điện thoại: Bắt buộc, chỉ được nhập số!
+              </span>
+            </p>
+          </div>
+        </div>
+      </div>
+
+       <div class="main-content">
+        <div class="info-group">
+          <h2>Địa chỉ nhận hàng</h2>
+          <div class="info-part">
+            <p><label for="receiverName">Tên người nhận</label></p>
+            <p>
+              <input name="name" type="text" required [(ngModel)]="order.ReceiverName" #name="ngModel">
+              <span class="alert alert-danger" [hidden]="name.valid || name.pristine">
+                    Tên người nhận: Bắt buộc!
+              </span>
+            </p>
+          </div>
+           <div class="info-part">
+            <p><label for="receiverCity">Thành phố / Tỉnh</label></p>
+            <p>
+              <p-dropdown [options]="cities" name="city" [(ngModel)]="order.ReceiverCity" [style]="{'width':'100%'}" filter="filter">
+                <template let-car>
+                    <div class="ui-helper-clearfix" style="position: relative;height: 25px;">
+                        <div style="font-size:14px;float:right;margin-top:4px">{{car.label}}</div>
+                    </div>
+                </template>
+            </p-dropdown>
+            </p>
+          </div>
+           <div class="info-part">
+            <p><label for="receiverDistrict">Quận / Huyện</label></p>
+            <p>
+                <input name="district" type="text" required [(ngModel)]="order.ReceiverDistrict" #district="ngModel">
+              <span class="alert alert-danger" [hidden]="district.valid || district.pristine">
+                    Quận / huyện: Bắt buộc!
+              </span>
+            </p>
+          </div> <div class="info-part">
+            <p><label for="receiverAddress">Địa chỉ</label></p>
+            <p>
+                  <input name="address" type="text" required [(ngModel)]="order.ReceiverAddress" #address="ngModel">
+              <span class="alert alert-danger" [hidden]="address.valid || address.pristine">
+                    Địa chỉ: Bắt buộc!
+              </span>
+            </p>
+          </div> <div class="info-part">
+            <span><label for="addressType">Loại địa chỉ</label></span>
+            <!--<p>-->
+              <div class="ui-g" style="width:250px;margin-bottom:10px">
+              <div class="ui-g-12"><p-radioButton name="group" value="1" label="Nhà riêng / chung cư" [(ngModel)]="order.AddressType"></p-radioButton></div>
+              <div class="ui-g-12"><p-radioButton name="group" value="2" label="Cơ quan / doanh nghiệp" [(ngModel)]="order.AddressType"></p-radioButton></div>
+             </div>
+            <!--</p>-->
+          </div>
+        </div>
+      </div>
+
+      <div  class="basket-totals-wrap">
+        <div class="basket-checkout-btn-wrap">
+          <div class="checkout-btns-wrap">
+            <button type="submit">Tiếp theo</button>
+          </div>
+          <div  class="checkout-btns-wrap">
+            <button >Quay lại</button>
+          </div>
+        </div>
+      </div>
+        </form>
+    </div>
+  </div>
+</div>

@@ -3,26 +3,37 @@ import { Routes, RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { FormsModule, FormGroup, FormBuilder } from '@angular/forms';
 
+
+
 import { NavComponent } from './nav/nav.component';
 import { MainPageComponent } from './main-page/main-page.component';
 import { BookDetailComponent } from './book-detail/book-detail.component';
 import { BookSearchListComponent } from './book-search-list/book-search-list.component';
-import { AccountComponent } from './account/account.component';
+import { AccountComponent, AccountComponentModule, routes as accountChildRoutes } from './account/account.component';
+import { ForgottenPasswordComponent } from './forgotten-password/forgotten-password.component';
 import { LoginComponent } from './login/login.component';
+import { BasketComponent } from './basket/basket.component';
+import { DeliveryComponent } from './delivery/delivery.component';
+import { ContactComponent } from './contact/contact.component';
+
+
 import { DataGridModule } from 'primeng/primeng';
 import { ButtonModule } from 'primeng/primeng';
 // import {InputTextModule} from 'primeng/primeng';
 import { AutoCompleteModule } from 'primeng/primeng';
 import { RatingModule } from 'primeng/primeng';
-// import {DropdownModule} from 'primeng/primeng';
+import {DropdownModule} from 'primeng/primeng';
 import { SliderModule } from 'primeng/primeng';
-import {ListboxModule, GrowlModule,MessagesModule,InputTextareaModule} from 'primeng/primeng';
-
+import { ListboxModule, GrowlModule, MessagesModule, InputTextareaModule } from 'primeng/primeng';
+import {RadioButtonModule} from 'primeng/primeng';
 
 // service 
 import { bookMultiqueryServiceInjectables } from './book-search-list/book-search-list.component';
 import { AuthGuard } from '../../services/auth.guard';
 import { AuthenticationService } from '../../services/AuthenticationService';
+import {BookService} from '../../services/book.service';
+import { EqualValidator } from '../../services/equal-validator.directive';
+
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -37,12 +48,17 @@ export class HomeComponent implements OnInit {
 
 }
 export const routes: Routes = [
-  { path: '', component: MainPageComponent},
-  { path: 'home', component: MainPageComponent},
+  { path: '', component: MainPageComponent },
+  { path: 'home', component: MainPageComponent },
   { path: 'books', component: BookSearchListComponent },
   { path: 'book/:id', component: BookDetailComponent },
   { path: 'login', component: LoginComponent },
-  { path: 'account', component: AccountComponent }
+  // { path: 'account', component: AccountComponent },
+  { path: 'basket', component: BasketComponent },
+  { path: 'delivery', component: DeliveryComponent },
+  { path: 'forgotten-password', component: ForgottenPasswordComponent },
+  { path: 'account', component: AccountComponent, children: accountChildRoutes },
+  { path: 'contact', component: ContactComponent }
 ]
 
 @NgModule({
@@ -53,13 +69,19 @@ export const routes: Routes = [
     BookDetailComponent,
     BookSearchListComponent,
     LoginComponent,
-    AccountComponent
+    // AccountComponent,
+    BasketComponent,
+    DeliveryComponent,
+    ForgottenPasswordComponent,
+    EqualValidator,
+    ContactComponent
   ],
   exports: [
     NavComponent,
     HomeComponent,
     LoginComponent,
-    AccountComponent
+    // AccountComponent,
+    AccountComponentModule
   ],
   imports: [
     RouterModule,
@@ -69,16 +91,17 @@ export const routes: Routes = [
     AutoCompleteModule,
     RatingModule,
     ButtonModule,
-    // DropdownModule
+    DropdownModule,
     SliderModule,
     DataGridModule,
     ListboxModule,
-     GrowlModule,MessagesModule,InputTextareaModule
-    
+    GrowlModule, MessagesModule, InputTextareaModule,
+    RadioButtonModule
   ],
   providers: [
     bookMultiqueryServiceInjectables,
-    AuthenticationService
+    AuthenticationService,
+    BookService
   ]
 })
 export class HomeComponentModule { }

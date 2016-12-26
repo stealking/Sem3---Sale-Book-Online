@@ -1,0 +1,111 @@
+<!--<div class="content">
+  <div class="container">
+    <h2>Lịch Sử Đơn Hàng</h2>
+    <ul class="order-list">
+      <li class="order-list-item">
+        <div class="order">
+          <header class="order-headline">
+            <div class="order-title">
+              <div class="headline">
+                <span class="headline-label">ĐẶT HÀNG #1111</span>
+                <br>
+                <span>Đặt ngày 11/11/1111</span>
+              </div>
+            </div>
+
+            <div class="order-cost">
+              <div class="headline">
+                <span class="headline-label">THÀNH TIỀN</span>
+                <br>
+                <span class="headline-value">20000000</span>
+              </div>
+            </div>
+            <div class="order_payment">
+              <div class="headline">
+                <span class="headline__label">Thanh toán</span>
+                <br>
+                <span class="headline__value">Thanh toán khi nhận hàng</span>
+              </div>
+            </div>
+
+            <div class="order__status order__status_delivered">
+              <span class="order__status-icon">
+                TÌNH TRẠNG
+                <span class="status-icon status-icon_type_delivered">
+                </span>
+              </span>
+            </div>
+            
+
+          </header>
+        </div>
+      </li>
+    </ul>
+  </div>
+</div>-->
+
+<p-dataScroller [value]="results" [rows]="10" [buffer]="0.4">
+    <header>
+        Trượt xuông để hiển thị thêm
+    </header>
+    <template let-result>
+        <div class="ui-grid ui-grid-responsive ui-fluid" style="font-size:16px;padding:20px;border-bottom:1px solid #D5D5D5;">
+            <div class="ui-grid-row">
+                <div class="ui-grid-col-3" style="text-align:center"><i class="fa fa-search" (click)="selectCar(result)" style="cursor:pointer;float:left;margin-top:40px"></i>
+                    <img
+                        src=""></div>
+                <div class="ui-grid-col-9">
+                    <div class="ui-grid ui-grid-responsive ui-fluid">
+                        <div class="ui-grid-row">
+                            <div class="ui-grid-col-2">Mã Đơn Hàng: </div>
+                            <div class="ui-grid-col-10">{{result.OrderID}}</div>
+                        </div>
+                        <div class="ui-grid-row">
+                            <div class="ui-grid-col-2">Mã Người Dùng: </div>
+                            <div class="ui-grid-col-10">{{result.UserID}}</div>
+                        </div>
+                        <div class="ui-grid-row">
+                            <div class="ui-grid-col-2">Ngày Đặt: </div>
+                            <div class="ui-grid-col-10">{{result.Date}}</div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </template>
+</p-dataScroller>
+<p-dialog header="Chi Tiết Đơn Hàng" [(visible)]="displayDialog" [responsive]="true" showEffect="fade" width="800" [modal]="true"
+    (onAfterHide)="onDialogHide()">
+    <div class="ui-grid ui-grid-responsive ui-fluid" *ngIf="orderdetail" style="font-size:16px;text-align:left;padding:20px;">
+        <div *ngFor="let detail of orderdetail">
+            <div class="ui-grid-row">
+                <div class="ui-grid-col-12" style="text-align:center"><img src="http://localhost:53106/content/{{detail.ImageUrl}}" style="width:100px;height:100px"></div>
+            </div>
+            <div class="ui-grid-row">
+                <div class="ui-grid-col-4">Mã Đơn Hàng: </div>
+                <div class="ui-grid-col-8">{{detail.OrderID}}</div>
+            </div>
+            <div class="ui-grid-row">
+                <div class="ui-grid-col-4">Tên Sách: </div>
+                <div class="ui-grid-col-8">{{detail.Name}}</div>
+            </div>
+            <div class="ui-grid-row">
+                <div class="ui-grid-col-4">Tác Giả: </div>
+                <div class="ui-grid-col-8">{{detail.Author}}</div>
+            </div>
+            <div class="ui-grid-row">
+                <div class="ui-grid-col-4">Số Lượng: </div>
+                <div class="ui-grid-col-8">{{detail.Number}}</div>
+            </div>
+            <div class="ui-grid-row">
+                <div class="ui-grid-col-4">Giá: </div>
+                <div class="ui-grid-col-8">{{detail.Price}} VND</div>
+            </div>
+            <div class="ui-grid-row">
+                <div class="ui-grid-col-4">Thành Tiền: </div>
+                <div class="ui-grid-col-8">{{detail.Price * detail.Number }} VND</div>
+            </div>
+        </div>
+    </div>
+</p-dialog>

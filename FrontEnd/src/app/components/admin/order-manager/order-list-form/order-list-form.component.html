@@ -1,27 +1,28 @@
-<div class="container">
-  <h2>List of Order</h2>
-  <a [routerLink]="['./new']" class="btn btn-primary">Add new Order</a>
-  <table class="table">
-    <thead>
-      <tr>
-        <th>No.</th>
-        <th>OrderID</th>
-        <th>UserID</th>
-        <th>Date</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr *ngFor="let Order of this.results; let num = index">
-        <td>{{num}}</td>
-        <td>{{Order.OrderID}}</td>
-        <td>{{Order.UserID}}</td>
-        <td>{{Order.Date}}</td>
-        <td>
-          <button class="btn btn-primary"><i class="fa fa-1x fa-pencil-square-o" aria-hidden="true" (click)="checkOrder(Order.OrderID)"></i></button>
-          <button class="btn btn-primary"><i class="fa fa-1x fa-pencil-square-o" aria-hidden="true" (click)="editOrder(Order.OrderID)"></i></button>
-          <button class="btn btn-danger"><i class="fa fa-1x fa-times" aria-hidden="true" (click)="deleteOrder(Order.OrderID)"></i></button>
-        </td>
-      </tr>
-    </tbody>
-  </table>
+<div class="ui-widget-header ui-helper-clearfix" style="padding:4px 10px;border-bottom: 0 none">
+  <i class="fa fa-search" style="float:left;margin:4px 4px 0 0"></i>
+  <input #gb type="text" pInputText size="50" style="float:left" placeholder="Global Filter">
 </div>
+<p-dataTable [value]="results" selectionMode="single" [(selection)]="selectedOrder" (onRowSelect)="onRowSelect($event)" [paginator]="true"
+  rows="6" [responsive]="true" [globalFilter]="gb" [contextMenu]="cm">
+  <header>Order</header>
+  <p-column field="OrderID" header="OrderID" [sortable]="true" [filter]="true" filterMatchMode="contains"></p-column>
+  <p-column field="UserID" header="UserID" [sortable]="true" [filter]="true" filterMatchMode="contains"></p-column>
+  <p-column field="Date" header="Date" [sortable]="true" [filter]="true" filterMatchMode="contains"></p-column>
+  <p-column field="ReceiverCity" header="ReceiverCity" [sortable]="true" [filter]="true" filterMatchMode="contains"></p-column>
+  <p-column field="ReceiverAddress" header="ReceiverAddress" [sortable]="true" [filter]="true" filterMatchMode="contains"></p-column>
+  <p-column field="ReceiverDistrict" header="ReceiverDistrict" [sortable]="true" [filter]="true" filterMatchMode="contains"></p-column>
+  <p-column field="AddressType" header="AddressType" [sortable]="true" [filter]="true" filterMatchMode="contains"></p-column>
+  <p-column field="LogisticsCost" header="LogisticsCost" [sortable]="true" [filter]="true" filterMatchMode="contains"></p-column>
+  <p-column field="Status" header="Status" [sortable]="true" [filter]="true" filterMatchMode="contains"></p-column>
+  <footer>
+    <div class="ui-helper-clearfix" style="width:100%">
+      <p-growl [value]="msgs"></p-growl>
+      <p-confirmDialog width="425"></p-confirmDialog>
+      <a [routerLink]="['./new']" pButton icon="fa-plus" style="float:left" label="Add new order"></a>
+      <button type="button" pButton icon="fa-search" style="float:left" (click)="checkOrder(order.OrderID)" label="Check OrderDetail"></button>
+      <button type="button" pButton icon="fa-edit" style="float:left" (click)="editOrder(order.OrderID)" label="Edit"></button>
+      <button type="button" pButton icon="fa-close" style="float:left" (click)="deleteOrder(order.OrderID)" label="Delete"></button>
+    </div>
+  </footer>
+</p-dataTable>
+<p-contextMenu #cm [model]="items"></p-contextMenu>

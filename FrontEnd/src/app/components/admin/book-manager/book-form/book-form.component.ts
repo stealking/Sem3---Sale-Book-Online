@@ -17,7 +17,7 @@ import {FileUploadModule} from 'primeng/primeng';
 export class BookFormComponent implements OnInit {
   rates = [1, 2, 3, 4, 5];
   statuss = ['New', 'Old','Hot'];
-  model = new Book(this.id,'','',5,'',null,null,'default-image.jpg',null,'',null,'',null,null,null,null,'',);
+  model = new Book(this.id);
   id: number;
   job: string;
   date1 = new Date();
@@ -81,7 +81,7 @@ export class BookFormComponent implements OnInit {
   }
 
   newBook() {
-    this.model = new Book(this.id,'','',5,'',null,null,'',null,'',null,'',null,null,null,null,'','','');
+    this.model = new Book(this.id);
   }
 
   back(): void {

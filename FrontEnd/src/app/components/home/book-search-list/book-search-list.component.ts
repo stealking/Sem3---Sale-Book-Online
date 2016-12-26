@@ -3,9 +3,11 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { Http, Response, Headers, RequestOptions } from '@angular/http';
 import { SelectItem } from 'primeng/primeng';
 import { Subscription } from 'rxjs';
-
+import { BookService } from '../../../services/book.service';
 // model
-import {Book} from '../../../classes/book';
+import { Book } from '../../../classes/book';
+import { OrderDetail } from '../../../classes/orderdetail';
+import { Order } from '../../../classes/order';
 // service 
 import { BookMultiqueryService } from '../../../services/book-multiquery.service';
 
@@ -36,7 +38,7 @@ export class BookSearchListComponent implements OnInit {
     status: ''
   };
   private subscription: Subscription
-  constructor(public http: Http, private router: Router, private route: ActivatedRoute, private queryService: BookMultiqueryService) {
+  constructor(public http: Http, private router: Router, private route: ActivatedRoute, private queryService: BookMultiqueryService, public bookService: BookService) {
     this.rate = 5;
     this.types = [];
     this.types.push({ label: 'Tất cả', value: null });
@@ -51,20 +53,20 @@ export class BookSearchListComponent implements OnInit {
     this.subscription = this.route.queryParams.subscribe(
       (param: any) => {
         let keyWord = param['keyWord'];
-        if(keyWord){
+        if (keyWord) {
           this.query = {
-          rate: '',
-          typeId: [],
-          name: '',
-          minPrice: '',
-          maxPrice: '',
-          status: ''
-        };
-        this.query.name = keyWord;
-        var queryStr = this.queryService.multiQueryBooks(this.query);
-        this.getData(queryStr);
+            rate: '',
+            typeId: [],
+            name: '',
+            minPrice: '',
+            maxPrice: '',
+            status: ''
+          };
+          this.query.name = keyWord;
+          var queryStr = this.queryService.multiQueryBooks(this.query);
+          this.getData(queryStr);
         }
-       
+
       });
   }
   ngOnDestroy() {
@@ -77,17 +79,18 @@ export class BookSearchListComponent implements OnInit {
     if (res) {
       console.log(res)
       this.books = res;
-      this.books.forEach(function(book){
-        book.CurrentPrice = (Math.floor(book.Price * (100 - book.SaleOff)) + "0 VND").replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-        book.PublishPrice = (book.Price * 100 + "0 VND").replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-        book.SavePrice = (Math.floor(book.Price * book.SaleOff) + "0 VND").replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+      var bookService = this.bookService;
+      this.books.forEach(function (book) {
+        book.CurrentPrice = bookService.formatPrice(book.Price * (100 - book.SaleOff));
+        book.PublishPrice = bookService.formatPrice(book.Price * 100);
+        book.SavePrice = bookService.formatPrice(book.Price * book.SaleOff);
       });
     }
     // console.log(JSON.stringify(this.books[0]));
   }
   numberWithCommas(x) {
     return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-}
+  }
   goBook(id: number): void {
     this.router.navigate(['../book/', id], { relativeTo: this.route });
   }
@@ -108,7 +111,7 @@ export class BookSearchListComponent implements OnInit {
     this.query.minPrice = Math.floor(this.rangeValues[0] / 1000) + '';
     this.query.maxPrice = Math.floor(this.rangeValues[1] / 1000) + '';
     if (this.rate != undefined) this.query.rate = this.rate + '';
-    else {this.query.rate = ''}
+    else { this.query.rate = '' }
     console.log(JSON.stringify(this.selectedTypes));
     if (this.selectedTypes != undefined) {
       var typeId = [];
@@ -131,5 +134,72 @@ export class BookSearchListComponent implements OnInit {
   getData(queryStr) {
     this.http.get(queryStr)
       .subscribe((res: any) => this.renderResults(res.json()));
+  }
+  addToCart(book) {
+    let order: Order = {};
+    order = JSON.parse(localStorage.getItem("order"));
+    // let http = this.http;
+    let hasBook = false;
+    // let headers = new Headers({ 'Content-Type': 'application/json' });
+    // let options = new RequestOptions({ headers: headers });
+
+    if (!order) {
+      order = new Order();
+      order.OrderDetails = [];
+    }
+    else {
+      for (let orderDetail of order.OrderDetails) {
+        console.log(orderDetail.Book.BookID + " // " + book.BookID);
+        if (orderDetail.Book.BookID === book.BookID) {
+          hasBook = true;
+          // alert(123);
+          break;
+        } 
+      }
+    }
+
+    // order.OrderDetails.forEach(function(orderDetail){
+    //      if (orderDetail.Book.BookID === book.bookID) {
+    //     hasBook = true;
+    //     alert(123);
+    //   }
+    // });
+   
+    if (hasBook) {
+      alert("Sach nay da co trong gio hang");
+    } else {
+
+      alert("Dua vao gio hang thanh cong");
+      let orderDetail: OrderDetail = {};
+      orderDetail.Book = book;
+      orderDetail.Flag = true;
+      orderDetail.Number = 1;
+    
+      order.OrderDetails.push(orderDetail);
+      console.log(JSON.stringify(order));
+      // var orderDetail = new OrderDetail(0, order.OrderID, bookID, 1, true);
+      // console.log(JSON.stringify(orderDetail));
+      // http.post(
+      //   'http://localhost:53106/api/orderdetail/AddOrder',
+      //   JSON.stringify(orderDetail), options)
+      //   .subscribe((res: Response) => {
+      //     alert("Dua vao gio hang thanh cong");
+      //   })
+    }
+
+    localStorage.setItem("order", JSON.stringify(order));
+    // http.get(
+    //   'http://localhost:53106/api/order/SearchByUserID/1')
+    //   .subscribe(function (ress: any) {
+    //     var res = JSON.parse(ress.json());
+    //     order = res[0];
+
+    //     if(order){ // neu co order, lay orderdetail
+
+    //       order.OrderDetails
+    //     } else {
+    //       //
+    //     }
+    //   });
   }
 }

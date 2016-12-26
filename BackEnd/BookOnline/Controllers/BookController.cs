@@ -24,7 +24,7 @@ namespace BookOnline.Controllers
         //Get All Books
         [Route("book/getAll")]
         [HttpGet]
-        public dynamic GetAllBooks()
+        public IEnumerable<Book> GetAllBooks()
         {
 //            throw new HttpResponseException(HttpStatusCode.Unauthorized);
             return bookManager.GetAll();
@@ -45,9 +45,9 @@ namespace BookOnline.Controllers
         [HttpPost]
         public Book AddBook(Book book)
         {
-            if (book.DateCreate != null) book.DateCreate = book.DateCreate.Value.Date;
-            if (book.DateUpdate != null) book.DateCreate = book.DateUpdate.Value.Date;
-            if (book.PublishDate != null) book.DateCreate = book.PublishDate.Value.Date;
+            book.DateCreate = Convert.ToDateTime(book.DateCreate);
+            book.DateUpdate = Convert.ToDateTime(book.DateUpdate);
+            book.PublishDate = Convert.ToDateTime(book.PublishDate);
             book = bookManager.Add(book);
             return book;
         }
@@ -80,9 +80,9 @@ namespace BookOnline.Controllers
         }
 
         [HttpGet]
-        public dynamic SearchMultiQuery( int? rate, int?[] typeId, string name, decimal? minPrice, decimal? maxPrice, string status)
+        public dynamic SearchMultiQuery(string name, int? rate, int[] typeId, decimal? minPrice, decimal? maxPrice, string status)
         {
-            return bookManager.SearchMultiQuery( rate, typeId, name, minPrice, maxPrice, status);
+            return bookManager.SearchMultiQuery(name, rate, typeId, minPrice, maxPrice, status);
         }
 
         [HttpPost]
