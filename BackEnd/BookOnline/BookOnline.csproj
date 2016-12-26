@@ -263,6 +263,7 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\BookController.cs" />
+    <Compile Include="Controllers\EmailController.cs" />
     <Compile Include="Controllers\OrderController.cs" />
     <Compile Include="Controllers\OrderDetailController.cs" />
     <Compile Include="Controllers\TypeController.cs" />
@@ -275,7 +276,9 @@
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Models\BookManager.cs" />
+    <Compile Include="Models\EmailManager.cs" />
     <Compile Include="Models\IBookManager.cs" />
+    <Compile Include="Models\IEmailManager.cs" />
     <Compile Include="Models\IOrderDetailManager.cs" />
     <Compile Include="Models\IOrderManager.cs" />
     <Compile Include="Models\ITypeManager.cs" />
@@ -310,6 +313,7 @@
     <Compile Include="Models\sysdiagram.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="Models\testEmail.cs" />
     <Compile Include="Models\Type.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
