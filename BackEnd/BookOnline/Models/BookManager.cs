@@ -17,7 +17,7 @@ namespace BookOnline.Models
         
         BookOnlineEntities db;
         IList<Book> books;
-        public IEnumerable<Book> GetAll()
+        public dynamic GetAll()
         {
             using (db = new BookOnlineEntities())
             {
@@ -92,7 +92,7 @@ namespace BookOnline.Models
                     throw new ArgumentNullException(nameof(book));
                 }
                 book.BookID = db.Books.Max(s => s.BookID) + 1;
-                book.DateCreate = DateTime.Now;
+                book.DateCreate = DateTime.Now.Date;
                 book.Flag = true;
                 db.Books.Add(book);
                 db.SaveChanges();
@@ -124,7 +124,7 @@ namespace BookOnline.Models
                 {
                     return false;
                 }
-                book.DateUpdate = DateTime.Now;
+                book.DateUpdate = DateTime.Now.Date;
                 db.Books.AddOrUpdate(book);
                 db.SaveChanges();
                 return true;
@@ -165,14 +165,17 @@ namespace BookOnline.Models
             using (db = new BookOnlineEntities())
             {
                 var book = db.Books.SingleOrDefault(b => b.BookID == id);
-                book.ImageUrl = url;
-                db.Books.AddOrUpdate(book);
+                if (book != null)
+                {
+                    book.ImageUrl = url;
+                    db.Books.AddOrUpdate(book);
+                }
                 db.SaveChanges();
                 return true;
             }
         }
 
-        public dynamic SearchMultiQuery(string name, int? Rate, int?[] typeId, decimal? minPrice, decimal? maxPrice)
+        public dynamic SearchMultiQuery( int? Rate, int?[] typeId, string name, decimal? minPrice, decimal? maxPrice, string status)
         {
             using (db = new BookOnlineEntities())
             {
@@ -204,7 +207,7 @@ namespace BookOnline.Models
                     query = query.Where(b => b.Price >= minPrice);
                 if (maxPrice.HasValue)
                     query = query.Where(b => b.Price <= maxPrice);
-                var TypeId = new List<int> { 8 };
+                var TypeId = new List<int> { 4,5,8,9,10,11 };
                 query = query.Where(b => b.Types.Select(x => x.TypeID).Any() && b.Types.Select(x => x.TypeID).Intersect(TypeId).Any());
                 return JsonConvert.SerializeObject(query);
             }

@@ -15,11 +15,22 @@ namespace BookOnline.Controllers
     {
         static readonly IOrderManager orderManager = new OrderManager();
 
-        //Get All Orders
+        [HttpGet]
+        public IEnumerable<Order> GetAllOrderHistory(int id)
+        {
+            return orderManager.GetOrderHistory(id);
+        }
+
+        //Get All Orders with True Flags!
         [HttpGet]
         public IEnumerable<Order> GetAllOrders()
         {
             return orderManager.GetAll();
+        }
+        [HttpGet]
+        public IEnumerable<Order> SearchByUserID(int id)
+        {
+            return orderManager.SearchByUserID(id);
         }
         //Get Order by id
         [HttpGet]

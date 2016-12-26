@@ -21,6 +21,27 @@ namespace BookOnline.Controllers
         {
             return orderManager.GetAll();
         }
+        //Get all oderdt form orderid
+        [HttpGet]
+        public dynamic GetAllOrdersdt(int id)
+        {
+            var order = orderManager.Getdetail(id);
+            if (order == null)
+            {
+                throw new HttpResponseException(HttpStatusCode.OK);
+            }
+            return order;
+        }
+        [HttpGet]
+        public dynamic GetAllOrdersdtistory(int id)
+        {
+            var order = orderManager.Getdetailhistory(id);
+            if (order == null)
+            {
+                throw new HttpResponseException(HttpStatusCode.NotFound);
+            }
+            return order;
+        }
         //Get Order by id
         [HttpGet]
         public OrderDetail GetOrderById(int id)

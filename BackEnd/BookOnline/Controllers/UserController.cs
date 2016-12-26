@@ -36,10 +36,17 @@ namespace BookOnline.Controllers
         [HttpPost]
         public User AddUser(User user)
         {
-            user.DateOfBirth = Convert.ToDateTime(user.DateOfBirth);
+            user.RoleID = 2;
             user = userManager.Add(user);
             return user;
         }
+
+        [HttpGet]
+        public dynamic Login(string email, string password)
+        {
+            return userManager.Login(email, password);
+        }
+
         //Update User
         [HttpPut]
         public void UpdateUser(User user)
@@ -60,5 +67,15 @@ namespace BookOnline.Controllers
             }
             userManager.Remove(id);
         }
+
+        [HttpPut]
+        public void ChangePassword(int id, string newPass)
+        {
+            if (!userManager.ChangePassword(id, newPass))
+            {
+                throw new HttpResponseException(HttpStatusCode.NotFound);
+            }
+        }
+
     }
 }

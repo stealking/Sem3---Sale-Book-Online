@@ -10,6 +10,8 @@ namespace BookOnline.Models
     {
         BookOnlineEntities db = new BookOnlineEntities();
         IList<OrderDetail> ordersdetail;
+        IList<OrderDetail> getdt;
+        IList<OrderDetail> getdth;
         public IEnumerable<OrderDetail> GetAll()
         {
             ordersdetail = new List<OrderDetail>();
@@ -44,6 +46,45 @@ namespace BookOnline.Models
             }
             return ordersdetail;
         }
+        public dynamic Getdetail(int id)
+        {
+            var query = (from a in db.OrderDetails
+                         join b in db.Books on a.BookID equals b.BookID
+                         select new
+                         {
+                             a.BookID,
+                             a.OrderID,
+                             a.Number,
+                             a.Flag,
+                             b.Name,
+                             b.Price,
+                             b.ImageUrl,
+                             b.Author
+                         }).Where(w => w.OrderID == id && w.Flag == true).ToList();
+
+            return query;
+
+        }
+
+        public dynamic Getdetailhistory(int id)
+        {
+            var query = (from a in db.OrderDetails
+                join b in db.Books on a.BookID equals b.BookID
+                select new
+                {
+                    a.BookID,
+                    a.OrderID,
+                    a.Number,
+                    a.Flag,
+                    b.Name,
+                    b.Price,
+                    b.ImageUrl,
+                    b.Author
+                }).Where(w => w.OrderID == id && w.Flag == false).ToList();
+
+            return query;
+
+        }
 
         public OrderDetail Add(OrderDetail orderdetail)
         {
@@ -51,7 +92,7 @@ namespace BookOnline.Models
             {
                 throw new ArgumentNullException(nameof(orderdetail));
             }
-            orderdetail.OrderID = db.OrderDetails.Max(s => s.ID) + 1;
+            orderdetail.ID = db.OrderDetails.Max(s => s.ID) + 1;
             db.OrderDetails.Add(orderdetail);
             db.SaveChanges();
             return orderdetail;

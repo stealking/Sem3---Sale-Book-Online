@@ -3,6 +3,7 @@ import { Router } from '@angular/router';
 import { Http } from '@angular/http';
 import { User } from '../../../classes/user';
 import { AuthenticationService } from '../../../services/AuthenticationService';
+import { EqualValidator } from '../../../services/equal-validator.directive';
 import { ButtonModule } from 'primeng/primeng';
 @Component({
   selector: 'app-login',
@@ -10,8 +11,8 @@ import { ButtonModule } from 'primeng/primeng';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-  public user = new User(null, '', '', '', '', null, null, null, 1, true);
-  public model = new User(null, '', '', '', '', null, null, null, 1, true);
+  public user = new User(null, '', '', '', null, null, null, null, 1, true);
+  public model = new User(null, '', '', '',null,null,null,null,1,true);
   public errorMsg = '';
   public errorMsgRes = '';
   results: User[];
@@ -33,6 +34,8 @@ export class LoginComponent implements OnInit {
     this.http.get('http://localhost:53106/api/user/GetAllUsers').subscribe((res: any) => this.renderResults(res.json()));
   }
   
+ 
+
   login() {
     if (!this._service.login(this.user, this.results)) {
       this.errorMsg = 'Failed to login';

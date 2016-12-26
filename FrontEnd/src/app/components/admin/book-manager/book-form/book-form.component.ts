@@ -23,7 +23,7 @@ export class BookFormComponent implements OnInit {
   date1 = new Date();
   msgs: Message[];
   uploadedFiles: any[] = [];
-  URL = 'http://localhost:53106/api/book/PostFormData/' + this.id
+  URL = 'http://localhost:53106/api/book/PostFormData/' + this.id;
   // public uploader:FileUploader;
   
 

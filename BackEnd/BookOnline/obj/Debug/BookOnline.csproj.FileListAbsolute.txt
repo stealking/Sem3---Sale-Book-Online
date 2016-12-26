@@ -777,3 +777,13 @@ F:\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\System.Web.Http.WebHost.xml
 F:\Sem3---Sale-Book-Online\BackEnd\BookOnline\obj\Debug\BookOnline.csprojResolveAssemblyReference.cache
 F:\Sem3---Sale-Book-Online\BackEnd\BookOnline\obj\Debug\BookOnline.dll
 F:\Sem3---Sale-Book-Online\BackEnd\BookOnline\obj\Debug\BookOnline.pdb
+E:\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.AspNet.Identity.Core.dll
+E:\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.Threading.Tasks.dll
+E:\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.Threading.Tasks.Extensions.Desktop.dll
+E:\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.Threading.Tasks.Extensions.dll
+E:\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\SendGrid.SmtpApi.dll
+E:\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\SendGridMail.dll
+E:\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.AspNet.Identity.Core.xml
+E:\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.Threading.Tasks.xml
+E:\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.Threading.Tasks.Extensions.xml
+E:\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.Threading.Tasks.Extensions.Desktop.xml

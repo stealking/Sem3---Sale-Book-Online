@@ -10,6 +10,7 @@ export class User{
         public Phone?: number,
         public RoleID?: number,
         public Flag?:boolean,
-        public JustLogin?: boolean
+        public JustLogin?: boolean,
+        public ConfirmPassword?: string
     ){}
 }

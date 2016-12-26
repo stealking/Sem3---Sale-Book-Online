@@ -14,7 +14,7 @@ namespace BookOnline.Models
         public IEnumerable<Order> GetAll()
         {
             orders = new List<Order>();
-            var query = (from s in db.Orders select s).ToList();
+            var query = (from s in db.Orders where s.Flag == true select s).ToList();
             foreach (var item in query)
             {
                 orders.Add(new Order
@@ -26,6 +26,62 @@ namespace BookOnline.Models
                 });
             }
             return orders;
+        }
+
+        public IEnumerable<Order> GetOrderHistory(int id)
+        {
+            orders = new List<Order>();
+            try
+            {
+                var query = db.Orders.Where(b => b.Flag == false && b.UserID == id).Select(s => s).ToList();
+                foreach (var item in query)
+                {
+                    orders.Add(new Order
+                    {
+                        OrderID = item.OrderID,
+                        UserID = item.UserID,
+                        Date = item.Date,
+                        Flag = item.Flag,
+
+                    });
+                }
+                return orders;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex);
+            }
+            return orders;
+        }
+
+        public IEnumerable<Order> SearchByUserID(int id)
+        {
+            using (db = new BookOnlineEntities())
+            {
+                orders = new List<Order>();
+                var query = db.Orders.Where(b => b.Flag == true && b.UserID == id).Select(s => s).ToList();
+                foreach (var item in query)
+                {
+                    orders.Add(new Order
+                    {
+                        OrderID = item.OrderID,
+                        UserID = item.UserID,
+                        Date = item.Date,
+                        Flag = item.Flag,
+
+                    });
+                }
+                return orders;
+            }
+
+            //var query = (from b in db.Orders
+            //    where (b.UserID == id)
+            //    select new
+            //    {
+            //        Orderid = b.OrderID,
+            //        od = b.OrderDetails,
+            //    }).ToList();
+            //return query;
         }
 
         public Order Get(int id)

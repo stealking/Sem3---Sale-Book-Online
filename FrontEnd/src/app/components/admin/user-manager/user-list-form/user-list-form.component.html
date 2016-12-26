@@ -4,7 +4,7 @@
   <input #gb type="text" pInputText size="50" style="float:left" placeholder="Global Filter">
 </div>
 <p-dataTable [value]="results" selectionMode="single" [(selection)]="selectedUser" (onRowSelect)="onRowSelect($event)" [paginator]="true"
-  rows="5" [responsive]="true" [globalFilter]="gb" [contextMenu]="cm">
+  rows="15" [responsive]="true" [globalFilter]="gb" [contextMenu]="cm">
   <header>CRUD for Users</header>
   <p-column field="Email" header="Email" [sortable]="true" [filter]="true" filterMatchMode="contains"></p-column>
   <p-column field="Name" header="Name" [sortable]="true" [filter]="true" filterMatchMode="contains"></p-column>

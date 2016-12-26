@@ -1,28 +1,28 @@
 import { NgModule, Component, OnInit } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { BrowserModule } from '@angular/platform-browser';
 import { CommonModule } from '@angular/common';
+import { HttpModule } from '@angular/http';
 import { FormsModule, FormGroup, FormBuilder } from '@angular/forms';
-
 import { NavComponent } from './nav/nav.component';
 import { MainPageComponent } from './main-page/main-page.component';
 import { BookDetailComponent } from './book-detail/book-detail.component';
 import { BookSearchListComponent } from './book-search-list/book-search-list.component';
-import { AccountComponent } from './account/account.component';
 import { LoginComponent } from './login/login.component';
 import { DataGridModule } from 'primeng/primeng';
 import { ButtonModule } from 'primeng/primeng';
-// import {InputTextModule} from 'primeng/primeng';
 import { AutoCompleteModule } from 'primeng/primeng';
 import { RatingModule } from 'primeng/primeng';
-// import {DropdownModule} from 'primeng/primeng';
 import { SliderModule } from 'primeng/primeng';
-import {ListboxModule, GrowlModule,MessagesModule,InputTextareaModule} from 'primeng/primeng';
+import { ListboxModule, GrowlModule, MessagesModule, InputTextareaModule } from 'primeng/primeng';
+import { AccountComponent, AccountComponentModule, routes as accountChildRoutes } from './account/account.component';
 
 
 // service 
 import { bookMultiqueryServiceInjectables } from './book-search-list/book-search-list.component';
 import { AuthGuard } from '../../services/auth.guard';
 import { AuthenticationService } from '../../services/AuthenticationService';
+import { EqualValidator } from '../../services/equal-validator.directive';
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -37,12 +37,13 @@ export class HomeComponent implements OnInit {
 
 }
 export const routes: Routes = [
-  { path: '', component: MainPageComponent},
-  { path: 'home', component: MainPageComponent},
+  { path: '', component: MainPageComponent },
+  { path: 'home', component: MainPageComponent },
   { path: 'books', component: BookSearchListComponent },
   { path: 'book/:id', component: BookDetailComponent },
   { path: 'login', component: LoginComponent },
-  { path: 'account', component: AccountComponent }
+  
+  { path: 'account', component: AccountComponent, children: accountChildRoutes }
 ]
 
 @NgModule({
@@ -53,32 +54,39 @@ export const routes: Routes = [
     BookDetailComponent,
     BookSearchListComponent,
     LoginComponent,
-    AccountComponent
+    AccountComponent,
+    EqualValidator
   ],
   exports: [
     NavComponent,
     HomeComponent,
     LoginComponent,
-    AccountComponent
+    AccountComponent,
+    AccountComponentModule,
+    EqualValidator
   ],
   imports: [
     RouterModule,
     CommonModule,
     FormsModule,
-    // HttpModule,
+    HttpModule,
+    BrowserModule,
     AutoCompleteModule,
     RatingModule,
     ButtonModule,
-    // DropdownModule
     SliderModule,
     DataGridModule,
     ListboxModule,
-     GrowlModule,MessagesModule,InputTextareaModule
-    
+    GrowlModule,
+    MessagesModule,
+    InputTextareaModule,
+    AccountComponentModule
+
   ],
   providers: [
     bookMultiqueryServiceInjectables,
-    AuthenticationService
+    AuthenticationService,
+    EqualValidator
   ]
 })
 export class HomeComponentModule { }

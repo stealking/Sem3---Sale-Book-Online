@@ -10,6 +10,8 @@ namespace BookOnline.Models
     {
         IEnumerable<OrderDetail> GetAll();
         OrderDetail Get(int id);
+        dynamic Getdetail(int id);
+        dynamic Getdetailhistory(int id);
         OrderDetail Add(OrderDetail orderdetail);
         void Remove(int id);
         bool Update(OrderDetail orderdetail);
