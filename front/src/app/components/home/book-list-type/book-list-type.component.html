@@ -1,0 +1,54 @@
+<div style="text-align: center;">
+<h1>{{this.title}}</h1>
+</div>
+<div class="content-wrap">
+  <div class="ContentSideSections Implementation ui-fluid">
+    <div class="ui-grid ui-grid-responsive ui-grid-pad">
+      <div class="ui-grid-col-12">
+        <p-dataGrid [value]="books" [paginator]="true" [rows]="24">
+          <!--<header>
+            All book
+          </header>-->
+          <template let-book>
+            <div class="ui-g-6 ui-md-3 ui-lg-2 book-detail">
+              <!--<div class="book-detail-wrap">-->
+              <div class="book-image">
+                <a (click)="goBook(book.BookID)" style="position: relative;">
+                  <img src="http://localhost:53106/content/{{book.ImageUrl}}" style="vertical-align: top;">
+                  <div  class="ribbon {{book.Status}}" *ngIf="book.Status == 'highlight'|| book.Status == 'bestselling' || book.Status == 'sell-off'" >
+                     <span  *ngIf="book.Status == 'highlight'">Nổi<br/>bật</span>
+                     <span  *ngIf="book.Status == 'bestselling'">Bán<br/>chạy</span>
+                     <span  *ngIf="book.Status == 'sell-off'">Giảm<br/>giá</span>
+                  </div>
+                </a>
+              </div>
+              <div class="book-name">
+                <h3><a (click)="goBook(book.BookID)">{{book.Name}}</a></h3>
+              </div>
+              <div class="book-author">
+                <p><a href="">{{book.Author}}</a></p>
+              </div>
+              <div class="book-rate">
+                <p-rating [ngModel]="book.Rate" readonly="true" stars="5" [cancel]="false"></p-rating>
+              </div>
+              <div class="book-price-wrap">
+                <p class="book-price">
+                  {{ book.CurrentPrice }}
+                </p>
+                <!--<span *ngIf="book.SaleOff">-->
+               <p class="rrp" *ngIf="book.SavePrice != '00VND'"> &nbsp; &nbsp;<span>{{book.PublishPrice}}</span></p>
+                <p class="book-price-save" *ngIf="book.SavePrice != '00VND'">&nbsp;&nbsp;Tiết kiệm {{book.SavePrice}}</p>
+                <!--</span>-->
+              </div>
+              <div class="search-button normal-search">
+                <button pButton type="text" label="Đưa vô giỏ hàng" (click)="addToCart(book)"></button>
+              </div>
+              <!--<hr class="ui-widget-content" style="border-top:0">-->
+            </div>
+            <!--</div>-->
+          </template>
+        </p-dataGrid>
+      </div>
+    </div>
+  </div>
+</div>

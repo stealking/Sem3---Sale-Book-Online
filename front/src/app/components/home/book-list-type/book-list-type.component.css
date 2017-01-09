@@ -1,0 +1,121 @@
+.search-button button{
+    width: 100%;
+    height: 3.5rem;
+    border: 0;  
+    background: #10bbd5;
+    display: inline-block;
+    border-radius: .6rem;
+    transition: background .3s;
+}
+.normal-search button:hover{
+    background:  #29D5EF;
+}
+
+
+.book-detail{
+    padding:10px; 
+    height: 336px;
+}
+.book-detail  div {
+    text-align: center;
+}
+.book-name > p, .book-author > h3 {
+    display: inline-block;
+}
+.book-image{
+    height: 140px;
+}
+.book-image > a >img {
+    width: auto;
+    max-height: 140px; 
+    cursor: pointer;
+}
+
+.book-name > h3 {
+    margin: 0;
+    font-weight: bold;
+    width: 100%;
+    font-size: 1.4rem;
+    line-height: 2rem;
+    padding-top: .5rem;
+    height: 4rem;
+    max-width: 15rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    box-sizing: content-box;
+}
+.book-author > p{
+    color: #4d4d4d;
+    box-sizing: content-box;
+    height: 2rem;
+    max-width: 15rem;
+    line-height: 2rem;
+    overflow: hidden;
+}
+.book-rate > p-rating{
+    display: inline-block;
+}
+
+.book-price-wrap{
+    white-space: nowrap;
+    -webkit-align-self: flex-end;
+    -ms-flex-item-align: end;
+    align-self: flex-end;
+    width: 100%;
+    height: 5.6rem;
+    margin-top: 0.5rem;
+}
+.book-price{
+    font-size: 1.7rem;
+    line-height: 1.7rem;
+    padding-top: 0.5rem;
+    color: #ff0072;
+}
+.rrp{
+    font-size: 1.1rem;
+    color: #999;
+}
+.rrp span {
+ text-decoration: line-through;
+}
+.book-price-save{
+    color: #333;
+    padding-top: 0;
+    font-style: italic;
+    font-size: 1.2rem;
+}
+.book-detail p {
+    margin: 0;
+    width: 100%;
+}
+.book-detail-wrap{
+    border: 1px solid;
+    padding: 10px;
+}
+.price-range-label{
+    display: inline-block;
+}
+.price-range-value{
+    display: inline-block;
+    width: 100%;
+    text-align: right;
+}
+.price-range-wrapper{
+    margin-top: 6px;
+}
+.price-range-wrapper:last-child{
+    margin-top: 0px;
+}
+h1{
+    color: #fff;
+    font-family: 'Cormorant Garamond';
+    border-bottom: 3px solid #e66c7e;
+    font-size: 48px;
+    font-weight: 400;
+    line-height: 72px;
+    letter-spacing: 35px;
+    text-align: center;
+    text-indent: 24px;
+    text-transform: uppercase;
+    background: #4c394e;
+}

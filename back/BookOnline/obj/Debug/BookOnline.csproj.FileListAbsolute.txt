@@ -1,0 +1,1127 @@
+E:\Project Sem 3\BookOnline\BookOnline\bin\ApplicationInsights.config
+E:\Project Sem 3\BookOnline\BookOnline\bin\roslyn\csc.exe
+E:\Project Sem 3\BookOnline\BookOnline\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+E:\Project Sem 3\BookOnline\BookOnline\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+E:\Project Sem 3\BookOnline\BookOnline\bin\roslyn\Microsoft.CodeAnalysis.dll
+E:\Project Sem 3\BookOnline\BookOnline\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+E:\Project Sem 3\BookOnline\BookOnline\bin\roslyn\Microsoft.CSharp.Core.targets
+E:\Project Sem 3\BookOnline\BookOnline\bin\roslyn\Microsoft.VisualBasic.Core.targets
+E:\Project Sem 3\BookOnline\BookOnline\bin\roslyn\System.Collections.Immutable.dll
+E:\Project Sem 3\BookOnline\BookOnline\bin\roslyn\System.Reflection.Metadata.dll
+E:\Project Sem 3\BookOnline\BookOnline\bin\roslyn\vbc.exe
+E:\Project Sem 3\BookOnline\BookOnline\bin\roslyn\VBCSCompiler.exe
+E:\Project Sem 3\BookOnline\BookOnline\bin\roslyn\VBCSCompiler.exe.config
+E:\Project Sem 3\BookOnline\BookOnline\bin\BookOnline.dll.config
+E:\Project Sem 3\BookOnline\BookOnline\bin\BookOnline.dll
+E:\Project Sem 3\BookOnline\BookOnline\bin\BookOnline.pdb
+E:\Project Sem 3\BookOnline\BookOnline\bin\EntityFramework.dll
+E:\Project Sem 3\BookOnline\BookOnline\bin\Microsoft.AI.Agent.Intercept.dll
+E:\Project Sem 3\BookOnline\BookOnline\bin\Microsoft.AI.DependencyCollector.dll
+E:\Project Sem 3\BookOnline\BookOnline\bin\Microsoft.AI.PerfCounterCollector.dll
+E:\Project Sem 3\BookOnline\BookOnline\bin\Microsoft.AI.ServerTelemetryChannel.dll
+E:\Project Sem 3\BookOnline\BookOnline\bin\Microsoft.AI.Web.dll
+E:\Project Sem 3\BookOnline\BookOnline\bin\Microsoft.AI.WindowsServer.dll
+E:\Project Sem 3\BookOnline\BookOnline\bin\Microsoft.ApplicationInsights.dll
+E:\Project Sem 3\BookOnline\BookOnline\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+E:\Project Sem 3\BookOnline\BookOnline\bin\Newtonsoft.Json.dll
+E:\Project Sem 3\BookOnline\BookOnline\bin\System.Net.Http.Formatting.dll
+E:\Project Sem 3\BookOnline\BookOnline\bin\System.Web.Http.dll
+E:\Project Sem 3\BookOnline\BookOnline\bin\System.Web.Http.WebHost.dll
+E:\Project Sem 3\BookOnline\BookOnline\bin\EntityFramework.xml
+E:\Project Sem 3\BookOnline\BookOnline\bin\Microsoft.AI.DependencyCollector.xml
+E:\Project Sem 3\BookOnline\BookOnline\bin\Microsoft.AI.ServerTelemetryChannel.xml
+E:\Project Sem 3\BookOnline\BookOnline\bin\Microsoft.AI.Web.xml
+E:\Project Sem 3\BookOnline\BookOnline\bin\Microsoft.AI.WindowsServer.xml
+E:\Project Sem 3\BookOnline\BookOnline\bin\Microsoft.ApplicationInsights.xml
+E:\Project Sem 3\BookOnline\BookOnline\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+E:\Project Sem 3\BookOnline\BookOnline\bin\Newtonsoft.Json.xml
+E:\Project Sem 3\BookOnline\BookOnline\bin\System.Net.Http.Formatting.xml
+E:\Project Sem 3\BookOnline\BookOnline\bin\System.Web.Http.xml
+E:\Project Sem 3\BookOnline\BookOnline\bin\System.Web.Http.WebHost.xml
+E:\Project Sem 3\BookOnline\BookOnline\obj\Debug\BookOnline.csprojResolveAssemblyReference.cache
+E:\Project Sem 3\BookOnline\BookOnline\obj\Debug\BookOnline.dll
+E:\Project Sem 3\BookOnline\BookOnline\obj\Debug\BookOnline.pdb
+E:\Project Sem 3\BookOnline\BookOnline\bin\Microsoft.Web.Infrastructure.dll
+E:\Project Sem 3\BookOnline\BookOnline\bin\System.Web.Helpers.dll
+E:\Project Sem 3\BookOnline\BookOnline\bin\System.Web.Mvc.dll
+E:\Project Sem 3\BookOnline\BookOnline\bin\System.Web.Razor.dll
+E:\Project Sem 3\BookOnline\BookOnline\bin\System.Web.WebPages.Deployment.dll
+E:\Project Sem 3\BookOnline\BookOnline\bin\System.Web.WebPages.dll
+E:\Project Sem 3\BookOnline\BookOnline\bin\System.Web.WebPages.Razor.dll
+E:\Project Sem 3\BookOnline\BookOnline\bin\System.Web.Helpers.xml
+E:\Project Sem 3\BookOnline\BookOnline\bin\System.Web.Mvc.xml
+E:\Project Sem 3\BookOnline\BookOnline\bin\System.Web.Razor.xml
+E:\Project Sem 3\BookOnline\BookOnline\bin\System.Web.WebPages.xml
+E:\Project Sem 3\BookOnline\BookOnline\bin\System.Web.WebPages.Deployment.xml
+E:\Project Sem 3\BookOnline\BookOnline\bin\System.Web.WebPages.Razor.xml
+E:\Project Sem 3\BackEnd\BookOnline\bin\ApplicationInsights.config
+E:\Project Sem 3\BackEnd\BookOnline\bin\roslyn\csc.exe
+E:\Project Sem 3\BackEnd\BookOnline\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+E:\Project Sem 3\BackEnd\BookOnline\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+E:\Project Sem 3\BackEnd\BookOnline\bin\roslyn\Microsoft.CodeAnalysis.dll
+E:\Project Sem 3\BackEnd\BookOnline\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+E:\Project Sem 3\BackEnd\BookOnline\bin\roslyn\Microsoft.CSharp.Core.targets
+E:\Project Sem 3\BackEnd\BookOnline\bin\roslyn\Microsoft.VisualBasic.Core.targets
+E:\Project Sem 3\BackEnd\BookOnline\bin\roslyn\System.Collections.Immutable.dll
+E:\Project Sem 3\BackEnd\BookOnline\bin\roslyn\System.Reflection.Metadata.dll
+E:\Project Sem 3\BackEnd\BookOnline\bin\roslyn\vbc.exe
+E:\Project Sem 3\BackEnd\BookOnline\bin\roslyn\VBCSCompiler.exe
+E:\Project Sem 3\BackEnd\BookOnline\bin\roslyn\VBCSCompiler.exe.config
+E:\Project Sem 3\BackEnd\BookOnline\bin\BookOnline.dll.config
+E:\Project Sem 3\BackEnd\BookOnline\bin\BookOnline.dll
+E:\Project Sem 3\BackEnd\BookOnline\bin\BookOnline.pdb
+E:\Project Sem 3\BackEnd\BookOnline\bin\EntityFramework.dll
+E:\Project Sem 3\BackEnd\BookOnline\bin\Microsoft.AI.Agent.Intercept.dll
+E:\Project Sem 3\BackEnd\BookOnline\bin\Microsoft.AI.DependencyCollector.dll
+E:\Project Sem 3\BackEnd\BookOnline\bin\Microsoft.AI.PerfCounterCollector.dll
+E:\Project Sem 3\BackEnd\BookOnline\bin\Microsoft.AI.ServerTelemetryChannel.dll
+E:\Project Sem 3\BackEnd\BookOnline\bin\Microsoft.AI.Web.dll
+E:\Project Sem 3\BackEnd\BookOnline\bin\Microsoft.AI.WindowsServer.dll
+E:\Project Sem 3\BackEnd\BookOnline\bin\Microsoft.ApplicationInsights.dll
+E:\Project Sem 3\BackEnd\BookOnline\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+E:\Project Sem 3\BackEnd\BookOnline\bin\Microsoft.Web.Infrastructure.dll
+E:\Project Sem 3\BackEnd\BookOnline\bin\Newtonsoft.Json.dll
+E:\Project Sem 3\BackEnd\BookOnline\bin\System.Net.Http.Formatting.dll
+E:\Project Sem 3\BackEnd\BookOnline\bin\System.Web.Helpers.dll
+E:\Project Sem 3\BackEnd\BookOnline\bin\System.Web.Http.dll
+E:\Project Sem 3\BackEnd\BookOnline\bin\System.Web.Http.WebHost.dll
+E:\Project Sem 3\BackEnd\BookOnline\bin\System.Web.Mvc.dll
+E:\Project Sem 3\BackEnd\BookOnline\bin\System.Web.Razor.dll
+E:\Project Sem 3\BackEnd\BookOnline\bin\System.Web.WebPages.Deployment.dll
+E:\Project Sem 3\BackEnd\BookOnline\bin\System.Web.WebPages.dll
+E:\Project Sem 3\BackEnd\BookOnline\bin\System.Web.WebPages.Razor.dll
+E:\Project Sem 3\BackEnd\BookOnline\bin\EntityFramework.xml
+E:\Project Sem 3\BackEnd\BookOnline\bin\Microsoft.AI.DependencyCollector.xml
+E:\Project Sem 3\BackEnd\BookOnline\bin\Microsoft.AI.ServerTelemetryChannel.xml
+E:\Project Sem 3\BackEnd\BookOnline\bin\Microsoft.AI.Web.xml
+E:\Project Sem 3\BackEnd\BookOnline\bin\Microsoft.AI.WindowsServer.xml
+E:\Project Sem 3\BackEnd\BookOnline\bin\Microsoft.ApplicationInsights.xml
+E:\Project Sem 3\BackEnd\BookOnline\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+E:\Project Sem 3\BackEnd\BookOnline\bin\System.Web.Helpers.xml
+E:\Project Sem 3\BackEnd\BookOnline\bin\System.Web.Mvc.xml
+E:\Project Sem 3\BackEnd\BookOnline\bin\System.Web.Razor.xml
+E:\Project Sem 3\BackEnd\BookOnline\bin\System.Web.WebPages.xml
+E:\Project Sem 3\BackEnd\BookOnline\bin\System.Web.WebPages.Deployment.xml
+E:\Project Sem 3\BackEnd\BookOnline\bin\System.Web.WebPages.Razor.xml
+E:\Project Sem 3\BackEnd\BookOnline\bin\Newtonsoft.Json.xml
+E:\Project Sem 3\BackEnd\BookOnline\bin\System.Net.Http.Formatting.xml
+E:\Project Sem 3\BackEnd\BookOnline\bin\System.Web.Http.xml
+E:\Project Sem 3\BackEnd\BookOnline\bin\System.Web.Http.WebHost.xml
+E:\Project Sem 3\BackEnd\BookOnline\obj\Debug\BookOnline.csprojResolveAssemblyReference.cache
+E:\Project Sem 3\BackEnd\BookOnline\obj\Debug\BookOnline.dll
+E:\Project Sem 3\BackEnd\BookOnline\obj\Debug\BookOnline.pdb
+C:\Users\Vo Thanh Dat\Desktop\New folder\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\ApplicationInsights.config
+C:\Users\Vo Thanh Dat\Desktop\New folder\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\roslyn\csc.exe
+C:\Users\Vo Thanh Dat\Desktop\New folder\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Vo Thanh Dat\Desktop\New folder\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Vo Thanh Dat\Desktop\New folder\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Vo Thanh Dat\Desktop\New folder\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Vo Thanh Dat\Desktop\New folder\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Vo Thanh Dat\Desktop\New folder\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Vo Thanh Dat\Desktop\New folder\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Vo Thanh Dat\Desktop\New folder\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Vo Thanh Dat\Desktop\New folder\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\roslyn\vbc.exe
+C:\Users\Vo Thanh Dat\Desktop\New folder\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\roslyn\VBCSCompiler.exe
+C:\Users\Vo Thanh Dat\Desktop\New folder\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Vo Thanh Dat\Desktop\New folder\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\BookOnline.dll.config
+C:\Users\Vo Thanh Dat\Desktop\New folder\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\BookOnline.dll
+C:\Users\Vo Thanh Dat\Desktop\New folder\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\BookOnline.pdb
+C:\Users\Vo Thanh Dat\Desktop\New folder\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\EntityFramework.dll
+C:\Users\Vo Thanh Dat\Desktop\New folder\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\Vo Thanh Dat\Desktop\New folder\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\Vo Thanh Dat\Desktop\New folder\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\Vo Thanh Dat\Desktop\New folder\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\Vo Thanh Dat\Desktop\New folder\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.AI.Web.dll
+C:\Users\Vo Thanh Dat\Desktop\New folder\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\Vo Thanh Dat\Desktop\New folder\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.ApplicationInsights.dll
+C:\Users\Vo Thanh Dat\Desktop\New folder\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Vo Thanh Dat\Desktop\New folder\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Vo Thanh Dat\Desktop\New folder\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Newtonsoft.Json.dll
+C:\Users\Vo Thanh Dat\Desktop\New folder\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\System.Net.Http.Formatting.dll
+C:\Users\Vo Thanh Dat\Desktop\New folder\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\System.Web.Helpers.dll
+C:\Users\Vo Thanh Dat\Desktop\New folder\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\System.Web.Http.dll
+C:\Users\Vo Thanh Dat\Desktop\New folder\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\System.Web.Http.WebHost.dll
+C:\Users\Vo Thanh Dat\Desktop\New folder\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\System.Web.Mvc.dll
+C:\Users\Vo Thanh Dat\Desktop\New folder\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\System.Web.Razor.dll
+C:\Users\Vo Thanh Dat\Desktop\New folder\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Vo Thanh Dat\Desktop\New folder\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\System.Web.WebPages.dll
+C:\Users\Vo Thanh Dat\Desktop\New folder\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\System.Web.WebPages.Razor.dll
+C:\Users\Vo Thanh Dat\Desktop\New folder\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\EntityFramework.xml
+C:\Users\Vo Thanh Dat\Desktop\New folder\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\Vo Thanh Dat\Desktop\New folder\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\Vo Thanh Dat\Desktop\New folder\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.AI.Web.xml
+C:\Users\Vo Thanh Dat\Desktop\New folder\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\Vo Thanh Dat\Desktop\New folder\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.ApplicationInsights.xml
+C:\Users\Vo Thanh Dat\Desktop\New folder\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Vo Thanh Dat\Desktop\New folder\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\System.Web.Helpers.xml
+C:\Users\Vo Thanh Dat\Desktop\New folder\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\System.Web.Mvc.xml
+C:\Users\Vo Thanh Dat\Desktop\New folder\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\System.Web.Razor.xml
+C:\Users\Vo Thanh Dat\Desktop\New folder\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\System.Web.WebPages.xml
+C:\Users\Vo Thanh Dat\Desktop\New folder\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Vo Thanh Dat\Desktop\New folder\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\System.Web.WebPages.Razor.xml
+C:\Users\Vo Thanh Dat\Desktop\New folder\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Newtonsoft.Json.xml
+C:\Users\Vo Thanh Dat\Desktop\New folder\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\System.Net.Http.Formatting.xml
+C:\Users\Vo Thanh Dat\Desktop\New folder\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\System.Web.Http.xml
+C:\Users\Vo Thanh Dat\Desktop\New folder\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\System.Web.Http.WebHost.xml
+C:\Users\Vo Thanh Dat\Desktop\New folder\Sem3---Sale-Book-Online\BackEnd\BookOnline\obj\Debug\BookOnline.csprojResolveAssemblyReference.cache
+C:\Users\Vo Thanh Dat\Desktop\New folder\Sem3---Sale-Book-Online\BackEnd\BookOnline\obj\Debug\BookOnline.dll
+C:\Users\Vo Thanh Dat\Desktop\New folder\Sem3---Sale-Book-Online\BackEnd\BookOnline\obj\Debug\BookOnline.pdb
+C:\Users\Vo Thanh Dat\Desktop\New folder\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\EntityFramework.SqlServer.dll
+C:\Users\Vo Thanh Dat\Desktop\New folder\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\EntityFramework.SqlServer.xml
+C:\Users\Vo Thanh Dat\Desktop\book\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\ApplicationInsights.config
+C:\Users\Vo Thanh Dat\Desktop\book\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\roslyn\csc.exe
+C:\Users\Vo Thanh Dat\Desktop\book\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Vo Thanh Dat\Desktop\book\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Vo Thanh Dat\Desktop\book\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Vo Thanh Dat\Desktop\book\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Vo Thanh Dat\Desktop\book\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Vo Thanh Dat\Desktop\book\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Vo Thanh Dat\Desktop\book\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Vo Thanh Dat\Desktop\book\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Vo Thanh Dat\Desktop\book\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\roslyn\vbc.exe
+C:\Users\Vo Thanh Dat\Desktop\book\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\roslyn\VBCSCompiler.exe
+C:\Users\Vo Thanh Dat\Desktop\book\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Vo Thanh Dat\Desktop\book\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\BookOnline.dll.config
+C:\Users\Vo Thanh Dat\Desktop\book\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\BookOnline.dll
+C:\Users\Vo Thanh Dat\Desktop\book\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\BookOnline.pdb
+C:\Users\Vo Thanh Dat\Desktop\book\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\EntityFramework.dll
+C:\Users\Vo Thanh Dat\Desktop\book\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\EntityFramework.SqlServer.dll
+C:\Users\Vo Thanh Dat\Desktop\book\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\Vo Thanh Dat\Desktop\book\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\Vo Thanh Dat\Desktop\book\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\Vo Thanh Dat\Desktop\book\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\Vo Thanh Dat\Desktop\book\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.AI.Web.dll
+C:\Users\Vo Thanh Dat\Desktop\book\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\Vo Thanh Dat\Desktop\book\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.ApplicationInsights.dll
+C:\Users\Vo Thanh Dat\Desktop\book\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Vo Thanh Dat\Desktop\book\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Vo Thanh Dat\Desktop\book\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Newtonsoft.Json.dll
+C:\Users\Vo Thanh Dat\Desktop\book\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\System.Net.Http.Formatting.dll
+C:\Users\Vo Thanh Dat\Desktop\book\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\System.Web.Helpers.dll
+C:\Users\Vo Thanh Dat\Desktop\book\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\System.Web.Http.dll
+C:\Users\Vo Thanh Dat\Desktop\book\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\System.Web.Http.WebHost.dll
+C:\Users\Vo Thanh Dat\Desktop\book\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\System.Web.Mvc.dll
+C:\Users\Vo Thanh Dat\Desktop\book\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\System.Web.Razor.dll
+C:\Users\Vo Thanh Dat\Desktop\book\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Vo Thanh Dat\Desktop\book\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\System.Web.WebPages.dll
+C:\Users\Vo Thanh Dat\Desktop\book\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\System.Web.WebPages.Razor.dll
+C:\Users\Vo Thanh Dat\Desktop\book\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\EntityFramework.xml
+C:\Users\Vo Thanh Dat\Desktop\book\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\EntityFramework.SqlServer.xml
+C:\Users\Vo Thanh Dat\Desktop\book\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\Vo Thanh Dat\Desktop\book\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\Vo Thanh Dat\Desktop\book\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.AI.Web.xml
+C:\Users\Vo Thanh Dat\Desktop\book\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\Vo Thanh Dat\Desktop\book\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.ApplicationInsights.xml
+C:\Users\Vo Thanh Dat\Desktop\book\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Vo Thanh Dat\Desktop\book\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\System.Web.Helpers.xml
+C:\Users\Vo Thanh Dat\Desktop\book\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\System.Web.Mvc.xml
+C:\Users\Vo Thanh Dat\Desktop\book\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\System.Web.Razor.xml
+C:\Users\Vo Thanh Dat\Desktop\book\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\System.Web.WebPages.xml
+C:\Users\Vo Thanh Dat\Desktop\book\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Vo Thanh Dat\Desktop\book\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\System.Web.WebPages.Razor.xml
+C:\Users\Vo Thanh Dat\Desktop\book\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Newtonsoft.Json.xml
+C:\Users\Vo Thanh Dat\Desktop\book\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\System.Net.Http.Formatting.xml
+C:\Users\Vo Thanh Dat\Desktop\book\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\System.Web.Http.xml
+C:\Users\Vo Thanh Dat\Desktop\book\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\System.Web.Http.WebHost.xml
+C:\Users\Vo Thanh Dat\Desktop\book\Sem3---Sale-Book-Online\BackEnd\BookOnline\obj\Debug\BookOnline.csprojResolveAssemblyReference.cache
+C:\Users\Vo Thanh Dat\Desktop\book\Sem3---Sale-Book-Online\BackEnd\BookOnline\obj\Debug\BookOnline.dll
+C:\Users\Vo Thanh Dat\Desktop\book\Sem3---Sale-Book-Online\BackEnd\BookOnline\obj\Debug\BookOnline.pdb
+C:\Users\Vo Thanh Dat\Desktop\book\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.AspNetCore.Cors.dll
+C:\Users\Vo Thanh Dat\Desktop\book\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.AspNetCore.Http.Abstractions.dll
+C:\Users\Vo Thanh Dat\Desktop\book\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.AspNetCore.Http.Extensions.dll
+C:\Users\Vo Thanh Dat\Desktop\book\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.AspNetCore.Http.Features.dll
+C:\Users\Vo Thanh Dat\Desktop\book\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\Users\Vo Thanh Dat\Desktop\book\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\Vo Thanh Dat\Desktop\book\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.Extensions.FileProviders.Abstractions.dll
+C:\Users\Vo Thanh Dat\Desktop\book\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.Extensions.Options.dll
+C:\Users\Vo Thanh Dat\Desktop\book\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.Extensions.Primitives.dll
+C:\Users\Vo Thanh Dat\Desktop\book\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.Net.Http.Headers.dll
+C:\Users\Vo Thanh Dat\Desktop\book\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\System.Buffers.dll
+C:\Users\Vo Thanh Dat\Desktop\book\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\Vo Thanh Dat\Desktop\book\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\System.Runtime.InteropServices.RuntimeInformation.dll
+C:\Users\Vo Thanh Dat\Desktop\book\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\System.Text.Encodings.Web.dll
+C:\Users\Vo Thanh Dat\Desktop\book\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\System.Web.Cors.dll
+C:\Users\Vo Thanh Dat\Desktop\book\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\System.Web.Http.Cors.dll
+C:\Users\Vo Thanh Dat\Desktop\book\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.AspNetCore.Cors.xml
+C:\Users\Vo Thanh Dat\Desktop\book\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.AspNetCore.Http.Abstractions.xml
+C:\Users\Vo Thanh Dat\Desktop\book\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.AspNetCore.Http.Extensions.xml
+C:\Users\Vo Thanh Dat\Desktop\book\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.AspNetCore.Http.Features.xml
+C:\Users\Vo Thanh Dat\Desktop\book\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.Extensions.Configuration.Abstractions.xml
+C:\Users\Vo Thanh Dat\Desktop\book\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.Extensions.DependencyInjection.Abstractions.xml
+C:\Users\Vo Thanh Dat\Desktop\book\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.Extensions.FileProviders.Abstractions.xml
+C:\Users\Vo Thanh Dat\Desktop\book\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.Extensions.Options.xml
+C:\Users\Vo Thanh Dat\Desktop\book\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.Extensions.Primitives.xml
+C:\Users\Vo Thanh Dat\Desktop\book\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.Net.Http.Headers.xml
+C:\Users\Vo Thanh Dat\Desktop\book\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\Vo Thanh Dat\Desktop\book\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\System.Text.Encodings.Web.xml
+C:\Users\Vo Thanh Dat\Desktop\book\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\System.Web.Http.Cors.xml
+C:\Users\Dat\Desktop\sem3\Sem3---Sale-Book-Online\BackEnd\BookOnline\obj\Debug\BookOnline.csprojResolveAssemblyReference.cache
+C:\Users\Dat\Desktop\sem3\Sem3---Sale-Book-Online\BackEnd\BookOnline\obj\Debug\BookOnline.dll
+C:\Users\Dat\Desktop\sem3\Sem3---Sale-Book-Online\BackEnd\BookOnline\obj\Debug\BookOnline.pdb
+C:\Users\Dat\Desktop\sem3\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\ApplicationInsights.config
+C:\Users\Dat\Desktop\sem3\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\roslyn\csc.exe
+C:\Users\Dat\Desktop\sem3\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Dat\Desktop\sem3\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Dat\Desktop\sem3\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Dat\Desktop\sem3\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Dat\Desktop\sem3\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Dat\Desktop\sem3\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Dat\Desktop\sem3\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Dat\Desktop\sem3\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Dat\Desktop\sem3\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\roslyn\vbc.exe
+C:\Users\Dat\Desktop\sem3\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\roslyn\VBCSCompiler.exe
+C:\Users\Dat\Desktop\sem3\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Dat\Desktop\sem3\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\BookOnline.dll.config
+C:\Users\Dat\Desktop\sem3\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\BookOnline.dll
+C:\Users\Dat\Desktop\sem3\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\BookOnline.pdb
+C:\Users\Dat\Desktop\sem3\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\EntityFramework.dll
+C:\Users\Dat\Desktop\sem3\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\EntityFramework.SqlServer.dll
+C:\Users\Dat\Desktop\sem3\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\Dat\Desktop\sem3\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\Dat\Desktop\sem3\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\Dat\Desktop\sem3\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\Dat\Desktop\sem3\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.AI.Web.dll
+C:\Users\Dat\Desktop\sem3\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\Dat\Desktop\sem3\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.ApplicationInsights.dll
+C:\Users\Dat\Desktop\sem3\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.AspNetCore.Cors.dll
+C:\Users\Dat\Desktop\sem3\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.AspNetCore.Http.Abstractions.dll
+C:\Users\Dat\Desktop\sem3\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.AspNetCore.Http.Extensions.dll
+C:\Users\Dat\Desktop\sem3\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.AspNetCore.Http.Features.dll
+C:\Users\Dat\Desktop\sem3\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Dat\Desktop\sem3\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\Users\Dat\Desktop\sem3\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\Dat\Desktop\sem3\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.Extensions.FileProviders.Abstractions.dll
+C:\Users\Dat\Desktop\sem3\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.Extensions.Options.dll
+C:\Users\Dat\Desktop\sem3\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.Extensions.Primitives.dll
+C:\Users\Dat\Desktop\sem3\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.Net.Http.Headers.dll
+C:\Users\Dat\Desktop\sem3\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Dat\Desktop\sem3\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Newtonsoft.Json.dll
+C:\Users\Dat\Desktop\sem3\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\System.Buffers.dll
+C:\Users\Dat\Desktop\sem3\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\System.Net.Http.Formatting.dll
+C:\Users\Dat\Desktop\sem3\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\Dat\Desktop\sem3\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\System.Runtime.InteropServices.RuntimeInformation.dll
+C:\Users\Dat\Desktop\sem3\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\System.Text.Encodings.Web.dll
+C:\Users\Dat\Desktop\sem3\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\System.Web.Cors.dll
+C:\Users\Dat\Desktop\sem3\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\System.Web.Helpers.dll
+C:\Users\Dat\Desktop\sem3\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\System.Web.Http.Cors.dll
+C:\Users\Dat\Desktop\sem3\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\System.Web.Http.dll
+C:\Users\Dat\Desktop\sem3\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\System.Web.Http.WebHost.dll
+C:\Users\Dat\Desktop\sem3\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\System.Web.Mvc.dll
+C:\Users\Dat\Desktop\sem3\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\System.Web.Razor.dll
+C:\Users\Dat\Desktop\sem3\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Dat\Desktop\sem3\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\System.Web.WebPages.dll
+C:\Users\Dat\Desktop\sem3\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\System.Web.WebPages.Razor.dll
+C:\Users\Dat\Desktop\sem3\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\EntityFramework.xml
+C:\Users\Dat\Desktop\sem3\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\EntityFramework.SqlServer.xml
+C:\Users\Dat\Desktop\sem3\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\Dat\Desktop\sem3\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\Dat\Desktop\sem3\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.AI.Web.xml
+C:\Users\Dat\Desktop\sem3\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\Dat\Desktop\sem3\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.ApplicationInsights.xml
+C:\Users\Dat\Desktop\sem3\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.AspNetCore.Cors.xml
+C:\Users\Dat\Desktop\sem3\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.AspNetCore.Http.Abstractions.xml
+C:\Users\Dat\Desktop\sem3\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.AspNetCore.Http.Extensions.xml
+C:\Users\Dat\Desktop\sem3\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.AspNetCore.Http.Features.xml
+C:\Users\Dat\Desktop\sem3\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Dat\Desktop\sem3\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.Extensions.Configuration.Abstractions.xml
+C:\Users\Dat\Desktop\sem3\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.Extensions.DependencyInjection.Abstractions.xml
+C:\Users\Dat\Desktop\sem3\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.Extensions.FileProviders.Abstractions.xml
+C:\Users\Dat\Desktop\sem3\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.Extensions.Options.xml
+C:\Users\Dat\Desktop\sem3\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.Extensions.Primitives.xml
+C:\Users\Dat\Desktop\sem3\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.Net.Http.Headers.xml
+C:\Users\Dat\Desktop\sem3\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\Dat\Desktop\sem3\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\System.Text.Encodings.Web.xml
+C:\Users\Dat\Desktop\sem3\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\System.Web.Helpers.xml
+C:\Users\Dat\Desktop\sem3\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\System.Web.Http.Cors.xml
+C:\Users\Dat\Desktop\sem3\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\System.Web.Mvc.xml
+C:\Users\Dat\Desktop\sem3\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\System.Web.Razor.xml
+C:\Users\Dat\Desktop\sem3\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\System.Web.WebPages.xml
+C:\Users\Dat\Desktop\sem3\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Dat\Desktop\sem3\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\System.Web.WebPages.Razor.xml
+C:\Users\Dat\Desktop\sem3\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Newtonsoft.Json.xml
+C:\Users\Dat\Desktop\sem3\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\System.Net.Http.Formatting.xml
+C:\Users\Dat\Desktop\sem3\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\System.Web.Http.xml
+C:\Users\Dat\Desktop\sem3\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\System.Web.Http.WebHost.xml
+C:\Users\Dat\Desktop\New folder (2)\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\ApplicationInsights.config
+C:\Users\Dat\Desktop\New folder (2)\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\roslyn\csc.exe
+C:\Users\Dat\Desktop\New folder (2)\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Dat\Desktop\New folder (2)\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Dat\Desktop\New folder (2)\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Dat\Desktop\New folder (2)\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Dat\Desktop\New folder (2)\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Dat\Desktop\New folder (2)\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Dat\Desktop\New folder (2)\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Dat\Desktop\New folder (2)\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Dat\Desktop\New folder (2)\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\roslyn\vbc.exe
+C:\Users\Dat\Desktop\New folder (2)\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\roslyn\VBCSCompiler.exe
+C:\Users\Dat\Desktop\New folder (2)\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Dat\Desktop\New folder (2)\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\BookOnline.dll.config
+C:\Users\Dat\Desktop\New folder (2)\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\BookOnline.dll
+C:\Users\Dat\Desktop\New folder (2)\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\BookOnline.pdb
+C:\Users\Dat\Desktop\New folder (2)\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\EntityFramework.dll
+C:\Users\Dat\Desktop\New folder (2)\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\EntityFramework.SqlServer.dll
+C:\Users\Dat\Desktop\New folder (2)\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\Dat\Desktop\New folder (2)\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\Dat\Desktop\New folder (2)\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\Dat\Desktop\New folder (2)\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\Dat\Desktop\New folder (2)\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.AI.Web.dll
+C:\Users\Dat\Desktop\New folder (2)\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\Dat\Desktop\New folder (2)\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.ApplicationInsights.dll
+C:\Users\Dat\Desktop\New folder (2)\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.AspNetCore.Cors.dll
+C:\Users\Dat\Desktop\New folder (2)\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.AspNetCore.Http.Abstractions.dll
+C:\Users\Dat\Desktop\New folder (2)\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.AspNetCore.Http.Extensions.dll
+C:\Users\Dat\Desktop\New folder (2)\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.AspNetCore.Http.Features.dll
+C:\Users\Dat\Desktop\New folder (2)\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Dat\Desktop\New folder (2)\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\Users\Dat\Desktop\New folder (2)\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\Dat\Desktop\New folder (2)\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.Extensions.FileProviders.Abstractions.dll
+C:\Users\Dat\Desktop\New folder (2)\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.Extensions.Options.dll
+C:\Users\Dat\Desktop\New folder (2)\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.Extensions.Primitives.dll
+C:\Users\Dat\Desktop\New folder (2)\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.Net.Http.Headers.dll
+C:\Users\Dat\Desktop\New folder (2)\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Dat\Desktop\New folder (2)\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Newtonsoft.Json.dll
+C:\Users\Dat\Desktop\New folder (2)\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\System.Buffers.dll
+C:\Users\Dat\Desktop\New folder (2)\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\System.Net.Http.Formatting.dll
+C:\Users\Dat\Desktop\New folder (2)\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\Dat\Desktop\New folder (2)\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\System.Runtime.InteropServices.RuntimeInformation.dll
+C:\Users\Dat\Desktop\New folder (2)\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\System.Text.Encodings.Web.dll
+C:\Users\Dat\Desktop\New folder (2)\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\System.Web.Cors.dll
+C:\Users\Dat\Desktop\New folder (2)\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\System.Web.Helpers.dll
+C:\Users\Dat\Desktop\New folder (2)\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\System.Web.Http.Cors.dll
+C:\Users\Dat\Desktop\New folder (2)\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\System.Web.Http.dll
+C:\Users\Dat\Desktop\New folder (2)\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\System.Web.Http.WebHost.dll
+C:\Users\Dat\Desktop\New folder (2)\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\System.Web.Mvc.dll
+C:\Users\Dat\Desktop\New folder (2)\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\System.Web.Razor.dll
+C:\Users\Dat\Desktop\New folder (2)\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Dat\Desktop\New folder (2)\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\System.Web.WebPages.dll
+C:\Users\Dat\Desktop\New folder (2)\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\System.Web.WebPages.Razor.dll
+C:\Users\Dat\Desktop\New folder (2)\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\EntityFramework.xml
+C:\Users\Dat\Desktop\New folder (2)\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\EntityFramework.SqlServer.xml
+C:\Users\Dat\Desktop\New folder (2)\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\Dat\Desktop\New folder (2)\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\Dat\Desktop\New folder (2)\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.AI.Web.xml
+C:\Users\Dat\Desktop\New folder (2)\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\Dat\Desktop\New folder (2)\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.ApplicationInsights.xml
+C:\Users\Dat\Desktop\New folder (2)\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.AspNetCore.Cors.xml
+C:\Users\Dat\Desktop\New folder (2)\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.AspNetCore.Http.Abstractions.xml
+C:\Users\Dat\Desktop\New folder (2)\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.AspNetCore.Http.Extensions.xml
+C:\Users\Dat\Desktop\New folder (2)\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.AspNetCore.Http.Features.xml
+C:\Users\Dat\Desktop\New folder (2)\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Dat\Desktop\New folder (2)\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.Extensions.Configuration.Abstractions.xml
+C:\Users\Dat\Desktop\New folder (2)\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.Extensions.DependencyInjection.Abstractions.xml
+C:\Users\Dat\Desktop\New folder (2)\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.Extensions.FileProviders.Abstractions.xml
+C:\Users\Dat\Desktop\New folder (2)\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.Extensions.Options.xml
+C:\Users\Dat\Desktop\New folder (2)\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.Extensions.Primitives.xml
+C:\Users\Dat\Desktop\New folder (2)\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.Net.Http.Headers.xml
+C:\Users\Dat\Desktop\New folder (2)\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\Dat\Desktop\New folder (2)\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\System.Text.Encodings.Web.xml
+C:\Users\Dat\Desktop\New folder (2)\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\System.Web.Helpers.xml
+C:\Users\Dat\Desktop\New folder (2)\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\System.Web.Http.Cors.xml
+C:\Users\Dat\Desktop\New folder (2)\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\System.Web.Mvc.xml
+C:\Users\Dat\Desktop\New folder (2)\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\System.Web.Razor.xml
+C:\Users\Dat\Desktop\New folder (2)\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\System.Web.WebPages.xml
+C:\Users\Dat\Desktop\New folder (2)\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Dat\Desktop\New folder (2)\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\System.Web.WebPages.Razor.xml
+C:\Users\Dat\Desktop\New folder (2)\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Newtonsoft.Json.xml
+C:\Users\Dat\Desktop\New folder (2)\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\System.Net.Http.Formatting.xml
+C:\Users\Dat\Desktop\New folder (2)\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\System.Web.Http.xml
+C:\Users\Dat\Desktop\New folder (2)\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\System.Web.Http.WebHost.xml
+C:\Users\Dat\Desktop\New folder (2)\Sem3---Sale-Book-Online\BackEnd\BookOnline\obj\Debug\BookOnline.csprojResolveAssemblyReference.cache
+C:\Users\Dat\Desktop\New folder (2)\Sem3---Sale-Book-Online\BackEnd\BookOnline\obj\Debug\BookOnline.dll
+C:\Users\Dat\Desktop\New folder (2)\Sem3---Sale-Book-Online\BackEnd\BookOnline\obj\Debug\BookOnline.pdb
+C:\Users\Vo Thanh Dat\Desktop\8-12-2016\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\ApplicationInsights.config
+C:\Users\Vo Thanh Dat\Desktop\8-12-2016\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\roslyn\csc.exe
+C:\Users\Vo Thanh Dat\Desktop\8-12-2016\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Vo Thanh Dat\Desktop\8-12-2016\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Vo Thanh Dat\Desktop\8-12-2016\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Vo Thanh Dat\Desktop\8-12-2016\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Vo Thanh Dat\Desktop\8-12-2016\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Vo Thanh Dat\Desktop\8-12-2016\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Vo Thanh Dat\Desktop\8-12-2016\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Vo Thanh Dat\Desktop\8-12-2016\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Vo Thanh Dat\Desktop\8-12-2016\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\roslyn\vbc.exe
+C:\Users\Vo Thanh Dat\Desktop\8-12-2016\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\roslyn\VBCSCompiler.exe
+C:\Users\Vo Thanh Dat\Desktop\8-12-2016\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Vo Thanh Dat\Desktop\8-12-2016\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\BookOnline.dll.config
+C:\Users\Vo Thanh Dat\Desktop\8-12-2016\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\BookOnline.dll
+C:\Users\Vo Thanh Dat\Desktop\8-12-2016\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\BookOnline.pdb
+C:\Users\Vo Thanh Dat\Desktop\8-12-2016\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\EntityFramework.dll
+C:\Users\Vo Thanh Dat\Desktop\8-12-2016\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\EntityFramework.SqlServer.dll
+C:\Users\Vo Thanh Dat\Desktop\8-12-2016\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\Vo Thanh Dat\Desktop\8-12-2016\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\Vo Thanh Dat\Desktop\8-12-2016\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\Vo Thanh Dat\Desktop\8-12-2016\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\Vo Thanh Dat\Desktop\8-12-2016\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.AI.Web.dll
+C:\Users\Vo Thanh Dat\Desktop\8-12-2016\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\Vo Thanh Dat\Desktop\8-12-2016\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.ApplicationInsights.dll
+C:\Users\Vo Thanh Dat\Desktop\8-12-2016\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.AspNetCore.Cors.dll
+C:\Users\Vo Thanh Dat\Desktop\8-12-2016\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.AspNetCore.Http.Abstractions.dll
+C:\Users\Vo Thanh Dat\Desktop\8-12-2016\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.AspNetCore.Http.Extensions.dll
+C:\Users\Vo Thanh Dat\Desktop\8-12-2016\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.AspNetCore.Http.Features.dll
+C:\Users\Vo Thanh Dat\Desktop\8-12-2016\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Vo Thanh Dat\Desktop\8-12-2016\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\Users\Vo Thanh Dat\Desktop\8-12-2016\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\Vo Thanh Dat\Desktop\8-12-2016\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.Extensions.FileProviders.Abstractions.dll
+C:\Users\Vo Thanh Dat\Desktop\8-12-2016\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.Extensions.Options.dll
+C:\Users\Vo Thanh Dat\Desktop\8-12-2016\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.Extensions.Primitives.dll
+C:\Users\Vo Thanh Dat\Desktop\8-12-2016\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.Net.Http.Headers.dll
+C:\Users\Vo Thanh Dat\Desktop\8-12-2016\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Vo Thanh Dat\Desktop\8-12-2016\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Newtonsoft.Json.dll
+C:\Users\Vo Thanh Dat\Desktop\8-12-2016\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\System.Buffers.dll
+C:\Users\Vo Thanh Dat\Desktop\8-12-2016\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\System.Net.Http.Formatting.dll
+C:\Users\Vo Thanh Dat\Desktop\8-12-2016\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\Vo Thanh Dat\Desktop\8-12-2016\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\System.Runtime.InteropServices.RuntimeInformation.dll
+C:\Users\Vo Thanh Dat\Desktop\8-12-2016\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\System.Text.Encodings.Web.dll
+C:\Users\Vo Thanh Dat\Desktop\8-12-2016\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\System.Web.Cors.dll
+C:\Users\Vo Thanh Dat\Desktop\8-12-2016\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\System.Web.Helpers.dll
+C:\Users\Vo Thanh Dat\Desktop\8-12-2016\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\System.Web.Http.Cors.dll
+C:\Users\Vo Thanh Dat\Desktop\8-12-2016\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\System.Web.Http.dll
+C:\Users\Vo Thanh Dat\Desktop\8-12-2016\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\System.Web.Http.WebHost.dll
+C:\Users\Vo Thanh Dat\Desktop\8-12-2016\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\System.Web.Mvc.dll
+C:\Users\Vo Thanh Dat\Desktop\8-12-2016\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\System.Web.Razor.dll
+C:\Users\Vo Thanh Dat\Desktop\8-12-2016\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Vo Thanh Dat\Desktop\8-12-2016\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\System.Web.WebPages.dll
+C:\Users\Vo Thanh Dat\Desktop\8-12-2016\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\System.Web.WebPages.Razor.dll
+C:\Users\Vo Thanh Dat\Desktop\8-12-2016\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\EntityFramework.xml
+C:\Users\Vo Thanh Dat\Desktop\8-12-2016\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\EntityFramework.SqlServer.xml
+C:\Users\Vo Thanh Dat\Desktop\8-12-2016\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\Vo Thanh Dat\Desktop\8-12-2016\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\Vo Thanh Dat\Desktop\8-12-2016\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.AI.Web.xml
+C:\Users\Vo Thanh Dat\Desktop\8-12-2016\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\Vo Thanh Dat\Desktop\8-12-2016\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.ApplicationInsights.xml
+C:\Users\Vo Thanh Dat\Desktop\8-12-2016\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.AspNetCore.Cors.xml
+C:\Users\Vo Thanh Dat\Desktop\8-12-2016\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.AspNetCore.Http.Abstractions.xml
+C:\Users\Vo Thanh Dat\Desktop\8-12-2016\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.AspNetCore.Http.Extensions.xml
+C:\Users\Vo Thanh Dat\Desktop\8-12-2016\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.AspNetCore.Http.Features.xml
+C:\Users\Vo Thanh Dat\Desktop\8-12-2016\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Vo Thanh Dat\Desktop\8-12-2016\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.Extensions.Configuration.Abstractions.xml
+C:\Users\Vo Thanh Dat\Desktop\8-12-2016\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.Extensions.DependencyInjection.Abstractions.xml
+C:\Users\Vo Thanh Dat\Desktop\8-12-2016\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.Extensions.FileProviders.Abstractions.xml
+C:\Users\Vo Thanh Dat\Desktop\8-12-2016\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.Extensions.Options.xml
+C:\Users\Vo Thanh Dat\Desktop\8-12-2016\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.Extensions.Primitives.xml
+C:\Users\Vo Thanh Dat\Desktop\8-12-2016\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.Net.Http.Headers.xml
+C:\Users\Vo Thanh Dat\Desktop\8-12-2016\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\Vo Thanh Dat\Desktop\8-12-2016\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\System.Text.Encodings.Web.xml
+C:\Users\Vo Thanh Dat\Desktop\8-12-2016\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\System.Web.Helpers.xml
+C:\Users\Vo Thanh Dat\Desktop\8-12-2016\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\System.Web.Http.Cors.xml
+C:\Users\Vo Thanh Dat\Desktop\8-12-2016\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\System.Web.Mvc.xml
+C:\Users\Vo Thanh Dat\Desktop\8-12-2016\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\System.Web.Razor.xml
+C:\Users\Vo Thanh Dat\Desktop\8-12-2016\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\System.Web.WebPages.xml
+C:\Users\Vo Thanh Dat\Desktop\8-12-2016\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Vo Thanh Dat\Desktop\8-12-2016\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\System.Web.WebPages.Razor.xml
+C:\Users\Vo Thanh Dat\Desktop\8-12-2016\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Newtonsoft.Json.xml
+C:\Users\Vo Thanh Dat\Desktop\8-12-2016\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\System.Net.Http.Formatting.xml
+C:\Users\Vo Thanh Dat\Desktop\8-12-2016\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\System.Web.Http.xml
+C:\Users\Vo Thanh Dat\Desktop\8-12-2016\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\System.Web.Http.WebHost.xml
+C:\Users\Vo Thanh Dat\Desktop\8-12-2016\Sem3---Sale-Book-Online\BackEnd\BookOnline\obj\Debug\BookOnline.csprojResolveAssemblyReference.cache
+C:\Users\Vo Thanh Dat\Desktop\8-12-2016\Sem3---Sale-Book-Online\BackEnd\BookOnline\obj\Debug\BookOnline.dll
+C:\Users\Vo Thanh Dat\Desktop\8-12-2016\Sem3---Sale-Book-Online\BackEnd\BookOnline\obj\Debug\BookOnline.pdb
+E:\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\ApplicationInsights.config
+E:\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\roslyn\csc.exe
+E:\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+E:\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+E:\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\roslyn\Microsoft.CodeAnalysis.dll
+E:\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+E:\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\roslyn\Microsoft.CSharp.Core.targets
+E:\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\roslyn\Microsoft.VisualBasic.Core.targets
+E:\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\roslyn\System.Collections.Immutable.dll
+E:\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\roslyn\System.Reflection.Metadata.dll
+E:\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\roslyn\vbc.exe
+E:\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\roslyn\VBCSCompiler.exe
+E:\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\roslyn\VBCSCompiler.exe.config
+E:\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\BookOnline.dll.config
+E:\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\BookOnline.dll
+E:\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\BookOnline.pdb
+E:\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\EntityFramework.dll
+E:\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\EntityFramework.SqlServer.dll
+E:\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.AI.Agent.Intercept.dll
+E:\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.AI.DependencyCollector.dll
+E:\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.AI.PerfCounterCollector.dll
+E:\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.AI.ServerTelemetryChannel.dll
+E:\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.AI.Web.dll
+E:\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.AI.WindowsServer.dll
+E:\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.ApplicationInsights.dll
+E:\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.AspNetCore.Cors.dll
+E:\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.AspNetCore.Http.Abstractions.dll
+E:\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.AspNetCore.Http.Extensions.dll
+E:\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.AspNetCore.Http.Features.dll
+E:\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+E:\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.Extensions.Configuration.Abstractions.dll
+E:\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+E:\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.Extensions.FileProviders.Abstractions.dll
+E:\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.Extensions.Options.dll
+E:\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.Extensions.Primitives.dll
+E:\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.Net.Http.Headers.dll
+E:\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.Web.Infrastructure.dll
+E:\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Newtonsoft.Json.dll
+E:\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\System.Buffers.dll
+E:\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\System.Net.Http.Formatting.dll
+E:\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\System.Runtime.CompilerServices.Unsafe.dll
+E:\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\System.Runtime.InteropServices.RuntimeInformation.dll
+E:\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\System.Text.Encodings.Web.dll
+E:\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\System.Web.Cors.dll
+E:\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\System.Web.Helpers.dll
+E:\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\System.Web.Http.Cors.dll
+E:\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\System.Web.Http.dll
+E:\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\System.Web.Http.WebHost.dll
+E:\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\System.Web.Mvc.dll
+E:\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\System.Web.Razor.dll
+E:\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\System.Web.WebPages.Deployment.dll
+E:\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\System.Web.WebPages.dll
+E:\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\System.Web.WebPages.Razor.dll
+E:\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\EntityFramework.xml
+E:\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\EntityFramework.SqlServer.xml
+E:\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.AI.DependencyCollector.xml
+E:\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.AI.ServerTelemetryChannel.xml
+E:\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.AI.Web.xml
+E:\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.AI.WindowsServer.xml
+E:\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.ApplicationInsights.xml
+E:\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.AspNetCore.Cors.xml
+E:\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.AspNetCore.Http.Abstractions.xml
+E:\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.AspNetCore.Http.Extensions.xml
+E:\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.AspNetCore.Http.Features.xml
+E:\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+E:\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.Extensions.Configuration.Abstractions.xml
+E:\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.Extensions.DependencyInjection.Abstractions.xml
+E:\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.Extensions.FileProviders.Abstractions.xml
+E:\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.Extensions.Options.xml
+E:\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.Extensions.Primitives.xml
+E:\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.Net.Http.Headers.xml
+E:\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\System.Runtime.CompilerServices.Unsafe.xml
+E:\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\System.Text.Encodings.Web.xml
+E:\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\System.Web.Helpers.xml
+E:\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\System.Web.Http.Cors.xml
+E:\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\System.Web.Mvc.xml
+E:\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\System.Web.Razor.xml
+E:\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\System.Web.WebPages.xml
+E:\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\System.Web.WebPages.Deployment.xml
+E:\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\System.Web.WebPages.Razor.xml
+E:\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Newtonsoft.Json.xml
+E:\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\System.Net.Http.Formatting.xml
+E:\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\System.Web.Http.xml
+E:\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\System.Web.Http.WebHost.xml
+E:\Sem3---Sale-Book-Online\BackEnd\BookOnline\obj\Debug\BookOnline.csprojResolveAssemblyReference.cache
+E:\Sem3---Sale-Book-Online\BackEnd\BookOnline\obj\Debug\BookOnline.dll
+E:\Sem3---Sale-Book-Online\BackEnd\BookOnline\obj\Debug\BookOnline.pdb
+C:\Users\Dat\Desktop\p3\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\ApplicationInsights.config
+C:\Users\Dat\Desktop\p3\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\roslyn\csc.exe
+C:\Users\Dat\Desktop\p3\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Dat\Desktop\p3\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Dat\Desktop\p3\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Dat\Desktop\p3\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Dat\Desktop\p3\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Dat\Desktop\p3\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Dat\Desktop\p3\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Dat\Desktop\p3\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Dat\Desktop\p3\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\roslyn\vbc.exe
+C:\Users\Dat\Desktop\p3\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\roslyn\VBCSCompiler.exe
+C:\Users\Dat\Desktop\p3\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Dat\Desktop\p3\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\BookOnline.dll.config
+C:\Users\Dat\Desktop\p3\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\BookOnline.dll
+C:\Users\Dat\Desktop\p3\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\BookOnline.pdb
+C:\Users\Dat\Desktop\p3\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\EntityFramework.dll
+C:\Users\Dat\Desktop\p3\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\EntityFramework.SqlServer.dll
+C:\Users\Dat\Desktop\p3\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\Dat\Desktop\p3\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\Dat\Desktop\p3\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\Dat\Desktop\p3\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\Dat\Desktop\p3\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.AI.Web.dll
+C:\Users\Dat\Desktop\p3\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\Dat\Desktop\p3\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.ApplicationInsights.dll
+C:\Users\Dat\Desktop\p3\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.AspNetCore.Cors.dll
+C:\Users\Dat\Desktop\p3\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.AspNetCore.Http.Abstractions.dll
+C:\Users\Dat\Desktop\p3\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.AspNetCore.Http.Extensions.dll
+C:\Users\Dat\Desktop\p3\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.AspNetCore.Http.Features.dll
+C:\Users\Dat\Desktop\p3\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Dat\Desktop\p3\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\Users\Dat\Desktop\p3\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\Dat\Desktop\p3\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.Extensions.FileProviders.Abstractions.dll
+C:\Users\Dat\Desktop\p3\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.Extensions.Options.dll
+C:\Users\Dat\Desktop\p3\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.Extensions.Primitives.dll
+C:\Users\Dat\Desktop\p3\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.Net.Http.Headers.dll
+C:\Users\Dat\Desktop\p3\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Dat\Desktop\p3\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Newtonsoft.Json.dll
+C:\Users\Dat\Desktop\p3\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\System.Buffers.dll
+C:\Users\Dat\Desktop\p3\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\System.Net.Http.Formatting.dll
+C:\Users\Dat\Desktop\p3\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\Dat\Desktop\p3\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\System.Runtime.InteropServices.RuntimeInformation.dll
+C:\Users\Dat\Desktop\p3\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\System.Text.Encodings.Web.dll
+C:\Users\Dat\Desktop\p3\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\System.Web.Cors.dll
+C:\Users\Dat\Desktop\p3\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\System.Web.Helpers.dll
+C:\Users\Dat\Desktop\p3\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\System.Web.Http.Cors.dll
+C:\Users\Dat\Desktop\p3\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\System.Web.Http.dll
+C:\Users\Dat\Desktop\p3\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\System.Web.Http.WebHost.dll
+C:\Users\Dat\Desktop\p3\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\System.Web.Mvc.dll
+C:\Users\Dat\Desktop\p3\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\System.Web.Razor.dll
+C:\Users\Dat\Desktop\p3\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Dat\Desktop\p3\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\System.Web.WebPages.dll
+C:\Users\Dat\Desktop\p3\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\System.Web.WebPages.Razor.dll
+C:\Users\Dat\Desktop\p3\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\EntityFramework.xml
+C:\Users\Dat\Desktop\p3\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\EntityFramework.SqlServer.xml
+C:\Users\Dat\Desktop\p3\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\Dat\Desktop\p3\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\Dat\Desktop\p3\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.AI.Web.xml
+C:\Users\Dat\Desktop\p3\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\Dat\Desktop\p3\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.ApplicationInsights.xml
+C:\Users\Dat\Desktop\p3\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.AspNetCore.Cors.xml
+C:\Users\Dat\Desktop\p3\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.AspNetCore.Http.Abstractions.xml
+C:\Users\Dat\Desktop\p3\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.AspNetCore.Http.Extensions.xml
+C:\Users\Dat\Desktop\p3\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.AspNetCore.Http.Features.xml
+C:\Users\Dat\Desktop\p3\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Dat\Desktop\p3\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.Extensions.Configuration.Abstractions.xml
+C:\Users\Dat\Desktop\p3\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.Extensions.DependencyInjection.Abstractions.xml
+C:\Users\Dat\Desktop\p3\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.Extensions.FileProviders.Abstractions.xml
+C:\Users\Dat\Desktop\p3\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.Extensions.Options.xml
+C:\Users\Dat\Desktop\p3\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.Extensions.Primitives.xml
+C:\Users\Dat\Desktop\p3\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.Net.Http.Headers.xml
+C:\Users\Dat\Desktop\p3\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\Dat\Desktop\p3\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\System.Text.Encodings.Web.xml
+C:\Users\Dat\Desktop\p3\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\System.Web.Helpers.xml
+C:\Users\Dat\Desktop\p3\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\System.Web.Http.Cors.xml
+C:\Users\Dat\Desktop\p3\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\System.Web.Mvc.xml
+C:\Users\Dat\Desktop\p3\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\System.Web.Razor.xml
+C:\Users\Dat\Desktop\p3\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\System.Web.WebPages.xml
+C:\Users\Dat\Desktop\p3\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Dat\Desktop\p3\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\System.Web.WebPages.Razor.xml
+C:\Users\Dat\Desktop\p3\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Newtonsoft.Json.xml
+C:\Users\Dat\Desktop\p3\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\System.Net.Http.Formatting.xml
+C:\Users\Dat\Desktop\p3\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\System.Web.Http.xml
+C:\Users\Dat\Desktop\p3\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\System.Web.Http.WebHost.xml
+C:\Users\Dat\Desktop\p3\Sem3---Sale-Book-Online\BackEnd\BookOnline\obj\Debug\BookOnline.csprojResolveAssemblyReference.cache
+C:\Users\Dat\Desktop\p3\Sem3---Sale-Book-Online\BackEnd\BookOnline\obj\Debug\BookOnline.dll
+C:\Users\Dat\Desktop\p3\Sem3---Sale-Book-Online\BackEnd\BookOnline\obj\Debug\BookOnline.pdb
+F:\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\ApplicationInsights.config
+F:\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\roslyn\csc.exe
+F:\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+F:\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+F:\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\roslyn\Microsoft.CodeAnalysis.dll
+F:\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+F:\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\roslyn\Microsoft.CSharp.Core.targets
+F:\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\roslyn\Microsoft.VisualBasic.Core.targets
+F:\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\roslyn\System.Collections.Immutable.dll
+F:\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\roslyn\System.Reflection.Metadata.dll
+F:\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\roslyn\vbc.exe
+F:\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\roslyn\VBCSCompiler.exe
+F:\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\roslyn\VBCSCompiler.exe.config
+F:\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\BookOnline.dll.config
+F:\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\BookOnline.dll
+F:\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\BookOnline.pdb
+F:\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\EntityFramework.dll
+F:\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\EntityFramework.SqlServer.dll
+F:\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.AI.Agent.Intercept.dll
+F:\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.AI.DependencyCollector.dll
+F:\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.AI.PerfCounterCollector.dll
+F:\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.AI.ServerTelemetryChannel.dll
+F:\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.AI.Web.dll
+F:\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.AI.WindowsServer.dll
+F:\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.ApplicationInsights.dll
+F:\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.AspNetCore.Cors.dll
+F:\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.AspNetCore.Http.Abstractions.dll
+F:\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.AspNetCore.Http.Extensions.dll
+F:\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.AspNetCore.Http.Features.dll
+F:\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+F:\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.Extensions.Configuration.Abstractions.dll
+F:\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+F:\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.Extensions.FileProviders.Abstractions.dll
+F:\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.Extensions.Options.dll
+F:\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.Extensions.Primitives.dll
+F:\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.Net.Http.Headers.dll
+F:\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.Web.Infrastructure.dll
+F:\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Newtonsoft.Json.dll
+F:\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\System.Buffers.dll
+F:\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\System.Net.Http.Formatting.dll
+F:\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\System.Runtime.CompilerServices.Unsafe.dll
+F:\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\System.Runtime.InteropServices.RuntimeInformation.dll
+F:\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\System.Text.Encodings.Web.dll
+F:\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\System.Web.Cors.dll
+F:\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\System.Web.Helpers.dll
+F:\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\System.Web.Http.Cors.dll
+F:\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\System.Web.Http.dll
+F:\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\System.Web.Http.WebHost.dll
+F:\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\System.Web.Mvc.dll
+F:\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\System.Web.Razor.dll
+F:\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\System.Web.WebPages.Deployment.dll
+F:\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\System.Web.WebPages.dll
+F:\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\System.Web.WebPages.Razor.dll
+F:\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\EntityFramework.xml
+F:\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\EntityFramework.SqlServer.xml
+F:\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.AI.DependencyCollector.xml
+F:\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.AI.ServerTelemetryChannel.xml
+F:\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.AI.Web.xml
+F:\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.AI.WindowsServer.xml
+F:\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.ApplicationInsights.xml
+F:\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.AspNetCore.Cors.xml
+F:\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.AspNetCore.Http.Abstractions.xml
+F:\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.AspNetCore.Http.Extensions.xml
+F:\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.AspNetCore.Http.Features.xml
+F:\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+F:\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.Extensions.Configuration.Abstractions.xml
+F:\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.Extensions.DependencyInjection.Abstractions.xml
+F:\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.Extensions.FileProviders.Abstractions.xml
+F:\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.Extensions.Options.xml
+F:\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.Extensions.Primitives.xml
+F:\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.Net.Http.Headers.xml
+F:\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\System.Runtime.CompilerServices.Unsafe.xml
+F:\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\System.Text.Encodings.Web.xml
+F:\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\System.Web.Helpers.xml
+F:\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\System.Web.Http.Cors.xml
+F:\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\System.Web.Mvc.xml
+F:\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\System.Web.Razor.xml
+F:\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\System.Web.WebPages.xml
+F:\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\System.Web.WebPages.Deployment.xml
+F:\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\System.Web.WebPages.Razor.xml
+F:\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Newtonsoft.Json.xml
+F:\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\System.Net.Http.Formatting.xml
+F:\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\System.Web.Http.xml
+F:\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\System.Web.Http.WebHost.xml
+F:\Sem3---Sale-Book-Online\BackEnd\BookOnline\obj\Debug\BookOnline.csprojResolveAssemblyReference.cache
+F:\Sem3---Sale-Book-Online\BackEnd\BookOnline\obj\Debug\BookOnline.dll
+F:\Sem3---Sale-Book-Online\BackEnd\BookOnline\obj\Debug\BookOnline.pdb
+C:\Users\Vo Thanh Dat\Desktop\f3\Sem3---Sale-Book-Online\BackEnd\BookOnline\obj\Debug\BookOnline.csprojResolveAssemblyReference.cache
+C:\Users\Vo Thanh Dat\Desktop\f3\Sem3---Sale-Book-Online\BackEnd\BookOnline\obj\Debug\BookOnline.dll
+C:\Users\Vo Thanh Dat\Desktop\f3\Sem3---Sale-Book-Online\BackEnd\BookOnline\obj\Debug\BookOnline.pdb
+C:\Users\Vo Thanh Dat\Desktop\f3\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\ApplicationInsights.config
+C:\Users\Vo Thanh Dat\Desktop\f3\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\roslyn\csc.exe
+C:\Users\Vo Thanh Dat\Desktop\f3\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Vo Thanh Dat\Desktop\f3\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Vo Thanh Dat\Desktop\f3\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Vo Thanh Dat\Desktop\f3\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Vo Thanh Dat\Desktop\f3\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Vo Thanh Dat\Desktop\f3\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Vo Thanh Dat\Desktop\f3\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Vo Thanh Dat\Desktop\f3\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Vo Thanh Dat\Desktop\f3\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\roslyn\vbc.exe
+C:\Users\Vo Thanh Dat\Desktop\f3\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\roslyn\VBCSCompiler.exe
+C:\Users\Vo Thanh Dat\Desktop\f3\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Vo Thanh Dat\Desktop\f3\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\BookOnline.dll.config
+C:\Users\Vo Thanh Dat\Desktop\f3\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\BookOnline.dll
+C:\Users\Vo Thanh Dat\Desktop\f3\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\BookOnline.pdb
+C:\Users\Vo Thanh Dat\Desktop\f3\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\EntityFramework.dll
+C:\Users\Vo Thanh Dat\Desktop\f3\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\EntityFramework.SqlServer.dll
+C:\Users\Vo Thanh Dat\Desktop\f3\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\Vo Thanh Dat\Desktop\f3\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\Vo Thanh Dat\Desktop\f3\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\Vo Thanh Dat\Desktop\f3\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\Vo Thanh Dat\Desktop\f3\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.AI.Web.dll
+C:\Users\Vo Thanh Dat\Desktop\f3\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\Vo Thanh Dat\Desktop\f3\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.ApplicationInsights.dll
+C:\Users\Vo Thanh Dat\Desktop\f3\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.AspNetCore.Cors.dll
+C:\Users\Vo Thanh Dat\Desktop\f3\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.AspNetCore.Http.Abstractions.dll
+C:\Users\Vo Thanh Dat\Desktop\f3\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.AspNetCore.Http.Extensions.dll
+C:\Users\Vo Thanh Dat\Desktop\f3\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.AspNetCore.Http.Features.dll
+C:\Users\Vo Thanh Dat\Desktop\f3\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Vo Thanh Dat\Desktop\f3\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\Users\Vo Thanh Dat\Desktop\f3\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\Vo Thanh Dat\Desktop\f3\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.Extensions.FileProviders.Abstractions.dll
+C:\Users\Vo Thanh Dat\Desktop\f3\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.Extensions.Options.dll
+C:\Users\Vo Thanh Dat\Desktop\f3\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.Extensions.Primitives.dll
+C:\Users\Vo Thanh Dat\Desktop\f3\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.Net.Http.Headers.dll
+C:\Users\Vo Thanh Dat\Desktop\f3\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Vo Thanh Dat\Desktop\f3\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Newtonsoft.Json.dll
+C:\Users\Vo Thanh Dat\Desktop\f3\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\System.Buffers.dll
+C:\Users\Vo Thanh Dat\Desktop\f3\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\System.Net.Http.Formatting.dll
+C:\Users\Vo Thanh Dat\Desktop\f3\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\Vo Thanh Dat\Desktop\f3\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\System.Runtime.InteropServices.RuntimeInformation.dll
+C:\Users\Vo Thanh Dat\Desktop\f3\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\System.Text.Encodings.Web.dll
+C:\Users\Vo Thanh Dat\Desktop\f3\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\System.Web.Cors.dll
+C:\Users\Vo Thanh Dat\Desktop\f3\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\System.Web.Helpers.dll
+C:\Users\Vo Thanh Dat\Desktop\f3\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\System.Web.Http.Cors.dll
+C:\Users\Vo Thanh Dat\Desktop\f3\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\System.Web.Http.dll
+C:\Users\Vo Thanh Dat\Desktop\f3\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\System.Web.Http.WebHost.dll
+C:\Users\Vo Thanh Dat\Desktop\f3\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\System.Web.Mvc.dll
+C:\Users\Vo Thanh Dat\Desktop\f3\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\System.Web.Razor.dll
+C:\Users\Vo Thanh Dat\Desktop\f3\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Vo Thanh Dat\Desktop\f3\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\System.Web.WebPages.dll
+C:\Users\Vo Thanh Dat\Desktop\f3\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\System.Web.WebPages.Razor.dll
+C:\Users\Vo Thanh Dat\Desktop\f3\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\EntityFramework.xml
+C:\Users\Vo Thanh Dat\Desktop\f3\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\EntityFramework.SqlServer.xml
+C:\Users\Vo Thanh Dat\Desktop\f3\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\Vo Thanh Dat\Desktop\f3\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\Vo Thanh Dat\Desktop\f3\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.AI.Web.xml
+C:\Users\Vo Thanh Dat\Desktop\f3\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\Vo Thanh Dat\Desktop\f3\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.ApplicationInsights.xml
+C:\Users\Vo Thanh Dat\Desktop\f3\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.AspNetCore.Cors.xml
+C:\Users\Vo Thanh Dat\Desktop\f3\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.AspNetCore.Http.Abstractions.xml
+C:\Users\Vo Thanh Dat\Desktop\f3\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.AspNetCore.Http.Extensions.xml
+C:\Users\Vo Thanh Dat\Desktop\f3\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.AspNetCore.Http.Features.xml
+C:\Users\Vo Thanh Dat\Desktop\f3\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Vo Thanh Dat\Desktop\f3\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.Extensions.Configuration.Abstractions.xml
+C:\Users\Vo Thanh Dat\Desktop\f3\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.Extensions.DependencyInjection.Abstractions.xml
+C:\Users\Vo Thanh Dat\Desktop\f3\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.Extensions.FileProviders.Abstractions.xml
+C:\Users\Vo Thanh Dat\Desktop\f3\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.Extensions.Options.xml
+C:\Users\Vo Thanh Dat\Desktop\f3\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.Extensions.Primitives.xml
+C:\Users\Vo Thanh Dat\Desktop\f3\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.Net.Http.Headers.xml
+C:\Users\Vo Thanh Dat\Desktop\f3\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\Vo Thanh Dat\Desktop\f3\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\System.Text.Encodings.Web.xml
+C:\Users\Vo Thanh Dat\Desktop\f3\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\System.Web.Helpers.xml
+C:\Users\Vo Thanh Dat\Desktop\f3\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\System.Web.Http.Cors.xml
+C:\Users\Vo Thanh Dat\Desktop\f3\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\System.Web.Mvc.xml
+C:\Users\Vo Thanh Dat\Desktop\f3\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\System.Web.Razor.xml
+C:\Users\Vo Thanh Dat\Desktop\f3\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\System.Web.WebPages.xml
+C:\Users\Vo Thanh Dat\Desktop\f3\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Vo Thanh Dat\Desktop\f3\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\System.Web.WebPages.Razor.xml
+C:\Users\Vo Thanh Dat\Desktop\f3\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Newtonsoft.Json.xml
+C:\Users\Vo Thanh Dat\Desktop\f3\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\System.Net.Http.Formatting.xml
+C:\Users\Vo Thanh Dat\Desktop\f3\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\System.Web.Http.xml
+C:\Users\Vo Thanh Dat\Desktop\f3\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\System.Web.Http.WebHost.xml
+C:\Users\Vo Thanh Dat\Desktop\backend\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\ApplicationInsights.config
+C:\Users\Vo Thanh Dat\Desktop\backend\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\roslyn\csc.exe
+C:\Users\Vo Thanh Dat\Desktop\backend\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Vo Thanh Dat\Desktop\backend\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Vo Thanh Dat\Desktop\backend\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Vo Thanh Dat\Desktop\backend\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Vo Thanh Dat\Desktop\backend\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Vo Thanh Dat\Desktop\backend\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Vo Thanh Dat\Desktop\backend\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Vo Thanh Dat\Desktop\backend\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Vo Thanh Dat\Desktop\backend\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\roslyn\vbc.exe
+C:\Users\Vo Thanh Dat\Desktop\backend\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\roslyn\VBCSCompiler.exe
+C:\Users\Vo Thanh Dat\Desktop\backend\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Vo Thanh Dat\Desktop\backend\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\BookOnline.dll.config
+C:\Users\Vo Thanh Dat\Desktop\backend\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\BookOnline.dll
+C:\Users\Vo Thanh Dat\Desktop\backend\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\BookOnline.pdb
+C:\Users\Vo Thanh Dat\Desktop\backend\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\EntityFramework.dll
+C:\Users\Vo Thanh Dat\Desktop\backend\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\EntityFramework.SqlServer.dll
+C:\Users\Vo Thanh Dat\Desktop\backend\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\Vo Thanh Dat\Desktop\backend\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\Vo Thanh Dat\Desktop\backend\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\Vo Thanh Dat\Desktop\backend\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\Vo Thanh Dat\Desktop\backend\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.AI.Web.dll
+C:\Users\Vo Thanh Dat\Desktop\backend\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\Vo Thanh Dat\Desktop\backend\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.ApplicationInsights.dll
+C:\Users\Vo Thanh Dat\Desktop\backend\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.AspNetCore.Cors.dll
+C:\Users\Vo Thanh Dat\Desktop\backend\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.AspNetCore.Http.Abstractions.dll
+C:\Users\Vo Thanh Dat\Desktop\backend\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.AspNetCore.Http.Extensions.dll
+C:\Users\Vo Thanh Dat\Desktop\backend\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.AspNetCore.Http.Features.dll
+C:\Users\Vo Thanh Dat\Desktop\backend\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Vo Thanh Dat\Desktop\backend\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\Users\Vo Thanh Dat\Desktop\backend\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\Vo Thanh Dat\Desktop\backend\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.Extensions.FileProviders.Abstractions.dll
+C:\Users\Vo Thanh Dat\Desktop\backend\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.Extensions.Options.dll
+C:\Users\Vo Thanh Dat\Desktop\backend\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.Extensions.Primitives.dll
+C:\Users\Vo Thanh Dat\Desktop\backend\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.Net.Http.Headers.dll
+C:\Users\Vo Thanh Dat\Desktop\backend\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Vo Thanh Dat\Desktop\backend\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Newtonsoft.Json.dll
+C:\Users\Vo Thanh Dat\Desktop\backend\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\System.Buffers.dll
+C:\Users\Vo Thanh Dat\Desktop\backend\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\System.Net.Http.Formatting.dll
+C:\Users\Vo Thanh Dat\Desktop\backend\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\Vo Thanh Dat\Desktop\backend\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\System.Runtime.InteropServices.RuntimeInformation.dll
+C:\Users\Vo Thanh Dat\Desktop\backend\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\System.Text.Encodings.Web.dll
+C:\Users\Vo Thanh Dat\Desktop\backend\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\System.Web.Cors.dll
+C:\Users\Vo Thanh Dat\Desktop\backend\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\System.Web.Helpers.dll
+C:\Users\Vo Thanh Dat\Desktop\backend\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\System.Web.Http.Cors.dll
+C:\Users\Vo Thanh Dat\Desktop\backend\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\System.Web.Http.dll
+C:\Users\Vo Thanh Dat\Desktop\backend\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\System.Web.Http.WebHost.dll
+C:\Users\Vo Thanh Dat\Desktop\backend\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\System.Web.Mvc.dll
+C:\Users\Vo Thanh Dat\Desktop\backend\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\System.Web.Razor.dll
+C:\Users\Vo Thanh Dat\Desktop\backend\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Vo Thanh Dat\Desktop\backend\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\System.Web.WebPages.dll
+C:\Users\Vo Thanh Dat\Desktop\backend\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\System.Web.WebPages.Razor.dll
+C:\Users\Vo Thanh Dat\Desktop\backend\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\EntityFramework.xml
+C:\Users\Vo Thanh Dat\Desktop\backend\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\EntityFramework.SqlServer.xml
+C:\Users\Vo Thanh Dat\Desktop\backend\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\Vo Thanh Dat\Desktop\backend\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\Vo Thanh Dat\Desktop\backend\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.AI.Web.xml
+C:\Users\Vo Thanh Dat\Desktop\backend\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\Vo Thanh Dat\Desktop\backend\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.ApplicationInsights.xml
+C:\Users\Vo Thanh Dat\Desktop\backend\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.AspNetCore.Cors.xml
+C:\Users\Vo Thanh Dat\Desktop\backend\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.AspNetCore.Http.Abstractions.xml
+C:\Users\Vo Thanh Dat\Desktop\backend\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.AspNetCore.Http.Extensions.xml
+C:\Users\Vo Thanh Dat\Desktop\backend\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.AspNetCore.Http.Features.xml
+C:\Users\Vo Thanh Dat\Desktop\backend\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Vo Thanh Dat\Desktop\backend\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.Extensions.Configuration.Abstractions.xml
+C:\Users\Vo Thanh Dat\Desktop\backend\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.Extensions.DependencyInjection.Abstractions.xml
+C:\Users\Vo Thanh Dat\Desktop\backend\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.Extensions.FileProviders.Abstractions.xml
+C:\Users\Vo Thanh Dat\Desktop\backend\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.Extensions.Options.xml
+C:\Users\Vo Thanh Dat\Desktop\backend\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.Extensions.Primitives.xml
+C:\Users\Vo Thanh Dat\Desktop\backend\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Microsoft.Net.Http.Headers.xml
+C:\Users\Vo Thanh Dat\Desktop\backend\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\Vo Thanh Dat\Desktop\backend\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\System.Text.Encodings.Web.xml
+C:\Users\Vo Thanh Dat\Desktop\backend\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\System.Web.Helpers.xml
+C:\Users\Vo Thanh Dat\Desktop\backend\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\System.Web.Http.Cors.xml
+C:\Users\Vo Thanh Dat\Desktop\backend\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\System.Web.Mvc.xml
+C:\Users\Vo Thanh Dat\Desktop\backend\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\System.Web.Razor.xml
+C:\Users\Vo Thanh Dat\Desktop\backend\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\System.Web.WebPages.xml
+C:\Users\Vo Thanh Dat\Desktop\backend\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Vo Thanh Dat\Desktop\backend\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\System.Web.WebPages.Razor.xml
+C:\Users\Vo Thanh Dat\Desktop\backend\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\Newtonsoft.Json.xml
+C:\Users\Vo Thanh Dat\Desktop\backend\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\System.Net.Http.Formatting.xml
+C:\Users\Vo Thanh Dat\Desktop\backend\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\System.Web.Http.xml
+C:\Users\Vo Thanh Dat\Desktop\backend\Sem3---Sale-Book-Online\BackEnd\BookOnline\bin\System.Web.Http.WebHost.xml
+C:\Users\Vo Thanh Dat\Desktop\backend\Sem3---Sale-Book-Online\BackEnd\BookOnline\obj\Debug\BookOnline.csprojResolveAssemblyReference.cache
+C:\Users\Vo Thanh Dat\Desktop\backend\Sem3---Sale-Book-Online\BackEnd\BookOnline\obj\Debug\BookOnline.dll
+C:\Users\Vo Thanh Dat\Desktop\backend\Sem3---Sale-Book-Online\BackEnd\BookOnline\obj\Debug\BookOnline.pdb
+C:\Users\Vo Thanh Dat\Desktop\again\BO\BackEnd\BookOnline\bin\ApplicationInsights.config
+C:\Users\Vo Thanh Dat\Desktop\again\BO\BackEnd\BookOnline\bin\roslyn\csc.exe
+C:\Users\Vo Thanh Dat\Desktop\again\BO\BackEnd\BookOnline\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Vo Thanh Dat\Desktop\again\BO\BackEnd\BookOnline\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Vo Thanh Dat\Desktop\again\BO\BackEnd\BookOnline\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Vo Thanh Dat\Desktop\again\BO\BackEnd\BookOnline\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Vo Thanh Dat\Desktop\again\BO\BackEnd\BookOnline\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Vo Thanh Dat\Desktop\again\BO\BackEnd\BookOnline\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Vo Thanh Dat\Desktop\again\BO\BackEnd\BookOnline\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Vo Thanh Dat\Desktop\again\BO\BackEnd\BookOnline\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Vo Thanh Dat\Desktop\again\BO\BackEnd\BookOnline\bin\roslyn\vbc.exe
+C:\Users\Vo Thanh Dat\Desktop\again\BO\BackEnd\BookOnline\bin\roslyn\VBCSCompiler.exe
+C:\Users\Vo Thanh Dat\Desktop\again\BO\BackEnd\BookOnline\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Vo Thanh Dat\Desktop\again\BO\BackEnd\BookOnline\bin\BookOnline.dll.config
+C:\Users\Vo Thanh Dat\Desktop\again\BO\BackEnd\BookOnline\bin\BookOnline.dll
+C:\Users\Vo Thanh Dat\Desktop\again\BO\BackEnd\BookOnline\bin\BookOnline.pdb
+C:\Users\Vo Thanh Dat\Desktop\again\BO\BackEnd\BookOnline\bin\EntityFramework.dll
+C:\Users\Vo Thanh Dat\Desktop\again\BO\BackEnd\BookOnline\bin\EntityFramework.SqlServer.dll
+C:\Users\Vo Thanh Dat\Desktop\again\BO\BackEnd\BookOnline\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\Vo Thanh Dat\Desktop\again\BO\BackEnd\BookOnline\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\Vo Thanh Dat\Desktop\again\BO\BackEnd\BookOnline\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\Vo Thanh Dat\Desktop\again\BO\BackEnd\BookOnline\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\Vo Thanh Dat\Desktop\again\BO\BackEnd\BookOnline\bin\Microsoft.AI.Web.dll
+C:\Users\Vo Thanh Dat\Desktop\again\BO\BackEnd\BookOnline\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\Vo Thanh Dat\Desktop\again\BO\BackEnd\BookOnline\bin\Microsoft.ApplicationInsights.dll
+C:\Users\Vo Thanh Dat\Desktop\again\BO\BackEnd\BookOnline\bin\Microsoft.AspNetCore.Cors.dll
+C:\Users\Vo Thanh Dat\Desktop\again\BO\BackEnd\BookOnline\bin\Microsoft.AspNetCore.Http.Abstractions.dll
+C:\Users\Vo Thanh Dat\Desktop\again\BO\BackEnd\BookOnline\bin\Microsoft.AspNetCore.Http.Extensions.dll
+C:\Users\Vo Thanh Dat\Desktop\again\BO\BackEnd\BookOnline\bin\Microsoft.AspNetCore.Http.Features.dll
+C:\Users\Vo Thanh Dat\Desktop\again\BO\BackEnd\BookOnline\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Vo Thanh Dat\Desktop\again\BO\BackEnd\BookOnline\bin\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\Users\Vo Thanh Dat\Desktop\again\BO\BackEnd\BookOnline\bin\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\Vo Thanh Dat\Desktop\again\BO\BackEnd\BookOnline\bin\Microsoft.Extensions.FileProviders.Abstractions.dll
+C:\Users\Vo Thanh Dat\Desktop\again\BO\BackEnd\BookOnline\bin\Microsoft.Extensions.Options.dll
+C:\Users\Vo Thanh Dat\Desktop\again\BO\BackEnd\BookOnline\bin\Microsoft.Extensions.Primitives.dll
+C:\Users\Vo Thanh Dat\Desktop\again\BO\BackEnd\BookOnline\bin\Microsoft.Net.Http.Headers.dll
+C:\Users\Vo Thanh Dat\Desktop\again\BO\BackEnd\BookOnline\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Vo Thanh Dat\Desktop\again\BO\BackEnd\BookOnline\bin\Newtonsoft.Json.dll
+C:\Users\Vo Thanh Dat\Desktop\again\BO\BackEnd\BookOnline\bin\System.Buffers.dll
+C:\Users\Vo Thanh Dat\Desktop\again\BO\BackEnd\BookOnline\bin\System.Net.Http.Formatting.dll
+C:\Users\Vo Thanh Dat\Desktop\again\BO\BackEnd\BookOnline\bin\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\Vo Thanh Dat\Desktop\again\BO\BackEnd\BookOnline\bin\System.Runtime.InteropServices.RuntimeInformation.dll
+C:\Users\Vo Thanh Dat\Desktop\again\BO\BackEnd\BookOnline\bin\System.Text.Encodings.Web.dll
+C:\Users\Vo Thanh Dat\Desktop\again\BO\BackEnd\BookOnline\bin\System.Web.Cors.dll
+C:\Users\Vo Thanh Dat\Desktop\again\BO\BackEnd\BookOnline\bin\System.Web.Helpers.dll
+C:\Users\Vo Thanh Dat\Desktop\again\BO\BackEnd\BookOnline\bin\System.Web.Http.Cors.dll
+C:\Users\Vo Thanh Dat\Desktop\again\BO\BackEnd\BookOnline\bin\System.Web.Http.dll
+C:\Users\Vo Thanh Dat\Desktop\again\BO\BackEnd\BookOnline\bin\System.Web.Http.WebHost.dll
+C:\Users\Vo Thanh Dat\Desktop\again\BO\BackEnd\BookOnline\bin\System.Web.Mvc.dll
+C:\Users\Vo Thanh Dat\Desktop\again\BO\BackEnd\BookOnline\bin\System.Web.Razor.dll
+C:\Users\Vo Thanh Dat\Desktop\again\BO\BackEnd\BookOnline\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Vo Thanh Dat\Desktop\again\BO\BackEnd\BookOnline\bin\System.Web.WebPages.dll
+C:\Users\Vo Thanh Dat\Desktop\again\BO\BackEnd\BookOnline\bin\System.Web.WebPages.Razor.dll
+C:\Users\Vo Thanh Dat\Desktop\again\BO\BackEnd\BookOnline\bin\EntityFramework.xml
+C:\Users\Vo Thanh Dat\Desktop\again\BO\BackEnd\BookOnline\bin\EntityFramework.SqlServer.xml
+C:\Users\Vo Thanh Dat\Desktop\again\BO\BackEnd\BookOnline\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\Vo Thanh Dat\Desktop\again\BO\BackEnd\BookOnline\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\Vo Thanh Dat\Desktop\again\BO\BackEnd\BookOnline\bin\Microsoft.AI.Web.xml
+C:\Users\Vo Thanh Dat\Desktop\again\BO\BackEnd\BookOnline\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\Vo Thanh Dat\Desktop\again\BO\BackEnd\BookOnline\bin\Microsoft.ApplicationInsights.xml
+C:\Users\Vo Thanh Dat\Desktop\again\BO\BackEnd\BookOnline\bin\Microsoft.AspNetCore.Cors.xml
+C:\Users\Vo Thanh Dat\Desktop\again\BO\BackEnd\BookOnline\bin\Microsoft.AspNetCore.Http.Abstractions.xml
+C:\Users\Vo Thanh Dat\Desktop\again\BO\BackEnd\BookOnline\bin\Microsoft.AspNetCore.Http.Extensions.xml
+C:\Users\Vo Thanh Dat\Desktop\again\BO\BackEnd\BookOnline\bin\Microsoft.AspNetCore.Http.Features.xml
+C:\Users\Vo Thanh Dat\Desktop\again\BO\BackEnd\BookOnline\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Vo Thanh Dat\Desktop\again\BO\BackEnd\BookOnline\bin\Microsoft.Extensions.Configuration.Abstractions.xml
+C:\Users\Vo Thanh Dat\Desktop\again\BO\BackEnd\BookOnline\bin\Microsoft.Extensions.DependencyInjection.Abstractions.xml
+C:\Users\Vo Thanh Dat\Desktop\again\BO\BackEnd\BookOnline\bin\Microsoft.Extensions.FileProviders.Abstractions.xml
+C:\Users\Vo Thanh Dat\Desktop\again\BO\BackEnd\BookOnline\bin\Microsoft.Extensions.Options.xml
+C:\Users\Vo Thanh Dat\Desktop\again\BO\BackEnd\BookOnline\bin\Microsoft.Extensions.Primitives.xml
+C:\Users\Vo Thanh Dat\Desktop\again\BO\BackEnd\BookOnline\bin\Microsoft.Net.Http.Headers.xml
+C:\Users\Vo Thanh Dat\Desktop\again\BO\BackEnd\BookOnline\bin\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\Vo Thanh Dat\Desktop\again\BO\BackEnd\BookOnline\bin\System.Text.Encodings.Web.xml
+C:\Users\Vo Thanh Dat\Desktop\again\BO\BackEnd\BookOnline\bin\System.Web.Helpers.xml
+C:\Users\Vo Thanh Dat\Desktop\again\BO\BackEnd\BookOnline\bin\System.Web.Http.Cors.xml
+C:\Users\Vo Thanh Dat\Desktop\again\BO\BackEnd\BookOnline\bin\System.Web.Mvc.xml
+C:\Users\Vo Thanh Dat\Desktop\again\BO\BackEnd\BookOnline\bin\System.Web.Razor.xml
+C:\Users\Vo Thanh Dat\Desktop\again\BO\BackEnd\BookOnline\bin\System.Web.WebPages.xml
+C:\Users\Vo Thanh Dat\Desktop\again\BO\BackEnd\BookOnline\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Vo Thanh Dat\Desktop\again\BO\BackEnd\BookOnline\bin\System.Web.WebPages.Razor.xml
+C:\Users\Vo Thanh Dat\Desktop\again\BO\BackEnd\BookOnline\bin\Newtonsoft.Json.xml
+C:\Users\Vo Thanh Dat\Desktop\again\BO\BackEnd\BookOnline\bin\System.Net.Http.Formatting.xml
+C:\Users\Vo Thanh Dat\Desktop\again\BO\BackEnd\BookOnline\bin\System.Web.Http.xml
+C:\Users\Vo Thanh Dat\Desktop\again\BO\BackEnd\BookOnline\bin\System.Web.Http.WebHost.xml
+C:\Users\Vo Thanh Dat\Desktop\again\BO\BackEnd\BookOnline\obj\Debug\BookOnline.csprojResolveAssemblyReference.cache
+C:\Users\Vo Thanh Dat\Desktop\again\BO\BackEnd\BookOnline\obj\Debug\BookOnline.dll
+C:\Users\Vo Thanh Dat\Desktop\again\BO\BackEnd\BookOnline\obj\Debug\BookOnline.pdb
+C:\Users\Vo Thanh Dat\Desktop\again\book\back\BookOnline\obj\Debug\BookOnline.csprojResolveAssemblyReference.cache
+C:\Users\Vo Thanh Dat\Desktop\again\book\back\BookOnline\obj\Debug\BookOnline.dll
+C:\Users\Vo Thanh Dat\Desktop\again\book\back\BookOnline\obj\Debug\BookOnline.pdb
+C:\Users\Vo Thanh Dat\Desktop\again\book\back\BookOnline\bin\ApplicationInsights.config
+C:\Users\Vo Thanh Dat\Desktop\again\book\back\BookOnline\bin\roslyn\csc.exe
+C:\Users\Vo Thanh Dat\Desktop\again\book\back\BookOnline\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\Vo Thanh Dat\Desktop\again\book\back\BookOnline\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\Vo Thanh Dat\Desktop\again\book\back\BookOnline\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\Vo Thanh Dat\Desktop\again\book\back\BookOnline\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\Vo Thanh Dat\Desktop\again\book\back\BookOnline\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\Vo Thanh Dat\Desktop\again\book\back\BookOnline\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\Vo Thanh Dat\Desktop\again\book\back\BookOnline\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\Vo Thanh Dat\Desktop\again\book\back\BookOnline\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\Vo Thanh Dat\Desktop\again\book\back\BookOnline\bin\roslyn\vbc.exe
+C:\Users\Vo Thanh Dat\Desktop\again\book\back\BookOnline\bin\roslyn\VBCSCompiler.exe
+C:\Users\Vo Thanh Dat\Desktop\again\book\back\BookOnline\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\Vo Thanh Dat\Desktop\again\book\back\BookOnline\bin\BookOnline.dll.config
+C:\Users\Vo Thanh Dat\Desktop\again\book\back\BookOnline\bin\BookOnline.dll
+C:\Users\Vo Thanh Dat\Desktop\again\book\back\BookOnline\bin\BookOnline.pdb
+C:\Users\Vo Thanh Dat\Desktop\again\book\back\BookOnline\bin\EntityFramework.dll
+C:\Users\Vo Thanh Dat\Desktop\again\book\back\BookOnline\bin\EntityFramework.SqlServer.dll
+C:\Users\Vo Thanh Dat\Desktop\again\book\back\BookOnline\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\Vo Thanh Dat\Desktop\again\book\back\BookOnline\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\Vo Thanh Dat\Desktop\again\book\back\BookOnline\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\Vo Thanh Dat\Desktop\again\book\back\BookOnline\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\Vo Thanh Dat\Desktop\again\book\back\BookOnline\bin\Microsoft.AI.Web.dll
+C:\Users\Vo Thanh Dat\Desktop\again\book\back\BookOnline\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\Vo Thanh Dat\Desktop\again\book\back\BookOnline\bin\Microsoft.ApplicationInsights.dll
+C:\Users\Vo Thanh Dat\Desktop\again\book\back\BookOnline\bin\Microsoft.AspNetCore.Cors.dll
+C:\Users\Vo Thanh Dat\Desktop\again\book\back\BookOnline\bin\Microsoft.AspNetCore.Http.Abstractions.dll
+C:\Users\Vo Thanh Dat\Desktop\again\book\back\BookOnline\bin\Microsoft.AspNetCore.Http.Extensions.dll
+C:\Users\Vo Thanh Dat\Desktop\again\book\back\BookOnline\bin\Microsoft.AspNetCore.Http.Features.dll
+C:\Users\Vo Thanh Dat\Desktop\again\book\back\BookOnline\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\Vo Thanh Dat\Desktop\again\book\back\BookOnline\bin\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\Users\Vo Thanh Dat\Desktop\again\book\back\BookOnline\bin\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\Vo Thanh Dat\Desktop\again\book\back\BookOnline\bin\Microsoft.Extensions.FileProviders.Abstractions.dll
+C:\Users\Vo Thanh Dat\Desktop\again\book\back\BookOnline\bin\Microsoft.Extensions.Options.dll
+C:\Users\Vo Thanh Dat\Desktop\again\book\back\BookOnline\bin\Microsoft.Extensions.Primitives.dll
+C:\Users\Vo Thanh Dat\Desktop\again\book\back\BookOnline\bin\Microsoft.Net.Http.Headers.dll
+C:\Users\Vo Thanh Dat\Desktop\again\book\back\BookOnline\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Vo Thanh Dat\Desktop\again\book\back\BookOnline\bin\Newtonsoft.Json.dll
+C:\Users\Vo Thanh Dat\Desktop\again\book\back\BookOnline\bin\System.Buffers.dll
+C:\Users\Vo Thanh Dat\Desktop\again\book\back\BookOnline\bin\System.Net.Http.Formatting.dll
+C:\Users\Vo Thanh Dat\Desktop\again\book\back\BookOnline\bin\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\Vo Thanh Dat\Desktop\again\book\back\BookOnline\bin\System.Runtime.InteropServices.RuntimeInformation.dll
+C:\Users\Vo Thanh Dat\Desktop\again\book\back\BookOnline\bin\System.Text.Encodings.Web.dll
+C:\Users\Vo Thanh Dat\Desktop\again\book\back\BookOnline\bin\System.Web.Cors.dll
+C:\Users\Vo Thanh Dat\Desktop\again\book\back\BookOnline\bin\System.Web.Helpers.dll
+C:\Users\Vo Thanh Dat\Desktop\again\book\back\BookOnline\bin\System.Web.Http.Cors.dll
+C:\Users\Vo Thanh Dat\Desktop\again\book\back\BookOnline\bin\System.Web.Http.dll
+C:\Users\Vo Thanh Dat\Desktop\again\book\back\BookOnline\bin\System.Web.Http.WebHost.dll
+C:\Users\Vo Thanh Dat\Desktop\again\book\back\BookOnline\bin\System.Web.Mvc.dll
+C:\Users\Vo Thanh Dat\Desktop\again\book\back\BookOnline\bin\System.Web.Razor.dll
+C:\Users\Vo Thanh Dat\Desktop\again\book\back\BookOnline\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Vo Thanh Dat\Desktop\again\book\back\BookOnline\bin\System.Web.WebPages.dll
+C:\Users\Vo Thanh Dat\Desktop\again\book\back\BookOnline\bin\System.Web.WebPages.Razor.dll
+C:\Users\Vo Thanh Dat\Desktop\again\book\back\BookOnline\bin\EntityFramework.xml
+C:\Users\Vo Thanh Dat\Desktop\again\book\back\BookOnline\bin\EntityFramework.SqlServer.xml
+C:\Users\Vo Thanh Dat\Desktop\again\book\back\BookOnline\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\Vo Thanh Dat\Desktop\again\book\back\BookOnline\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\Vo Thanh Dat\Desktop\again\book\back\BookOnline\bin\Microsoft.AI.Web.xml
+C:\Users\Vo Thanh Dat\Desktop\again\book\back\BookOnline\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\Vo Thanh Dat\Desktop\again\book\back\BookOnline\bin\Microsoft.ApplicationInsights.xml
+C:\Users\Vo Thanh Dat\Desktop\again\book\back\BookOnline\bin\Microsoft.AspNetCore.Cors.xml
+C:\Users\Vo Thanh Dat\Desktop\again\book\back\BookOnline\bin\Microsoft.AspNetCore.Http.Abstractions.xml
+C:\Users\Vo Thanh Dat\Desktop\again\book\back\BookOnline\bin\Microsoft.AspNetCore.Http.Extensions.xml
+C:\Users\Vo Thanh Dat\Desktop\again\book\back\BookOnline\bin\Microsoft.AspNetCore.Http.Features.xml
+C:\Users\Vo Thanh Dat\Desktop\again\book\back\BookOnline\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\Vo Thanh Dat\Desktop\again\book\back\BookOnline\bin\Microsoft.Extensions.Configuration.Abstractions.xml
+C:\Users\Vo Thanh Dat\Desktop\again\book\back\BookOnline\bin\Microsoft.Extensions.DependencyInjection.Abstractions.xml
+C:\Users\Vo Thanh Dat\Desktop\again\book\back\BookOnline\bin\Microsoft.Extensions.FileProviders.Abstractions.xml
+C:\Users\Vo Thanh Dat\Desktop\again\book\back\BookOnline\bin\Microsoft.Extensions.Options.xml
+C:\Users\Vo Thanh Dat\Desktop\again\book\back\BookOnline\bin\Microsoft.Extensions.Primitives.xml
+C:\Users\Vo Thanh Dat\Desktop\again\book\back\BookOnline\bin\Microsoft.Net.Http.Headers.xml
+C:\Users\Vo Thanh Dat\Desktop\again\book\back\BookOnline\bin\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\Vo Thanh Dat\Desktop\again\book\back\BookOnline\bin\System.Text.Encodings.Web.xml
+C:\Users\Vo Thanh Dat\Desktop\again\book\back\BookOnline\bin\System.Web.Helpers.xml
+C:\Users\Vo Thanh Dat\Desktop\again\book\back\BookOnline\bin\System.Web.Http.Cors.xml
+C:\Users\Vo Thanh Dat\Desktop\again\book\back\BookOnline\bin\System.Web.Mvc.xml
+C:\Users\Vo Thanh Dat\Desktop\again\book\back\BookOnline\bin\System.Web.Razor.xml
+C:\Users\Vo Thanh Dat\Desktop\again\book\back\BookOnline\bin\System.Web.WebPages.xml
+C:\Users\Vo Thanh Dat\Desktop\again\book\back\BookOnline\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Vo Thanh Dat\Desktop\again\book\back\BookOnline\bin\System.Web.WebPages.Razor.xml
+C:\Users\Vo Thanh Dat\Desktop\again\book\back\BookOnline\bin\Newtonsoft.Json.xml
+C:\Users\Vo Thanh Dat\Desktop\again\book\back\BookOnline\bin\System.Net.Http.Formatting.xml
+C:\Users\Vo Thanh Dat\Desktop\again\book\back\BookOnline\bin\System.Web.Http.xml
+C:\Users\Vo Thanh Dat\Desktop\again\book\back\BookOnline\bin\System.Web.Http.WebHost.xml

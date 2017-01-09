@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="b81ac52553f84aa0877c8973ff305db6" Name="Diagram1" ZoomLevel="82">
+        <EntityTypeShape EntityType="BookOnlineModel.Book" Width="1.5" PointX="5.25" PointY="5.375" />
+        <EntityTypeShape EntityType="BookOnlineModel.Order" Width="1.5" PointX="5.25" PointY="1.25" />
+        <EntityTypeShape EntityType="BookOnlineModel.OrderDetail" Width="1.5" PointX="7.5" PointY="4.625" />
+        <EntityTypeShape EntityType="BookOnlineModel.Role" Width="1.5" PointX="0.75" PointY="5" />
+        <EntityTypeShape EntityType="BookOnlineModel.sysdiagram" Width="1.5" PointX="0.75" PointY="0.75" />
+        <EntityTypeShape EntityType="BookOnlineModel.Type" Width="1.5" PointX="7.5" PointY="10" />
+        <EntityTypeShape EntityType="BookOnlineModel.User" Width="1.5" PointX="3" PointY="3.875" />
+        <AssociationConnector Association="BookOnlineModel.FK_Book_User" />
+        <AssociationConnector Association="BookOnlineModel.FK_Book_User1" />
+        <AssociationConnector Association="BookOnlineModel.FK_OrderDetail_Book" />
+        <AssociationConnector Association="BookOnlineModel.FK_Order_User" />
+        <AssociationConnector Association="BookOnlineModel.FK_OrderDetail_Order" />
+        <AssociationConnector Association="BookOnlineModel.FK_User_Role" />
+        <AssociationConnector Association="BookOnlineModel.TypeBook" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

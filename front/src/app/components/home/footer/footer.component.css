@@ -1,0 +1,98 @@
+
+.footer-social-wrap{color:#999;display:block;text-align:center;padding:1.5rem;background:white; margin-top: 20px}
+.footer-social-wrap a{color:#999;text-decoration:none}
+.footer-social-wrap a:hover,.footer-social-wrap a:active,.footer-social-wrap a:visited{color:#999}
+.footer-social-wrap h4{color:#999;text-align:center;padding:0;margin:0}
+.footer-social-wrap h4 a{color:#999;text-decoration:none}
+.footer-social-wrap h4 a:hover,.footer-social-wrap h4 a:active,.footer-social-wrap h4 a:visited{color:#999}
+.footer-social-wrap ul{display:block;list-style:none;margin:0 auto;padding:0;text-align:center;width:100%}
+.footer-social-wrap a,.footer-social-wrap a:hover{text-decoration:none}
+.footer-social-wrap li{display:inline-block;margin:0;padding:1rem 1.5rem 0;font-size:1.8rem}
+
+
+.footer-wrap {
+    background: #403042;
+    color: white;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    font-size: 1.4rem;
+}
+* {
+    box-sizing: border-box;
+}
+.footer-wrap .footer {
+    clear: both;
+    overflow: hidden;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+.footer-wrap .footer-left-content {
+    float: left;
+    padding: 0 1.5rem;
+}
+.footer-wrap .footer-left-content {
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-grow: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+}
+
+.show-only-mobile{
+    display: none !important;
+}
+
+@media (max-width: 1023px) and (min-width: 668px){
+.footer-left-content, .footer-right-content {
+    min-width: 100%;
+}
+}
+
+@media (max-width: 667px){
+   
+    .footer-wrap .footer-links {
+    width: 100%;
+    }
+    .hide-on-mobile {
+    display: none !important;
+    }
+    .show-only-mobile {
+    display: block !important;
+    }
+}
+   
+
+.footer-links{
+    width: 25%;
+}
+.footer-wrap .footer-links ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    min-width: 17rem;
+    display: inline-block;
+}
+.footer-wrap .footer-links ul li {
+    padding: 0;
+    margin: 0;
+}
+
+.footer-wrap a {
+    color: #fff;
+    display: block;
+    padding: 1rem 0.5rem;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+.footer-wrap .footer-right-content {
+    float: right;
+    padding: 0 1.5rem;
+}
