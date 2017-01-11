@@ -36,30 +36,41 @@ namespace BookOnline.Models
             return orders;
         }
 
-        public IEnumerable<Order> GetOrderHistory()
+        public IEnumerable<Order> GetOrderHistory(int id)
         {
             orders = new List<Order>();
-            var query = (from s in db.Orders where s.Flag == false select s).ToList();
-            foreach (var item in query)
+            try
             {
-                orders.Add(new Order
+                //!(b.Flag == true) && 
+                var query = db.Orders.Where(b => b.UserID == id).Select(s => s).ToList();
+                foreach (var item in query)
                 {
-                    OrderID = item.OrderID,
-                    UserID = item.UserID,
-                    Date = item.Date,
-                    Flag = item.Flag
-                });
+                    orders.Add(new Order
+                    {
+                        OrderID = item.OrderID,
+                        UserID = item.UserID,
+                        Date = item.Date,
+                        Flag = item.Flag,
+
+                    });
+                }
+                return orders;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex);
             }
             return orders;
         }
 
         public dynamic SearchByUserID(int id)
         {
+
             using (db = new BookOnlineEntities())
             {
 
                 var query = (from b in db.Orders
-                    where (b.Flag == true && b.UserID == id && b.Status == "new")
+                    where (b.Flag == true && b.UserID == id )
                     select new
                     {
                         b.OrderID,

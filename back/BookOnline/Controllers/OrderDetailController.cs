@@ -23,7 +23,7 @@ namespace BookOnline.Controllers
         }
         //Get all oderdt form orderid
         [HttpGet]
-        public IEnumerable<OrderDetail> GetAllOrdersdt(int id)
+        public dynamic GetAllOrdersdt(int id)
         {
             var order = orderManager.Getdetail(id);
             if (order == null)
@@ -33,7 +33,7 @@ namespace BookOnline.Controllers
             return order;
         }
         [HttpGet]
-        public IEnumerable<OrderDetail> GetAllOrdersdtistory(int id)
+        public dynamic GetAllOrdersdtistory(int id)
         {
             var order = orderManager.Getdetailhistory(id);
             if (order == null)

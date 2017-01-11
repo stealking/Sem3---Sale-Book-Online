@@ -4,6 +4,7 @@ using System.Data.Entity.Migrations;
 using System.Linq;
 using System.Web;
 using System.Web.Razor.Generator;
+using Newtonsoft.Json;
 
 namespace BookOnline.Models
 {
@@ -54,44 +55,75 @@ namespace BookOnline.Models
             }
         }
 
-        public IEnumerable<OrderDetail> Getdetail(int id)
+          public dynamic Getdetail(int id)
         {
+            //            var query = (from a in db.OrderDetails
+            //                         join b in db.Books on a.BookID equals b.BookID
+            //                         select new
+            //                         {
+            //                             a.BookID,
+            //                             a.OrderID,
+            //                             a.Number,
+            //                             a.Flag,
+            //                             b.Name,
+            //                             b.Price,
+            //                             b.ImageUrl,
+            //                             b.Author
+            //                         }).Where(w => w.OrderID == id && w.Flag == true).ToList();
             using (db = new BookOnlineEntities())
             {
-                getdt = new List<OrderDetail>();
-                var query = (db.OrderDetails.Where(oder => oder.OrderID == id && oder.Flag == true)).ToList();
-                foreach (var item in query)
-                {
-                    getdt.Add(new OrderDetail
+                var query = (from a in db.OrderDetails
+                    select new
                     {
-                        ID = item.ID,
-                        OrderID = item.OrderID,
-                        BookID = item.BookID,
-                        Number = item.Number
-                    });
-                }
-                return getdt;
+                        a.BookID,
+                        a.OrderID,
+                        a.Number,
+                        a.Flag,
+                        a.Book
+                    }).Where(w => w.OrderID == id && w.Flag == true);
+
+                return JsonConvert.SerializeObject(query);
             }
+
         }
 
-        public IEnumerable<OrderDetail> Getdetailhistory(int id)
+//        public IEnumerable<OrderDetail> Getdetailhistory(int id)
+//        {
+//            using (db = new BookOnlineEntities())
+//            {
+//                getdth = new List<OrderDetail>();
+//                var query = (db.OrderDetails.Where(oder => oder.OrderID == id && oder.Flag == true)).ToList();
+//                foreach (var item in query)
+//                {
+//                    getdth.Add(new OrderDetail
+//                    {
+//                        ID = item.ID,
+//                        OrderID = item.OrderID,
+//                        BookID = item.BookID,
+//                        Number = item.Number
+//                    });
+//                }
+//                return getdth;
+//            }
+//        }
+        public dynamic Getdetailhistory(int id)
         {
-            using (db = new BookOnlineEntities())
-            {
-                getdth = new List<OrderDetail>();
-                var query = (db.OrderDetails.Where(oder => oder.OrderID == id && oder.Flag == true)).ToList();
-                foreach (var item in query)
-                {
-                    getdth.Add(new OrderDetail
-                    {
-                        ID = item.ID,
-                        OrderID = item.OrderID,
-                        BookID = item.BookID,
-                        Number = item.Number
-                    });
-                }
-                return getdth;
-            }
+            var query = (from a in db.OrderDetails
+                         join b in db.Books on a.BookID equals b.BookID
+                         select new
+                         {
+                             a.BookID,
+                             a.OrderID,
+                             a.Number,
+                             a.Flag,
+                             b.Name,
+                             b.Price,
+                             b.ImageUrl,
+                             b.Author
+                         }).Where(w => w.OrderID == id && w.Flag == false).ToList();
+
+            return query;
+
         }
 
         public OrderDetail Add(OrderDetail orderdetail)

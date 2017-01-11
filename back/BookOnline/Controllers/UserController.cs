@@ -60,5 +60,19 @@ namespace BookOnline.Controllers
             }
             userManager.Remove(id);
         }
+        [HttpGet]
+        public bool CheckExistEmail(string email)
+        {
+            using (var db = new BookOnlineEntities())
+            {
+                var query = db.Users.SingleOrDefault(u => u.Email == email);
+                if (query != null)
+                {
+                    return true;
+                }
+                return false;
+            }
+        }
     }
+
 }

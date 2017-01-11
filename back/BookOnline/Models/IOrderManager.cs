@@ -9,7 +9,7 @@ namespace BookOnline.Models
     public interface IOrderManager
     {
         IEnumerable<Order> GetAll();
-        IEnumerable<Order> GetOrderHistory();
+        IEnumerable<Order> GetOrderHistory(int id);
         Order Get(int id);
         dynamic SearchByUserID(int id);
         Order Add(Order order);

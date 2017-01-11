@@ -16,6 +16,7 @@ export class LoginComponent implements OnInit {
   public model = new User(null, '', '', '',null,null,null,null,2,true);
   public errorMsg = '';
   public errorMsgRes = '';
+  private isExistEmail: boolean;
   results: User[];
   constructor(public router: Router, public http: Http, private _service: AuthenticationService) { }
 
@@ -50,8 +51,17 @@ export class LoginComponent implements OnInit {
   }
 
   register(){
-    if (!this._service.register(this.model)) {
-      this.errorMsgRes = 'Failed to register';
-    }
-  }
-}
+   this.http.get("http://localhost:53106/api/user/CheckExistEmail/?email=" + this.model.Email).subscribe((res: any) => {
+      console.log(res.json());
+      this.isExistEmail = res.json();
+      if (this.isExistEmail == true) {
+        this.errorMsgRes = "Email is exist";
+      }
+      else {
+        if (this._service.register(this.model)) {
+          this.errorMsgRes = '';
+        }
+      }
+
+    });
+}}

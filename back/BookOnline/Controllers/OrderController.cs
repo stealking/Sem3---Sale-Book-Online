@@ -16,9 +16,9 @@ namespace BookOnline.Controllers
         static readonly IOrderManager orderManager = new OrderManager();
 
         [HttpGet]
-        public IEnumerable<Order> GetAllOrderHistory()
+        public IEnumerable<Order> GetAllOrderHistory(int id)
         {
-            return orderManager.GetOrderHistory();
+            return orderManager.GetOrderHistory(id);
         }
 
             //Get All Orders with True Flags!

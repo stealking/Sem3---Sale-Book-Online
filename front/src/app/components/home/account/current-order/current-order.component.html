@@ -31,7 +31,7 @@
     <div *ngFor="let detail of orderdetail">
         <div class="ui-grid ui-grid-responsive ui-fluid" *ngIf="orderdetail" style="font-size:16px;text-align:left;padding:20px;" >
         <div class="ui-grid-row">
-            <div class="ui-grid-col-12" style="text-align:center"><img src="http://localhost:53106/content/{{detail.ImageUrl}}" style="width:100px;height:100px"></div>
+            <div class="ui-grid-col-12" style="text-align:center"><img src="http://localhost:53106/content/{{detail.Book.ImageUrl}}" style="width:100px;height:100px"></div>
         </div>
         <div class="ui-grid-row">
             <div class="ui-grid-col-4">Mã Đơn Hàng: </div>
@@ -39,11 +39,11 @@
         </div>
         <div class="ui-grid-row">
             <div class="ui-grid-col-4">Tên Sách: </div>
-            <div class="ui-grid-col-8">{{detail.Name}}</div>
+            <div class="ui-grid-col-8">{{detail.Book.Name}}</div>
         </div>
         <div class="ui-grid-row">
             <div class="ui-grid-col-4">Tác Giả: </div>
-            <div class="ui-grid-col-8">{{detail.Author}}</div>
+            <div class="ui-grid-col-8">{{detail.Book.Author}}</div>
         </div>
         <div class="ui-grid-row">
             <div class="ui-grid-col-4">Số Lượng: </div>
@@ -51,11 +51,11 @@
         </div>
         <div class="ui-grid-row">
             <div class="ui-grid-col-4">Giá: </div>
-            <div class="ui-grid-col-8">{{detail.Price}} VND</div>
+            <div class="ui-grid-col-8">{{detail.Book.Price}} VND</div>
         </div>
         <div class="ui-grid-row">
             <div class="ui-grid-col-4">Thành Tiền: </div>
-            <div class="ui-grid-col-8">{{detail.Price * detail.Number }} VND</div>
+            <div class="ui-grid-col-8">{{detail.Book.Price * detail.Number }} VND</div>
         </div>
     </div>
     </div>
