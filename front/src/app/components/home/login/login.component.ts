@@ -40,8 +40,8 @@ export class LoginComponent implements OnInit {
 
   login() {
     if (!this._service.login(this.user, this.results)) {
-      this.errorMsg = 'Failed to login';
-      alert("Email hoặc password không chính xác")
+      this.errorMsg = 'Đăng nhập không thành công';
+      alert("Email hoặc mật khẩu không chính xác")
     } else {
       let order = new Order();
       order.OrderDetails = [];
@@ -55,7 +55,7 @@ export class LoginComponent implements OnInit {
       console.log(res.json());
       this.isExistEmail = res.json();
       if (this.isExistEmail == true) {
-        this.errorMsgRes = "Email is exist";
+        this.errorMsgRes = "Email đã tồn tại";
       }
       else {
         if (this._service.register(this.model)) {
