@@ -100,11 +100,11 @@
             </div>
             <div class="ui-grid-row">
                 <div class="ui-grid-col-4">Giá: </div>
-                <div class="ui-grid-col-8">{{detail.Price}} VND</div>
+                <div class="ui-grid-col-8">{{bookService.formatPrice(detail.Price * 100)}}</div>
             </div>
             <div class="ui-grid-row">
                 <div class="ui-grid-col-4">Thành Tiền: </div>
-                <div class="ui-grid-col-8">{{detail.Price * detail.Number }} VND</div>
+                <div class="ui-grid-col-8">{{bookService.formatPrice(detail.Price * detail.Number * 100)}}</div>
             </div>
         </div>
     </div>

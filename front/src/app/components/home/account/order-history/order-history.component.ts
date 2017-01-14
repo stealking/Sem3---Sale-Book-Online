@@ -4,7 +4,7 @@ import {DataScrollerModule} from 'primeng/primeng';
 import { Order } from '../../../../classes/order';
 import { OrderDetail } from '../../../../classes/orderdetail';
 
-
+import { BookService } from '../../../../services/book.service';
 @Component({
   selector: 'app-order-history',
   templateUrl: './order-history.component.html',
@@ -18,7 +18,7 @@ export class OrderHistoryComponent implements OnInit {
   selectedOrder: Order;
   displayDialog: boolean;
   selectedOrderDetail: OrderDetail[];
-  constructor(public http: Http) { }
+  constructor(public http: Http, public bookService: BookService) { }
 
   ngOnInit() {
     this.updateListOrder();
