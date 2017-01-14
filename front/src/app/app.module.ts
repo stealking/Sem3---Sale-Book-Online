@@ -10,6 +10,7 @@ import { HomeComponent, HomeComponentModule, routes as homeChildRoutes } from '.
 
 
 
+
 const routes: Routes = [
   { path: '', component: HomeComponent, children: homeChildRoutes },
   { path: 'admin', component: AdminComponent, children: adminChildRoutes }

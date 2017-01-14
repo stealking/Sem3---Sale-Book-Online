@@ -30,7 +30,7 @@
 # e2e
 /FrontEnd/e2e/*.js
 /FrontEnd/e2e/*.map
-
+packages
 #System Files
 .DS_Store
 Thumbs.db

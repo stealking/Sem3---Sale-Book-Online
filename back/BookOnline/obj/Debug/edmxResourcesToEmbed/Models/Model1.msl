@@ -26,6 +26,7 @@
     <EntitySetMapping Name="Orders">
       <EntityTypeMapping TypeName="BookOnlineModel.Order">
         <MappingFragment StoreEntitySet="Order">
+          <ScalarProperty Name="Receiver" ColumnName="Receiver" />
           <ScalarProperty Name="LogisticsCost" ColumnName="LogisticsCost" />
           <ScalarProperty Name="Status" ColumnName="Status" />
           <ScalarProperty Name="AddressType" ColumnName="AddressType" />

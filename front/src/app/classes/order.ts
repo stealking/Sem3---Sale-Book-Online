@@ -5,6 +5,7 @@ export class Order {
         public UserID?: number,
         public Date?: string,
         public City?: string,
+          public Receiver?: string,
         public District?: string,
         public Address?: string,
         public AddressType?: number,

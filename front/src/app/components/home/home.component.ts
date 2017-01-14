@@ -4,7 +4,6 @@ import { CommonModule } from '@angular/common';
 import { FormsModule, FormGroup, FormBuilder } from '@angular/forms';
 
 
-
 import { NavComponent } from './nav/nav.component';
 import { MainPageComponent } from './main-page/main-page.component';
 import { BookDetailComponent } from './book-detail/book-detail.component';
@@ -17,6 +16,7 @@ import { DeliveryComponent } from './delivery/delivery.component';
 import { ContactComponent } from './contact/contact.component';
 import { BookListTypeComponent } from './book-list-type/book-list-type.component';
 import { FooterComponent } from './footer/footer.component';
+import { PaymentComponent } from './payment/payment.component';
 
 
 import { DataGridModule } from 'primeng/primeng';
@@ -29,6 +29,7 @@ import { SliderModule } from 'primeng/primeng';
 import { ListboxModule, GrowlModule, MessagesModule, InputTextareaModule } from 'primeng/primeng';
 import {RadioButtonModule} from 'primeng/primeng';
 import {GalleriaModule} from 'primeng/primeng';
+import {StepsModule} from 'primeng/primeng';
 
 // service 
 import { bookMultiqueryServiceInjectables } from './book-search-list/book-search-list.component';
@@ -62,6 +63,7 @@ export const routes: Routes = [
   { path: 'forgotten-password', component: ForgottenPasswordComponent },
   { path: 'account', component: AccountComponent, children: accountChildRoutes },
   { path: 'contact', component: ContactComponent },
+  { path: 'payment', component: PaymentComponent },
   { path: 'books/:status', component: BookListTypeComponent}
 ]
 
@@ -80,7 +82,8 @@ export const routes: Routes = [
     EqualValidator,
     ContactComponent,
     BookListTypeComponent ,
-    FooterComponent
+    FooterComponent,
+    PaymentComponent
   ],
   exports: [
     NavComponent,
@@ -103,7 +106,8 @@ export const routes: Routes = [
     ListboxModule,
     GrowlModule, MessagesModule, InputTextareaModule,
     RadioButtonModule,
-    GalleriaModule
+    GalleriaModule,
+    StepsModule
   ],
   providers: [
     bookMultiqueryServiceInjectables,

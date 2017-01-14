@@ -27,6 +27,7 @@
     </Key>
     <Property Name="OrderID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="UserID" Type="int" />
+    <Property Name="Receiver" Type="nvarchar" MaxLength="50" />
     <Property Name="Date" Type="date" />
     <Property Name="Flag" Type="bit" />
     <Property Name="City" Type="nvarchar" MaxLength="50" />

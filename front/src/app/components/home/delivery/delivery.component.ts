@@ -10,6 +10,8 @@ import { Order } from '../../../classes/order';
 
 import { BookService } from '../../../services/book.service';
 import {SelectItem} from 'primeng/primeng';
+import {MenuItem} from 'primeng/primeng';
+
 @Component({
   selector: 'app-basket',
   templateUrl: './delivery.component.html',
@@ -21,7 +23,8 @@ export class DeliveryComponent implements OnInit {
   sum: number = 0;
   orderDetailIDRemoved: number[] = [];
   order: Order = {};
-
+  activeIndex: number = 1;
+   private items: MenuItem[];
    cities: SelectItem[];
   constructor(public http: Http, private router: Router, private route: ActivatedRoute, public bookService: BookService) { }
 
@@ -33,8 +36,16 @@ export class DeliveryComponent implements OnInit {
         this.cities.push({label:'Hà Nội', value:'Hà Nội'});
         this.cities.push({label:'Đà Nẵng', value:'Đà Nẵng'});
         this.cities.push({label:'Hồ Chí Minh', value:'Hồ Chí Minh'});
+
+        this.items = [
+            {label: 'Đăng nhập'},
+            {label: 'Địa chỉ'},
+            {label: 'Thanh toán'}
+        ];
   }
   next(){
-    console.log(this.order);
+    localStorage.setItem("order", JSON.stringify(this.order));
+    console.log(JSON.stringify(this.order));
+    this.router.navigate(['payment']);
   }
 }

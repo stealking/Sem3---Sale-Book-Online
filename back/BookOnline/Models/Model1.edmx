@@ -32,6 +32,7 @@
           </Key>
           <Property Name="OrderID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="UserID" Type="int" />
+          <Property Name="Receiver" Type="nvarchar" MaxLength="50" />
           <Property Name="Date" Type="date" />
           <Property Name="Flag" Type="bit" />
           <Property Name="City" Type="nvarchar" MaxLength="50" />
@@ -315,6 +316,7 @@
           <Property Name="Status" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="LogisticsCost" Type="Decimal" Precision="19" Scale="4" />
           <NavigationProperty Name="OrderDetails" Relationship="BookOnlineModel.FK_OrderDetail_Order" FromRole="Order" ToRole="OrderDetail" />
+          <Property Name="Receiver" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
         </EntityType>
         <EntityType Name="OrderDetail">
           <Key>
@@ -476,6 +478,7 @@
           <EntitySetMapping Name="Orders">
             <EntityTypeMapping TypeName="BookOnlineModel.Order">
               <MappingFragment StoreEntitySet="Order">
+                <ScalarProperty Name="Receiver" ColumnName="Receiver" />
                 <ScalarProperty Name="LogisticsCost" ColumnName="LogisticsCost" />
                 <ScalarProperty Name="Status" ColumnName="Status" />
                 <ScalarProperty Name="AddressType" ColumnName="AddressType" />

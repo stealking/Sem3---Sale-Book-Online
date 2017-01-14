@@ -74,6 +74,7 @@
     <Property Name="Status" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="LogisticsCost" Type="Decimal" Precision="19" Scale="4" />
     <NavigationProperty Name="OrderDetails" Relationship="BookOnlineModel.FK_OrderDetail_Order" FromRole="Order" ToRole="OrderDetail" />
+    <Property Name="Receiver" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
   </EntityType>
   <EntityType Name="OrderDetail">
     <Key>

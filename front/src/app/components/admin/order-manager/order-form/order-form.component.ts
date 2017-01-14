@@ -28,9 +28,12 @@ export class OrderFormComponent implements OnInit {
   ngOnInit(): void {
     // check if in edit page
     if (this.job === 'edit') {
+
+            
       this.http.get(
         'http://localhost:53106/api/order/GetOrderById/' + this.id)
         .subscribe((res: Response) => {
+          console.log(this.model.Date); 
           this.model = <Order>res.json();
           this.d = this.model.Date.split("T");
           this.model.Date = this.d[0];

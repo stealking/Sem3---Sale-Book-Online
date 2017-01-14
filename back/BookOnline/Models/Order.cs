@@ -30,6 +30,7 @@ namespace BookOnline.Models
         public Nullable<int> AddressType { get; set; }
         public string Status { get; set; }
         public Nullable<decimal> LogisticsCost { get; set; }
+        public string Receiver { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<OrderDetail> OrderDetails { get; set; }

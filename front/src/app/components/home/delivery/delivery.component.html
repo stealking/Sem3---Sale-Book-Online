@@ -2,11 +2,16 @@
   <div class="ContentSideSections Implementation ui-fluid">
     <div class="ui-grid ui-grid-responsive ui-grid-pad basket-page">
       <form (ngSubmit)="next()" #detailForm="ngForm" class="ui-form">
-      <div>
+      <!--<div>
         <h1>Thông tin vận chuyển</h1>
-      </div>
-      <div class="main-content">
-       
+      </div>-->
+      
+      
+       <div class="main-content">
+        <p-steps [model]="items" [(activeIndex)]="activeIndex" styleClass="steps-basic" [readonly]="true"></p-steps>
+         </div>
+      <!--<div class="main-content">
+       <p-steps [model]="items"></p-steps>
         <div class="info-group">
           <h2>Thông tin liên hệ</h2>
           <div class="info-part">
@@ -28,7 +33,7 @@
             </p>
           </div>
         </div>
-      </div>
+      </div>-->
 
        <div class="main-content">
         <div class="info-group">
@@ -36,7 +41,7 @@
           <div class="info-part">
             <p><label for="receiverName">Tên người nhận</label></p>
             <p>
-              <input name="name" type="text" required [(ngModel)]="order.ReceiverName" #name="ngModel">
+              <input name="name" type="text" required [(ngModel)]="order.Receiver" #name="ngModel">
               <span class="alert alert-danger" [hidden]="name.valid || name.pristine">
                     Tên người nhận: Bắt buộc!
               </span>
@@ -45,7 +50,7 @@
            <div class="info-part">
             <p><label for="receiverCity">Thành phố / Tỉnh</label></p>
             <p>
-              <p-dropdown [options]="cities" name="city" [(ngModel)]="order.ReceiverCity" [style]="{'width':'100%'}" filter="filter">
+              <p-dropdown [options]="cities" name="city" [(ngModel)]="order.City" [style]="{'width':'100%'}" filter="filter">
                 <template let-car>
                     <div class="ui-helper-clearfix" style="position: relative;height: 25px;">
                         <div style="font-size:14px;float:right;margin-top:4px">{{car.label}}</div>
@@ -57,7 +62,7 @@
            <div class="info-part">
             <p><label for="receiverDistrict">Quận / Huyện</label></p>
             <p>
-                <input name="district" type="text" required [(ngModel)]="order.ReceiverDistrict" #district="ngModel">
+                <input name="district" type="text" required [(ngModel)]="order.District" #district="ngModel">
               <span class="alert alert-danger" [hidden]="district.valid || district.pristine">
                     Quận / huyện: Bắt buộc!
               </span>
@@ -65,7 +70,7 @@
           </div> <div class="info-part">
             <p><label for="receiverAddress">Địa chỉ</label></p>
             <p>
-                  <input name="address" type="text" required [(ngModel)]="order.ReceiverAddress" #address="ngModel">
+                  <input name="address" type="text" required [(ngModel)]="order.Address" #address="ngModel">
               <span class="alert alert-danger" [hidden]="address.valid || address.pristine">
                     Địa chỉ: Bắt buộc!
               </span>
