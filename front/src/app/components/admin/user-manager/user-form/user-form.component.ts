@@ -21,7 +21,7 @@ export class UserFormComponent implements OnInit {
   model = new User(1,	'',	'',	'',	'', this.date.getFullYear() + '/'+this.date.getMonth() +'/' + this.date.getDay()	,	null ,	null , 	1,	true);
   id: number;
   job: string;
-  
+  d: string[];
   
   
   constructor(public http: Http, public route: ActivatedRoute, public location: Location, public router: Router) { 
@@ -67,12 +67,14 @@ export class UserFormComponent implements OnInit {
         'http://localhost:53106/api/user/GetUserById/' + this.id)
         .subscribe((res: Response) => {
           this.model = <User>res.json();
+          this.d = this.model.DateOfBirth.split("T");
+          this.model.DateOfBirth = this.d[0];
         })
     }
   }
 
   newUser() {
-    this.model = new User(1,	'tansy91@gmail.com',	'12345',	'Trần Tấn Sỹ',	'214 Ngô Quyền', null	,	null ,	null , 	1,	true);
+    this.model = new User(1,null,	null,	null,	null, null	,	null ,	null , 	1,	true);
   }
 
   back(): void {
