@@ -27,14 +27,15 @@ export class OrderHistoryComponent implements OnInit {
   renderResults(res: any): void {
     this.results = null;
     if (res) {
-      this.results = res;
+     this.results = res;
     }
   }
 
   renderDetail(res: any): void {
     this.orderdetail = null;
     if (res) {
-      this.orderdetail = res;
+       this.orderdetail =JSON.parse(res);
+       console.log(this.orderdetail);
     }
   }
 

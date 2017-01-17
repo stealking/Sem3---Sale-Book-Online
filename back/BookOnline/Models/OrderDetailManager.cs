@@ -108,21 +108,35 @@ namespace BookOnline.Models
 //        }
         public dynamic Getdetailhistory(int id)
         {
-            var query = (from a in db.OrderDetails
-                         join b in db.Books on a.BookID equals b.BookID
-                         select new
-                         {
-                             a.BookID,
-                             a.OrderID,
-                             a.Number,
-                             a.Flag,
-                             b.Name,
-                             b.Price,
-                             b.ImageUrl,
-                             b.Author
-                         }).Where(w => w.OrderID == id && w.Flag == false).ToList();
+//            var query = (from a in db.OrderDetails
+//                         join b in db.Books on a.BookID equals b.BookID
+//                         select new
+//                         {
+//                             a.BookID,
+//                             a.OrderID,
+//                             a.Number,
+//                             a.Flag,
+//                             b.Name,
+//                             b.Price,
+//                             b.ImageUrl,
+//                             b.Author
+//                         }).Where(w => w.OrderID == id && w.Flag == false).ToList();
+//
+//            return query;
+            using (db = new BookOnlineEntities())
+            {
+                var query = (from a in db.OrderDetails
+                             select new
+                             {
+                                 a.BookID,
+                                 a.OrderID,
+                                 a.Number,
+                                 a.Flag,
+                                 a.Book
+                             }).Where(w => w.OrderID == id && w.Flag == true);
 
-            return query;
+                return JsonConvert.SerializeObject(query);
+            }
 
         }
 

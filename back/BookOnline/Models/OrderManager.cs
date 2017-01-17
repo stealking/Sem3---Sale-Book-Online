@@ -15,7 +15,9 @@ namespace BookOnline.Models
         IList<Order> orders;
         public IEnumerable<Order> GetAll()
         {
-            orders = new List<Order>();
+            using (db = new BookOnlineEntities())
+            {
+                orders = new List<Order>();
             var query = (from s in db.Orders where s.Flag == true select s).ToList();
             foreach (var item in query)
             {
@@ -33,16 +35,19 @@ namespace BookOnline.Models
                     Flag = item.Flag
                 });
             }
+            }
             return orders;
         }
 
         public IEnumerable<Order> GetOrderHistory(int id)
         {
-            orders = new List<Order>();
+            using (db = new BookOnlineEntities())
+            {
+                orders = new List<Order>();
             try
             {
-                //!(b.Flag == true) && 
-                var query = db.Orders.Where(b => b.UserID == id).Select(s => s).ToList();
+//                b.Flag == false &&
+                var query = db.Orders.Where(b => !(b.Flag==true)  &&  b.UserID == id).Select(s => s).ToList();
                 foreach (var item in query)
                 {
                     orders.Add(new Order
@@ -61,6 +66,7 @@ namespace BookOnline.Models
                 Console.WriteLine(ex);
             }
             return orders;
+        }
         }
 
         public dynamic SearchByUserID(int id)
@@ -107,54 +113,67 @@ namespace BookOnline.Models
 
         public Order Get(int id)
         {
-            Order order = null;
-            var query = db.Orders.SingleOrDefault(b => b.OrderID == id);
-            if (query != null)
+            using (db = new BookOnlineEntities())
             {
-                order = new Order
+                Order order = null;
+                var query = db.Orders.SingleOrDefault(b => b.OrderID == id);
+                if (query != null)
                 {
-                    OrderID = query.OrderID,
-                    UserID = query.UserID,
-                    Date = query.Date,
-                    Flag = query.Flag
-                };
+                    order = new Order
+                    {
+                        OrderID = query.OrderID,
+                        UserID = query.UserID,
+                        Date = query.Date,
+                        Flag = query.Flag
+                    };
+                }
+                return order;
             }
-            return order;
         }
 
         public Order Add(Order order)
         {
-            if (order == null)
+            using (db = new BookOnlineEntities())
             {
-                throw new ArgumentNullException(nameof(order));
+                if (order == null)
+                {
+                    throw new ArgumentNullException(nameof(order));
+                }
+//            order.OrderID = db.Orders.Max(s => s.OrderID) + 1;
+                order.Flag = true;
+                db.Orders.Add(order);
+                db.SaveChanges();
+                return order;
             }
-            order.OrderID = db.Orders.Max(s => s.OrderID) + 1;
-            order.Flag = true;
-            db.Orders.Add(order);
-            db.SaveChanges();
-            return order;
         }
 
         public void Remove(int id)
         {
-            var query = db.Orders.Where(b => b.OrderID == id).Select(s => s);
-            foreach (var item in query)
+
+            using (db = new BookOnlineEntities())
             {
-                item.Flag = false;
+                var query = db.Orders.Where(b => b.OrderID == id).Select(s => s);
+                foreach (var item in query)
+                {
+                    item.Flag = false;
+                }
+                db.SaveChanges();
             }
-            db.SaveChanges();
         }
 
         public bool Update(Order order)
         {
-            var query = db.Orders.Where(b => b.OrderID == order.OrderID);
-            if (!query.Any())
+            using (db = new BookOnlineEntities())
             {
-                return false;
+                var query = db.Orders.Where(b => b.OrderID == order.OrderID);
+                if (!query.Any())
+                {
+                    return false;
+                }
+                db.Orders.AddOrUpdate(order);
+                db.SaveChanges();
+                return true;
             }
-            db.Orders.AddOrUpdate(order);
-            db.SaveChanges();
-            return true;
         }
     }
 }

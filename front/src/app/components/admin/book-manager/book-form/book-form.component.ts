@@ -16,7 +16,7 @@ import {FileUploadModule} from 'primeng/primeng';
 })
 export class BookFormComponent implements OnInit {
   rates = [1, 2, 3, 4, 5];
-  statuss = ['New', 'Old','Hot'];
+  statuss = ['bestselling', 'highlight','sell-off'];
   model = new Book(this.id);
   id: number;
   job: string;
