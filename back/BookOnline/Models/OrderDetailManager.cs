@@ -148,7 +148,7 @@ namespace BookOnline.Models
                 {
                     throw new ArgumentNullException(nameof(orderdetail));
                 }
-                orderdetail.ID = db.OrderDetails.Max(s => s.ID) + 1;
+//                orderdetail.ID = db.OrderDetails.Max(s => s.ID) + 1;
                 db.OrderDetails.Add(orderdetail);
                 db.SaveChanges();
 //                db.Dispose();

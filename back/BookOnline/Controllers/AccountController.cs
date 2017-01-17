@@ -1,142 +1,204 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Configuration;
+using System.Data.Entity.Migrations;
 using System.IO;
 using System.Linq;
 using System.Net;
-using System.Net.Http;
 using System.Net.Mail;
 using System.Security.Cryptography;
 using System.Text;
 using System.Web;
 using System.Web.Http;
 using System.Web.Http.Cors;
+using System.Web.Mvc;
 using System.Web.Security;
+using BookOnline.Models;
+using Microsoft.AspNet.Identity;
 
 namespace BookOnline.Controllers
 {
-    
-    [EnableCors(origins: "http://localhost:4200",
-     headers: "*", methods: "*")]
+    [EnableCors("http://localhost:4200", "*", "*")]
     public class AccountController : ApiController
     {
-        static int _minExpires = 60;
-        [HttpGet]
-        public dynamic SendEmail(string emailStr)
+
+
+        [System.Web.Http.HttpPost]
+        public dynamic RequestResetPasswordLink(string userName)
         {
-            SendResetEmail(emailStr);
-            return "OK";
+            SendResetEmail(userName);
+            return Ok();
         }
 
-        public static void SendResetEmail(string emailStr)
+        public static void SendResetEmail(string _email)
         {
-//            string encrypted = Encryption.Encrypt(String.Format("{0}&{1}",
-//                user.UserName,
-//                DateTime.Now.AddMinutes(_minExpires).Ticks),
-//                ConfigurationManager.AppSettings[Constants.keyEncryptionKey]);
+            var encrypted = Encryption.Encrypt(string.Format("{0}&{1}",
+                _email,
+                DateTime.Now.AddMinutes(60).Ticks),
+                ConfigurationManager.AppSettings[Constants.DefaultSecurityStampClaimType]);
 
-            var passwordLink = "Account/ResetPassword?digest=";
-//                  HttpUtility.UrlEncode(encrypted);
+            var passwordLink = "http://localhost:4200/account/ResetPassword/?digest=" +
+                               HttpUtility.UrlEncode(encrypted);
 
             var email = new MailMessage();
 
-            email.From = new MailAddress("admin@domain.com");
-            email.To.Add(emailStr);
+            email.From = new MailAddress("lecongm15@gmail.com");
+            email.To.Add(_email);
 
             email.Subject = "Password Reset";
             email.IsBodyHtml = true;
 
-            email.Body += "<p>A request has been recieved to reset your password. If you did not initiate the request, then please ignore this email.</ p > ";
-            email.Body += "<p>Please click the following link to reset your password: < a href = '" + passwordLink + "' > " + passwordLink + " </ a ></ p > ";
+            email.Body +=
+                "<p>A request has been recieved to reset your password. If you did not initiate the request, then please ignore this email.</p> ";
+            email.Body += "<p>Please click the following link to reset your password: <a href = '" + passwordLink + "' >passwordLink </a ></p> ";
 
 
-            SmtpClient smtpClient = new SmtpClient();
+            var smtp = new SmtpClient();
+            smtp.Host = "smtp.gmail.com";
+            smtp.EnableSsl = true;
+            var NetworkCred = new NetworkCredential("lecongm15@gmail.com", "Minhhan1");
 
-            try
-            {
-                smtpClient.Send(email);
-            }
-            catch (Exception ex)
-            {
-//                ErrorHandler.HandleError(ex, ErrorHandler.Level.Error);
-            }
+            smtp.UseDefaultCredentials = false;
+            smtp.Credentials = NetworkCred;
+            smtp.Port = 587;
+            smtp.DeliveryMethod = SmtpDeliveryMethod.Network;
+
+            smtp.Send(email);
         }
 
-        public class Encryption
+        [RequireHttps]
+        [System.Web.Http.HttpGet]
+        public dynamic ResetPassword(string digest)
         {
-            private const string _defaultKey = "*3ld+43j";
+            var parts = ValidateResetCode(HttpUtility.UrlDecode(digest));
+            if (!parts.IsValid) return NotFound();
+            return parts;
+        }
 
-
-            public static string Encrypt(string toEncrypt, string key)
+        [System.Web.Http.HttpPut]
+        public void ChangePassword(ResetPasswordParts parts)
+        {
+            using (BookOnlineEntities db = new BookOnlineEntities())
             {
-                var des = new DESCryptoServiceProvider();
-                var ms = new MemoryStream();
-
-                VerifyKey(ref key);
-
-                des.Key = HashKey(key, des.KeySize / 8);
-                des.IV = HashKey(key, des.KeySize / 8);
-                byte[] inputBytes = Encoding.UTF8.GetBytes(toEncrypt);
-
-                var cs = new CryptoStream(ms, des.CreateEncryptor(), CryptoStreamMode.Write);
-                cs.Write(inputBytes, 0, inputBytes.Length);
-                cs.FlushFinalBlock();
-
-                return HttpServerUtility.UrlTokenEncode(ms.ToArray());
-            }
-
-            public static string Decrypt(string toDecrypt, string key)
-            {
-                var des = new DESCryptoServiceProvider();
-                var ms = new MemoryStream();
-
-                VerifyKey(ref key);
-
-                des.Key = HashKey(key, des.KeySize / 8);
-                des.IV = HashKey(key, des.KeySize / 8);
-                byte[] inputBytes = HttpServerUtility.UrlTokenDecode(toDecrypt);
-
-                var cs = new CryptoStream(ms, des.CreateDecryptor(), CryptoStreamMode.Write);
-                cs.Write(inputBytes, 0, inputBytes.Length);
-                cs.FlushFinalBlock();
-
-                var encoding = Encoding.UTF8;
-                return encoding.GetString(ms.ToArray());
-
-            }
-
-            /// <summary>
-            /// Make sure key is exactly 8 characters
-            /// </summary>
-            /// <param name="key"></param>
-            private static void VerifyKey(ref string key)
-            {
-                if (string.IsNullOrEmpty(key))
-                    key = _defaultKey;
-
-                key = key.Length > 8 ? key.Substring(0, 8) : key;
-
-                if (key.Length < 8)
+                var query = db.Users.SingleOrDefault(u => u.Email == parts.Email);
+                if (query != null)
                 {
-                    for (int i = key.Length; i < 8; i++)
-                    {
-                        key += _defaultKey[i];
-                    }
+                    query.Password = parts.Password;
+                    db.Users.AddOrUpdate(query);
+                    db.SaveChanges();
                 }
             }
+        }
 
-            private static byte[] HashKey(string key, int length)
+        public static ResetPasswordParts ValidateResetCode(string encryptedParam)
+        {
+            using (BookOnlineEntities db = new BookOnlineEntities())
             {
-                var sha = new SHA1CryptoServiceProvider();
-                byte[] keyBytes = Encoding.UTF8.GetBytes(key);
-                byte[] hash = sha.ComputeHash(keyBytes);
-                byte[] truncateHash = new byte[length];
-                Array.Copy(hash, 0, truncateHash, 0, length);
-                return truncateHash;
+                var decrypted = "";
+                var results = new ResetPasswordParts();
+                try
+                {
+                    decrypted = Encryption.Decrypt(encryptedParam, ConfigurationManager
+                        .AppSettings[Constants.DefaultSecurityStampClaimType]);
+
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine(ex);
+                }
+
+                var parts = decrypted.Split('&');
+
+                if (parts.Length != 2) return results;
+
+                var expires = DateTime.Now.AddHours(-1);
+                var _email = parts[0];
+                var query = db.Users.SingleOrDefault(s => s.Email == _email);
+                if (query == null) return results;
+
+                long ticks = 0;
+                if (!long.TryParse(parts[1], out ticks)) return results;
+                expires = new DateTime(ticks);
+                results.Expires = expires;
+
+                if (expires < DateTime.Now) return results;
+                results.IsValid = true;
+                results.Email = query.Email;
+                return results;
+            }
+        }
+    }
+
+
+    public class Encryption
+    {
+        private const string _defaultKey = "*3ld+43j";
+
+
+        public static string Encrypt(string toEncrypt, string key)
+        {
+            var des = new DESCryptoServiceProvider();
+            var ms = new MemoryStream();
+
+            VerifyKey(ref key);
+
+            des.Key = HashKey(key, des.KeySize / 8);
+            des.IV = HashKey(key, des.KeySize / 8);
+            var inputBytes = Encoding.UTF8.GetBytes(toEncrypt);
+
+            var cs = new CryptoStream(ms, des.CreateEncryptor(), CryptoStreamMode.Write);
+            cs.Write(inputBytes, 0, inputBytes.Length);
+            cs.FlushFinalBlock();
+
+            return HttpServerUtility.UrlTokenEncode(ms.ToArray());
+        }
+
+        public static string Decrypt(string toDecrypt, string key)
+        {
+            var des = new DESCryptoServiceProvider();
+            var ms = new MemoryStream();
+
+            VerifyKey(ref key);
+
+            des.Key = HashKey(key, des.KeySize / 8);
+            des.IV = HashKey(key, des.KeySize / 8);
+            var inputBytes = HttpServerUtility.UrlTokenDecode(toDecrypt);
+
+            var cs = new CryptoStream(ms, des.CreateDecryptor(), CryptoStreamMode.Write);
+            cs.Write(inputBytes, 0, inputBytes.Length);
+            cs.FlushFinalBlock();
+
+            var encoding = Encoding.UTF8;
+            return encoding.GetString(ms.ToArray());
+        }
+
+        /// <summary>
+        ///     Make sure key is exactly 8 characters
+        /// </summary>
+        /// <param name="key"></param>
+        private static void VerifyKey(ref string key)
+        {
+            if (string.IsNullOrEmpty(key))
+                key = _defaultKey;
+
+            key = key.Length > 8 ? key.Substring(0, 8) : key;
+
+            if (key.Length < 8)
+            {
+                for (var i = key.Length; i < 8; i++)
+                {
+                    key += _defaultKey[i];
+                }
             }
         }
 
+        private static byte[] HashKey(string key, int length)
+        {
+            var sha = new SHA1CryptoServiceProvider();
+            var keyBytes = Encoding.UTF8.GetBytes(key);
+            var hash = sha.ComputeHash(keyBytes);
+            var truncateHash = new byte[length];
+            Array.Copy(hash, 0, truncateHash, 0, length);
+            return truncateHash;
+        }
     }
 }
-
-

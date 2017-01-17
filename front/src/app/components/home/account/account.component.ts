@@ -6,6 +6,7 @@ import { Http, Response, Headers, RequestOptions } from '@angular/http';
 import { DetailFormComponent } from './detail-form/detail-form.component';
 import { OrderHistoryComponent } from './order-history/order-history.component';
 import { CurrentOrderComponent } from './current-order/current-order.component';
+import { ResetPasswordComponent } from './reset-password/reset-password.component';
 
 import { DataScrollerModule } from 'primeng/primeng';
 import { DialogModule } from 'primeng/primeng';
@@ -38,7 +39,8 @@ export const routes: Routes = [
   { path: '', component: DetailFormComponent },
   { path: 'detail', component: DetailFormComponent },
   { path: 'history-order', component: OrderHistoryComponent },
-  { path: 'current-order', component: CurrentOrderComponent }
+  { path: 'current-order', component: CurrentOrderComponent },
+  { path: 'ResetPassword/:digest', component: ResetPasswordComponent }
 ]
 
 @NgModule({
@@ -46,7 +48,8 @@ export const routes: Routes = [
     DetailFormComponent,
     OrderHistoryComponent,
     CurrentOrderComponent,
-    AccountComponent
+    AccountComponent,
+    ResetPasswordComponent
   ],
   exports: [
     DetailFormComponent,

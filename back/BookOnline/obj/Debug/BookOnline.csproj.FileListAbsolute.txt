@@ -1125,3 +1125,5 @@ C:\Users\Vo Thanh Dat\Desktop\again\book\back\BookOnline\bin\Newtonsoft.Json.xml
 C:\Users\Vo Thanh Dat\Desktop\again\book\back\BookOnline\bin\System.Net.Http.Formatting.xml
 C:\Users\Vo Thanh Dat\Desktop\again\book\back\BookOnline\bin\System.Web.Http.xml
 C:\Users\Vo Thanh Dat\Desktop\again\book\back\BookOnline\bin\System.Web.Http.WebHost.xml
+C:\Users\Vo Thanh Dat\Desktop\again\book\back\BookOnline\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\Vo Thanh Dat\Desktop\again\book\back\BookOnline\bin\Microsoft.AspNet.Identity.Core.xml
